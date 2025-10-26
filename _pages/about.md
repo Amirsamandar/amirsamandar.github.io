@@ -13,7 +13,7 @@ As part of the **COMPACT collaboration**, I’ve published five cosmology papers
 
 ---
 
-### Highlight Research
+Highlight Research
 ======
 My research spans cosmology and AI, with key contributions in cosmic topology and LLM evaluation. Notable projects include:
 
@@ -25,7 +25,7 @@ My research spans cosmology and AI, with key contributions in cosmic topology an
 - 📚 Publications in Journal of Cosmology and Astroparticle Physics, including: ([arXiv:2510.05030](https://arxiv.org/abs/2510.05030), [arXiv:2407.09400](https://arxiv.org/abs/2407.09400), [arXiv:2503.08671](https://arxiv.org/abs/2503.08671), [arXiv:2404.01236](https://arxiv.org/abs/2404.01236), [arXiv:2409.02226](https://arxiv.org/abs/2409.02226)).
 - ⚙️ Benchmarking reasoning capabilities in LLMs through ***ReasoningBench***, evaluating models across math, science, instruction-following, and code generation tasks (publication under preparation for Transactions on Machine Learning Research, TMLR).
 
-### Research in AI
+Research in AI
 ======
 I apply statistical and computational methods to advance large language models (LLMs):
 - 📈 A novel Bayesian evaluation framework for LLMs, "Don't Pass@k," robust for fewer trials and reducing computational costs (under review at ICLR 2026, [arXiv:2510.04265](https://arxiv.org/abs/2510.04265)).
@@ -36,7 +36,7 @@ I apply statistical and computational methods to advance large language models (
 - ⚙️ Contributed to ReasoningBench, a benchmark assessing reasoning capabilities in LLMs (foundation, fine-tuned, reinforcement learning, and hybrid models) across math, science, IFEval, and code tasks, analyzing sampling strategies and inference-time/post-training impacts.
 
 
-### Research in COMPACT
+Research in COMPACT
 ======
 As part of the COMPACT collaboration (Case Western Reserve, Pittsburgh, Imperial College London, IFT Madrid):
 - 🌌 Explored signatures of non-trivial topology in CMB anisotropies, computing temperature and polarization correlation functions.
@@ -45,6 +45,6 @@ As part of the COMPACT collaboration (Case Western Reserve, Pittsburgh, Imperial
 - 🔧 Developed efficient GPU-parallelized code for CMB covariance matrices and trained variational autoencoders as likelihood emulators.
 - 🤝 Recently initiated collaboration with LiteBIRD to develop pipelines for cosmic topology analysis in CMB polarization studies.
 
-### For More Info
+For More Info
 ------
 Explore sections on 📚 publications, 🔬 research experience, 🛠️ skills, 👨‍🏫 teaching, and 📄 CV. Contact me via the sidebar for collaborations or opportunities. 🚀
