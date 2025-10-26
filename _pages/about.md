@@ -10,7 +10,7 @@ I am a researcher and PhD candidate at Case Western Reserve University, set to e
 
 I now apply this expertise to Large Language Models (LLMs), developing a Bayesian evaluation framework (``Don't Pass@$k$'', under review at ICLR 2026), optimizing models with asymmetric KV-cache quantization and lossless compression, and contributing to the ReasoningBench benchmark. I’m also exploring diffusion models for LLM noise modeling, including brain wave applications.
 
-As part of the COMPACT collaboration, I’ve published five cosmology papers and developed CMBtopology, an HPC Python package for Cosmic Microwave Background analysis. This drives my passion for integrating statistical physics with AI, particularly through SPOC and IdePHICS, where I’m pursuing PhD opportunities in Europe due to U.S. travel restrictions separating me from my wife.
+As part of the COMPACT collaboration, I’ve published five cosmology papers and developed CMBtopology, an HPC Python package for Cosmic Microwave Background analysis. On a personal note, U.S. travel restrictions on Iranian citizens have prevented my wife from joining me here, motivating me to seek opportunities in Europe where we can reunite while I advance my career
 
 Highlight Research
 ======
