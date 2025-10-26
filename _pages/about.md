@@ -21,8 +21,9 @@ My research spans cosmology and AI, with key contributions in cosmic topology an
 - Machine learning classification of non-trivial universe topologies using CMB simulated data.
 - A novel Bayesian evaluation framework for LLMs, "Don’t Pass@k: A Bayesian Framework for Large Language Model Evaluation" (under review at ICLR 2026, arXiv:2510.04265 [cs.AI]).
 - Development of Bayes-Kit, an open-source Python and Julia toolkit for uncertainty-aware evaluation of sampling decodings in LLMs (GitHub: https://github.com/Amirsamandar/bayes-kit).
-- Benchmarking reasoning capabilities in LLMs through ReasoningBench, evaluating models across math, science, instruction-following, and code generation tasks (publication under preparation for Transactions on Machine Learning Research, TMLR).
 - Publications in Journal of Cosmology and Astroparticle Physics, including works on eigenmodes, correlation matrices, parity violation, and manifold classification (arXiv:2510.05030, 2407.09400, 2503.08671, 2404.01236, 2409.02226).
+- Benchmarking reasoning capabilities in LLMs through ReasoningBench, evaluating models across math, science, instruction-following, and code generation tasks (publication under preparation for Transactions on Machine Learning Research, TMLR).
+
 
 Research in AI
 ======
