@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-My name is Amirhossein Samandar. I am a researcher and PhD candidate at **Case Western Reserve University (CWRU)**, set to earn my Master’s in Physics this Fall 2025. My academic journey began with a B.Sc. in Physics from Sharif University of Technology, where I built a strong foundation in theoretical physics. On a personal note, U.S. travel restrictions on Iranian citizens have prevented my wife from joining me here, motivating me to seek opportunities in Europe where we can reunite while I advance my career
+My name is Amirhossein Samandar. I am a researcher and PhD candidate at **Case Western Reserve University (CWRU)**, set to earn my Master’s in Physics this Fall 2025. My academic journey began with a B.Sc. in Physics from Sharif University of Technology, where I built a strong foundation in theoretical physics. On a personal note, U.S. travel restrictions on Iranian citizens have prevented my wife from joining me here, motivating me to seek opportunities in Europe where we can reunite while I advance my career.
 
 As part of the **COMPACT collaboration**, I’ve published five cosmology papers and developed **CMBtopology**, an HPC Python package for Cosmic Microwave Background covariance matrices in compact Euclidean topologies. I now apply this expertise to Large Language Models (LLMs), developing a Bayesian evaluation framework (**"Don't Pass@k"**, under review at ICLR 2026), optimizing models with asymmetric KV-cache quantization and lossless compression, and contributing to the **ReasoningBench** benchmark. I’m also exploring diffusion models for LLM noise modeling, including brain wave applications.
 
