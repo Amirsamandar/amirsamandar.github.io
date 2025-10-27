@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "👨‍🎓 About Me 🌌"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -47,4 +47,4 @@ As part of the COMPACT collaboration (Case Western Reserve, Pittsburgh, Imperial
 
 For More Info
 ------
-Explore sections on 📚 publications, 🔬 research experience, 🛠️ skills, 👨‍🏫 teaching, and 📄 CV. Contact me via the sidebar for collaborations or opportunities. 🚀
+Explore sections on publications, research experience, skills, teaching, and CV. Contact me via the sidebar for collaborations or opportunities.
