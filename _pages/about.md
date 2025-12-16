@@ -21,7 +21,7 @@ My research spans cosmology and AI, with key contributions in cosmic topology an
 - 📊 Bayesian analysis of Planck CMB data to constrain cosmic topology.
 - 🤖 Machine learning classification of non-trivial universe topologies using CMB simulated data.
 - 📈 A novel Bayesian evaluation framework for LLMs, "Don’t Pass@k: A Bayesian Framework for Large Language Model Evaluation" (under review at ICLR 2026, [arXiv:2510.04265](https://arxiv.org/abs/2510.04265) [cs.AI]).
-- 🛠️ Development of [Bayes-Kit](https://github.com/Amirsamandar/bayes-kit), an open-source Python and Julia toolkit for uncertainty-aware evaluation of sampling decodings in LLMs.
+- 🛠️ Development of [scorio](https://github.com/Amirsamandar/scorio), an open-source Python and Julia toolkit for uncertainty-aware evaluation LLMs.
 - 📚 Publications in Journal of Cosmology and Astroparticle Physics, including: ([arXiv:2510.05030](https://arxiv.org/abs/2510.05030), [arXiv:2407.09400](https://arxiv.org/abs/2407.09400), [arXiv:2503.08671](https://arxiv.org/abs/2503.08671), [arXiv:2404.01236](https://arxiv.org/abs/2404.01236), [arXiv:2409.02226](https://arxiv.org/abs/2409.02226)).
 - ⚙️ Benchmarking reasoning capabilities in LLMs through ***ReasoningBench***, evaluating models across math, science, instruction-following, and code generation tasks (publication under preparation for Transactions on Machine Learning Research, TMLR).
 
@@ -29,9 +29,9 @@ Research in AI
 ======
 I apply statistical and computational methods to advance large language models (LLMs):
 - 📈 A novel Bayesian evaluation framework for LLMs, "Don't Pass@k," robust for fewer trials and reducing computational costs (under review at ICLR 2026, [arXiv:2510.04265](https://arxiv.org/abs/2510.04265)).
-- 🛠️ Co-developed Bayes-Kit, an open-source Python and Julia toolkit for uncertainty-aware evaluation of sampling decodings (GitHub: [https://github.com/Amirsamandar/bayes-kit](https://github.com/Amirsamandar/bayes-kit)).
-- 🔄 Contributed to asymmetric KV-cache quantization for LLMs, optimizing bit allocation for efficiency on resource-constrained hardware (anonymous ACL submission).
-- 📦 Worked on lossless compression techniques using Huffman coding, achieving 30% model size reduction ([arXiv:2504.11651](https://arxiv.org/abs/2504.11651)).
+- 🛠️ Co-developed scorio, an open-source Python and Julia toolkit for uncertainty-aware evaluation of sampling decodings (GitHub: [https://github.com/Amirsamandar/bayes-kit](https://github.com/Amirsamandar/scorio)).
+- 🔄 Non-author contribution to asymmetric KV-cache quantization for LLMs, optimizing bit allocation for efficiency on resource-constrained hardware (anonymous ACL submission).
+- 📦 Non-author Contribution to lossless compression techniques using Huffman coding, achieving 30% model size reduction ([arXiv:2504.11651](https://arxiv.org/abs/2504.11651)).
 - 🚀 Extending compression and quantization methods with Bayesian frameworks for GPU algorithms and large-scale training optimizations (forthcoming paper).
 - ⚙️ Contributed to ReasoningBench, a benchmark assessing reasoning capabilities in LLMs (foundation, fine-tuned, reinforcement learning, and hybrid models) across math, science, IFEval, and code tasks, analyzing sampling strategies and inference-time/post-training impacts.
 
