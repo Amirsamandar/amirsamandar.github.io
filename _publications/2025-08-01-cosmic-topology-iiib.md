@@ -1,12 +1,15 @@
 ---
 title: "Cosmic topology. Part IIIb. Eigenmodes and correlation matrices of spin-2 perturbations in orientable Euclidean manifolds"
 collection: publications
-category: manuscripts
+category: published
 permalink: /publication/2025-08-01-cosmic-topology-iiib
-excerpt: 'This paper analyzes eigenmodes and correlation matrices of spin-2 perturbations in orientable Euclidean manifolds within cosmic topology.'
 date: 2025-08-01
-venue: 'Journal of Cosmology and Astroparticle Physics, 2025 (08), 015'
-paperurl: 'https://amirsamandar.github.io/files/paper_cosmic_topology_iiib.pdf'
-bibtexurl: 'https://amirsamandar.github.io/files/bibtex_cosmic_topology_iiib.bib'
-citation: 'Samandar, A., et al. (2025). &quot;Cosmic topology. Part IIIb. Eigenmodes and correlation matrices of spin-2 perturbations in orientable Euclidean manifolds.&quot; <i>Journal of Cosmology and Astroparticle Physics</i>. 2025 (08), 015.'
+venue: "Journal of Cosmology and Astroparticle Physics 08 (2025) 015"
+authors: "<b>A. Samandar</b>, et al. (COMPACT Collaboration)"
+role: "First author"
+tags_line: "Tensor modes · Eigenmodes · Covariance matrices"
+arxiv: "2503.08671"
+arxivcat: "astro-ph.CO"
+paperurl: 'https://arxiv.org/abs/2503.08671'
+excerpt: 'First computation of spin-2 (tensor) Laplacian eigenmodes and the corresponding CMB correlation matrices for orientable compact Euclidean manifolds.'
 ---

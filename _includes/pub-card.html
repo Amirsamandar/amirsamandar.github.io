@@ -1,0 +1,26 @@
+{% include base_path %}
+<li class="pub-card">
+  <div class="pub-card__meta">
+    <span class="pub-card__year">{{ post.date | default: "1900-01-01" | date: "%Y" }}</span>
+    {% if post.role %}<span class="pub-card__role">{{ post.role }}</span>{% endif %}
+  </div>
+
+  <h3 class="pub-card__title">{{ post.title }}</h3>
+
+  {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
+
+  <p class="pub-card__venue">
+    <span class="pub-card__venue-name">{{ post.venue }}</span>{% if post.venuenote %}<span class="pub-card__venue-note"> · {{ post.venuenote }}</span>{% endif %}
+  </p>
+
+  {% if post.excerpt %}<p class="pub-card__excerpt">{{ post.excerpt }}</p>{% endif %}
+
+  {% if post.tags_line %}<p class="pub-card__tags">{{ post.tags_line }}</p>{% endif %}
+
+  {% if post.arxiv or post.extraurl %}
+  <p class="pub-card__links">
+    {% if post.arxiv %}<a class="pub-link" href="https://arxiv.org/abs/{{ post.arxiv }}">arXiv:{{ post.arxiv }}{% if post.arxivcat %} [{{ post.arxivcat }}]{% endif %}</a>{% endif %}
+    {% if post.extraurl %}<a class="pub-link" href="{{ post.extraurl }}">{{ post.extraname | default: "Link" }}</a>{% endif %}
+  </p>
+  {% endif %}
+</li>

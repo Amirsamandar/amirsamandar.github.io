@@ -1,50 +1,97 @@
 ---
 permalink: /
-title: "About Me"
+title: "Amirhossein Samandar"
+excerpt: "Statistical inference for cosmological data — likelihood-ratio methods and their neural counterparts."
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
-My name is Amirhossein Samandar, and I am a PhD candidate in Physics at Case Western Reserve University (CWRU), where I expect to complete my doctorate in 2027. I previously earned a B.Sc. in Physics from Sharif University of Technology, where I developed a strong foundation in theoretical physics and cosmology. I am currently seeking postdoctoral opportunities beginning in 2027, with interests spanning cosmology, scientific computing, and machine learning.
 
-As part of the **COMPACT collaboration**, I’ve published five cosmology papers and developed **CMBtopology**, an HPC Python package for Cosmic Microwave Background covariance matrices in compact Euclidean topologies. I now apply this expertise to Large Language Models (LLMs), developing a Bayesian evaluation framework (**"Don't Pass@k"**, under review at ICLR 2026), optimizing models with asymmetric KV-cache quantization and lossless compression, and contributing to the **ReasoningBench** benchmark. I’m also exploring diffusion models for LLM noise modeling, including brain wave applications.
+{% include base_path %}
 
+<div class="hero">
+  <p class="hero__kicker">Ph.D. Candidate in Physics · Case Western Reserve University</p>
+  <p class="hero__statement">
+    I work on <strong>statistical inference for cosmological data</strong>, with a focus on
+    <strong>likelihood-ratio methods and their neural counterparts</strong>.
+  </p>
+  <p class="hero__body">
+    My thesis develops exact <strong>detection-probability theory</strong> for Gaussian model comparison and applies
+    it to <strong>CMB statistics</strong>. Alongside it I build <strong>simulation-based inference</strong> pipelines
+    that replace intractable MCMC scans, and work on <strong>calibrated Bayesian evaluation</strong> of language
+    models. I move between analytic derivation, GPU/HPC implementation, and validation of learned inference.
+  </p>
+  <ul class="hero__tags">
+    <li>Statistical inference</li>
+    <li>Cosmological data analysis</li>
+    <li>Simulation-based inference</li>
+    <li>Information theory</li>
+    <li>CMB &amp; cosmic topology</li>
+    <li>Probabilistic machine learning</li>
+  </ul>
+  <p class="hero__actions">
+    <a class="btn-primary" href="{{ base_path }}/research/">Research</a>
+    <a class="btn-ghost" href="{{ base_path }}/publications/">Publications</a>
+    <a class="btn-ghost" href="{{ base_path }}/cv/">CV</a>
+  </p>
+  <p class="hero__seeking">Seeking postdoctoral positions beginning 2027.</p>
+</div>
 
----
+<section class="home-section">
+  <h2 class="section-title">The question behind the work</h2>
+  <p class="section-lede">
+    Cosmology gives us one universe and one sky. Nearly every statistic we use to decide whether a model
+    is <em>detectable</em> is an average over an ensemble of universes we will never observe. My research
+    asks what those ensemble quantities actually tell us about the single measurement in hand — and builds
+    the machinery, analytic and learned, to answer that honestly.
+  </p>
+  <p class="section-lede">
+    The same question turns out to have teeth outside cosmology. A benchmark score for a language model is
+    also one noisy draw from a distribution, reported as if it were a number. The methods transfer.
+  </p>
+</section>
 
-Highlight Research
-======
-My research spans cosmology and AI, with key contributions in cosmic topology and LLM evaluation. Notable projects include:
+<section class="home-section">
+  <h2 class="section-title">Current work</h2>
+  <div class="proj-grid">
+    {% for p in site.data.research.projects limit: 3 %}
+    <article class="proj-card">
+      <p class="proj-card__dates">{{ p.dates }}</p>
+      <h3 class="proj-card__title"><a href="{{ base_path }}/research/#{{ p.id }}">{{ p.title }}</a></h3>
+      <p class="proj-card__lead">{{ p.lead }}</p>
+      <ul class="proj-card__tags">
+        {% for t in p.tags %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="section-more"><a href="{{ base_path }}/research/">All research projects &rarr;</a></p>
+</section>
 
-- 🔧 Developing [CMBtopology](https://github.com/CompactCollaboration/CMBtopology), a Python-based HPC package for computing CMB covariance matrices in compact Euclidean topologies.
-- 📊 Bayesian analysis of Planck CMB data to constrain cosmic topology.
-- 🤖 Machine learning classification of non-trivial universe topologies using CMB simulated data.
-- 📈 A novel Bayesian evaluation framework for LLMs, "Don’t Pass@k: A Bayesian Framework for Large Language Model Evaluation" (under review at ICLR 2026, [arXiv:2510.04265](https://arxiv.org/abs/2510.04265) [cs.AI]).
-- 🛠️ Development of [scorio](https://github.com/Amirsamandar/scorio), an open-source Python and Julia toolkit for uncertainty-aware evaluation LLMs.
-- 📚 Publications in Journal of Cosmology and Astroparticle Physics, including: ([arXiv:2510.05030](https://arxiv.org/abs/2510.05030), [arXiv:2407.09400](https://arxiv.org/abs/2407.09400), [arXiv:2503.08671](https://arxiv.org/abs/2503.08671), [arXiv:2404.01236](https://arxiv.org/abs/2404.01236), [arXiv:2409.02226](https://arxiv.org/abs/2409.02226)).
-- ⚙️ Benchmarking reasoning capabilities in LLMs through ***ReasoningBench***, evaluating models across math, science, instruction-following, and code generation tasks (publication under preparation for Transactions on Machine Learning Research, TMLR).
+<section class="home-section">
+  <h2 class="section-title">Selected publications</h2>
+  {% assign pubs = site.publications | where: "category", "published" | sort: "date" | reverse %}
+  <ul class="pub-list pub-list--compact">
+    {% for post in pubs limit: 4 %}{% include pub-card.html %}{% endfor %}
+  </ul>
+  <p class="section-more"><a href="{{ base_path }}/publications/">Full publication list &rarr;</a></p>
+</section>
 
-Research in AI
-======
-I apply statistical and computational methods to advance large language models (LLMs):
-- 📈 A novel Bayesian evaluation framework for LLMs, "Don't Pass@k," robust for fewer trials and reducing computational costs (under review at ICLR 2026, [arXiv:2510.04265](https://arxiv.org/abs/2510.04265)).
-- 🛠️ Co-developed scorio, an open-source Python and Julia toolkit for uncertainty-aware evaluation of sampling decodings (GitHub: [https://github.com/Amirsamandar/bayes-kit](https://github.com/Amirsamandar/scorio)).
-- 🔄 Non-author contribution to asymmetric KV-cache quantization for LLMs, optimizing bit allocation for efficiency on resource-constrained hardware (anonymous ACL submission).
-- 📦 Non-author Contribution to lossless compression techniques using Huffman coding, achieving 30% model size reduction ([arXiv:2504.11651](https://arxiv.org/abs/2504.11651)).
-- 🚀 Extending compression and quantization methods with Bayesian frameworks for GPU algorithms and large-scale training optimizations (forthcoming paper).
-- ⚙️ Contributed to ReasoningBench, a benchmark assessing reasoning capabilities in LLMs (foundation, fine-tuned, reinforcement learning, and hybrid models) across math, science, IFEval, and code tasks, analyzing sampling strategies and inference-time/post-training impacts.
-
-
-Research in COMPACT
-======
-As part of the COMPACT collaboration (Case Western Reserve, Pittsburgh, Imperial College London, IFT Madrid):
-- 🌌 Explored signatures of non-trivial topology in CMB anisotropies, computing temperature and polarization correlation functions.
-- 📚 Published five papers on cosmic topology, including eigenmodes of non-orientable manifolds, parity violation without parity-violating microphysics, spin-2 perturbations, machine learning classification of toroidal universes, and limits on lens spaces.
-- 📊 Applied Bayesian likelihood analysis to Planck PR4 data, improving constraints from prior studies.
-- 🔧 Developed efficient GPU-parallelized code for CMB covariance matrices and trained variational autoencoders as likelihood emulators.
-- 🤝 Recently initiated collaboration with LiteBIRD to develop pipelines for cosmic topology analysis in CMB polarization studies.
-
-For More Info
-------
-Explore sections on publications, research experience, skills, teaching, and CV. Contact me via the sidebar for collaborations or opportunities.
+<section class="home-section">
+  <h2 class="section-title">Software</h2>
+  <div class="soft-grid">
+    <article class="soft-card">
+      <h3 class="soft-card__title"><a href="https://github.com/CompactCollaboration/CMBtopology">CMBtopology</a></h3>
+      <p>GPU-parallelized Python/HPC package computing CMB covariance matrices for compact Euclidean
+      topologies. Adopted collaboration-wide for tensor-mode likelihood analysis.</p>
+      <p class="soft-card__meta">Python · CUDA · HPC</p>
+    </article>
+    <article class="soft-card">
+      <h3 class="soft-card__title"><a href="https://github.com/mohsenhariri/scorio">Scorio</a></h3>
+      <p>Open-source Bayesian evaluation toolkit for large language models, implementing
+      Dirichlet-posterior estimates and credible intervals in place of Pass@<em>k</em>.</p>
+      <p class="soft-card__meta">Python · Julia</p>
+    </article>
+  </div>
+</section>

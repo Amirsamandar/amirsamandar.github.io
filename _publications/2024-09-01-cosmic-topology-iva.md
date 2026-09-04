@@ -1,12 +1,15 @@
 ---
 title: "Cosmic topology. Part IVa. Classification of manifolds using machine learning: a case study with small toroidal universes"
 collection: publications
-category: manuscripts
+category: published
 permalink: /publication/2024-09-01-cosmic-topology-iva
-excerpt: 'This work applies machine learning to classify cosmic topologies, focusing on small toroidal universes as a case study.'
 date: 2024-09-01
-venue: 'Journal of Cosmology and Astroparticle Physics, 09(2024), 057'
-paperurl: 'https://amirsamandar.github.io/files/paper_cosmic_topology_iva.pdf'
-bibtexurl: 'https://amirsamandar.github.io/files/bibtex_cosmic_topology_iva.bib'
-citation: 'Tamošiūnas, A., et al. (2024). &quot;Cosmic topology. Part IVa. Classification of manifolds using machine learning: a case study with small toroidal universes.&quot; <i>Journal of Cosmology and Astroparticle Physics</i>. 09(2024), 057.'
+venue: "Journal of Cosmology and Astroparticle Physics 09 (2024) 057"
+authors: "A. Tamosiunas, <b>A. Samandar</b>, et al. (COMPACT Collaboration)"
+role: "Co-author"
+tags_line: "Machine learning · CMB · Cosmic topology"
+arxiv: "2404.01236"
+arxivcat: "astro-ph.CO"
+paperurl: 'https://arxiv.org/abs/2404.01236'
+excerpt: 'Classifiers trained on simulated CMB maps recover near-likelihood-level discrimination between manifolds at a fraction of the cost. A rare setting in which the ground-truth likelihood is computable, so the learned model''s discrepancy from the optimal decision rule can be measured rather than assumed.'
 ---

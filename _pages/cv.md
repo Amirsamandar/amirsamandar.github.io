@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,110 +9,152 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D. in Physics (Mastering out in Fall 2025), Case Western Reserve University, Cleveland, Ohio, USA, Aug 2023–present
-  * Advisors: Glenn D. Starkman, Craig J. Copi
-* B.Sc. in Physics, GPA: 18.85/20 (Rank: 4/56), Sharif University of Technology, Tehran, Iran, 2018–2023
+<p class="lede">
+  Cosmologist working on statistical inference for cosmological data, with a focus on likelihood-ratio
+  methods and their neural counterparts. Seeking postdoctoral positions beginning 2027.
+</p>
 
-Research Experience
-======
-* A Novel Bayesian Evaluation Approach in LLMs, June 2025 – Oct 2025
-  * Developing a novel Bayesian evaluation framework for LLMs.
-  * Designed the method to be more robust and accurate, especially with fewer trials, reducing computational costs for benchmarking sampling decodings and LLM models.
-  * Bayes-Kit: A published Bayesian evaluation toolkit for large language models.
-    * Implements Python and Julia packages for uncertainty-aware evaluation of sampling decodings.
-    * Open-source and publicly available at https://github.com/Amirsamandar/bayes-kit.
-  * Related Publication: arXiv:2510.04265 [cs.AI]
+<h2 class="cv-h">Education</h2>
 
-* Bayesian Analysis for the Planck CMB Data, May 2025 – Present
-  * Applied Bayesian likelihood analysis to constrain cosmic topology using Planck PR4 temperature data, improving constraints from 2013/2015 Planck topology studies.
-  * Exploring hierarchical Bayesian methods, training variational autoencoders as emulators for likelihood functions, and developing efficient GPU-parallelized code for computing CMB covariance matrices.
+<div class="cv-entry">
+  <div class="cv-entry__when">Aug 2023 – early 2027 (expected)</div>
+  <div class="cv-entry__what">
+    <h3>Ph.D. in Physics</h3>
+    <p class="cv-entry__org">Case Western Reserve University, Cleveland, Ohio, USA</p>
+    <p><strong>Direct Ph.D. from the B.Sc., to be completed in 3.5 years.</strong><br>
+    Advisors: Glenn D. Starkman, Craig J. Copi · GPA 3.7/4.0</p>
+  </div>
+</div>
 
-* Large Language Model Optimization Projects, June 2025 – Present
-  * Contributed to an anonymous ACL submission (non-author) on asymmetric KV-cache quantization for LLMs, prioritizing bit allocation for keys over values based on norm disparities to enhance inference efficiency on resource-constrained hardware.
-  * Contributed to the development of lossless compression techniques (non-author) using Huffman coding, achieving 30% model size reduction with bit-for-bit identical outputs (arXiv:2504.11651).
-  * Extending compression methods for more efficient GPU algorithms and planning to apply a Bayesian framework to evaluate quantization techniques, including dynamic approaches, to inform large-scale training pipeline optimizations (forthcoming paper as author).
+<div class="cv-entry">
+  <div class="cv-entry__when">2018 – 2023</div>
+  <div class="cv-entry__what">
+    <h3>B.Sc. in Physics</h3>
+    <p class="cv-entry__org">Sharif University of Technology, Tehran, Iran</p>
+    <p>GPA 18.85/20 — <strong>Rank 4 of 56</strong></p>
+  </div>
+</div>
 
-* Benchmarking Reasoning Capabilities in Large Language Models, April 2025 – Present
-  * Developed ReasoningBench, a benchmark for systematically assessing a diverse range of reasoning LLMs, including foundation models, supervised fine-tuned variants, reinforcement learning-based models, and merged hybrid systems.
-  * Evaluated models across tasks in math, science, instruction-following (IFEval), and code generation.
-  * Employed diverse sampling strategies to evaluate both final answers and the structure of intermediate reasoning; examined how inference-time scaling and post-training techniques impact reasoning performance.
-  * Related Publication: under preparation for submission to Transactions on Machine Learning Research (TMLR).
+<h2 class="cv-h">Publication summary</h2>
 
-* Machine Learning for Cosmic Topology Classification, Jan 2024 – Present
-  * Applied classical machine learning and neural networks to classify non-trivial Universe topologies using CMB simulated data.
-  * Developed machine learning alternatives to likelihood-based methods for faster data analysis.
-  * Related Publication: arXiv:2404.01236 [astro-ph.CO]
+{% assign published = site.publications | where: "category", "published" %}
+{% assign review = site.publications | where: "category", "review" %}
+{% assign prep = site.publications | where: "category", "prep" %}
 
-* Cosmic Topology Research, Aug 2023 – Present
-  * Exploring the signatures of non-trivial topology in CMB anisotropies by computing the CMB temperature and polarization correlation functions.
-  * TopologyPy: A Python-based HPC package designed to compute CMB covariance matrices for ten compact Euclidean topologies, with ongoing development of a likelihood analysis extension.
-  * Related Publications: arXiv:2407.09400, 2503.08671, 2510.05030, 2409.02226 [astro-ph.CO]
+<ul class="cv-summary">
+  <li><strong>{{ published.size | plus: review.size }} papers</strong>: {{ published.size }} published / accepted, {{ review.size }} under review. <strong>78+ citations</strong> (Google Scholar and INSPIRE-HEP). Two further first-author manuscripts in preparation, listed separately.</li>
+  <li><strong>3 first-author</strong> and <strong>1 second-author</strong> papers among the {{ published.size | plus: review.size }}; both in-preparation manuscripts are first-author.</li>
+  <li><strong>8 papers</strong> on CMB statistics and cosmic topology (5 in <em>JCAP</em>), plus a COMPACT Collaboration review in <em>Nature Astronomy</em> (co-author, 20+ authors).</li>
+  <li><strong>2 papers</strong> on Bayesian evaluation and inference-time scaling of transformer models, including a main-conference paper at <strong>ICLR 2026</strong>.</li>
+</ul>
 
-* Quantum Cosmology, Jan 2022 – Feb 2023, Institute for Research in Fundamental Sciences (IPM), Supervisor: Mohammad Hossein Namjoo
-  * Studied complex scalar fields as dark matter candidates in the non-relativistic limit using effective field theory and iterative calculations.
-  * Developed canonical transformations for non-relativistic fields and analyzed pressure and energy density in multi-field axion dark matter models.
+<p class="section-more"><a href="{{ base_path }}/publications/">Full publication list &rarr;</a></p>
 
-* Quantum Cosmology, Institute for Research in Fundamental Sciences (IPM), Supervisor: Hassan Firouzjahi
-  * Explored cosmological perturbation theory, inflation, and non-Gaussian features of primordial fluctuations.
-  * Utilized xAct Mathematica package and in-in formalism, referencing Juan Maldacena’s work.
+<h2 class="cv-h">Methodological expertise</h2>
 
-Skills
-======
-* Programming Languages: Python, Mathematica, Julia, C
-* AI/ML Tools: PyTorch, scikit-learn, Ray, Google JAX
-* Libraries and Tools: Pandas, NumPy, Numba, JAX, Mathematica, LaTeX
-* Computational Skills: Advanced numerical methods, High-Performance Computing (HPC), Parallel computing, Convergence studies
-* Languages: Persian (native), English (fluent)
+<dl class="cv-skills">
+  <dt>Inference &amp; statistics</dt>
+  <dd>Bayesian inference and MCMC · likelihood-ratio / Neyman–Pearson testing · exact sampling distributions of test statistics · KL divergence and information-theoretic model comparison · ROC analysis and coverage calibration · large-scale Monte Carlo design</dd>
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <dt>Probabilistic ML</dt>
+  <dd>Neural likelihood and likelihood-ratio estimation · variational autoencoders as likelihood emulators · uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation of stochastic model outputs. Working knowledge of normalizing flows and score-based generative models.</dd>
 
-Selected Courses
-======
-* ML in Physics
-* Computational Methods in Physics
-* Modern Statistical Physics
-* Statistical Physics & AI
-* High Performance Computing
-* Quantum Computation
-* Quantum Cosmology
-* Group Theory
-* Quantum Field Theory
+  <dt>Deep learning</dt>
+  <dd>Transformer architectures and large language models — evaluation, uncertainty, inference-time (test-time) scaling · neural-network and classical classifiers for cosmological data · PyTorch, JAX, scikit-learn, Ray</dd>
 
-Achievements
-======
-* Ranked 20th among 20,000 candidates in Iran’s National University Exam for Master’s Studies.
-* Top 0.5% ranking (420th out of 150,000 candidates) in National University Entrance Exam for Undergraduate Studies.
+  <dt>Computation</dt>
+  <dd>GPU-accelerated and HPC / parallel scientific pipelines · numerical linear algebra on large covariance matrices · convergence and validation studies · Python, Julia, Mathematica, C</dd>
 
-Interests
-======
-* Geopolitics
-* History
-* Social Science
-* Hiking
-* Classical music
-* Anthropology
+  <dt>Cosmology</dt>
+  <dd>CMB temperature and polarization statistics · cosmic topology and eigenmode analysis · perturbation theory · primordial non-Gaussianity · <em>Planck</em> likelihood analysis</dd>
 
-References
-======
-* Glenn D. Starkman, Distinguished Professor and Vice-Chair, Department of Physics, CWRU, email: glenn.starkman@case.edu
-* Michael Hinczewski, Professor of Biophysics and Statistics, Department of Physics, CWRU, email: michael.hinczewski@case.edu
-* Craig J. Copi, Professor, Department of Physics, CWRU, email: craig.copi@case.edu
-* Yashar Akrami, Assistant Research Professor, Institute for Theoretical Physics (IFT) UAM-CSIC in Madrid, email: yashar.akrami@csic.es
+  <dt>Languages</dt>
+  <dd>Persian (native), English (fluent)</dd>
+</dl>
+
+<h2 class="cv-h">Selected research</h2>
+
+{% for p in site.data.research.projects %}
+<div class="cv-entry">
+  <div class="cv-entry__when">{{ p.dates }}</div>
+  <div class="cv-entry__what">
+    <h3><a href="{{ base_path }}/research/#{{ p.id }}">{{ p.title }}</a></h3>
+    <p class="cv-entry__org">{{ p.affiliation }} · {{ p.role }}</p>
+    <p>{{ p.lead }}</p>
+  </div>
+</div>
+{% endfor %}
+
+<p class="section-more"><a href="{{ base_path }}/research/">Full project descriptions &rarr;</a></p>
+
+<h2 class="cv-h">Research mentorship</h2>
+
+<div class="cv-entry">
+  <div class="cv-entry__when">Present</div>
+  <div class="cv-entry__what">
+    <h3>Undergraduate Research Mentor</h3>
+    <p class="cv-entry__org">Case Western Reserve University</p>
+    <p>Have mentored <strong>seven undergraduate researchers</strong>, working one-on-one on the underlying
+    physics, computational methods, and the interpretation and validation of numerical results.
+    A manuscript from one of these projects is expected to be submitted by the end of September 2026.</p>
+  </div>
+</div>
+
+<h2 class="cv-h">Software</h2>
+
+<dl class="cv-skills">
+  <dt><a href="https://github.com/CompactCollaboration/CMBtopology">CMBtopology</a></dt>
+  <dd>GPU-parallelized Python/HPC package for CMB covariance matrices in compact Euclidean topologies; adopted collaboration-wide for tensor-mode likelihood analysis.</dd>
+  <dt><a href="https://github.com/mohsenhariri/scorio">Scorio</a></dt>
+  <dd>Open-source Bayesian evaluation toolkit for large language models (Python / Julia).</dd>
+</dl>
+
+<h2 class="cv-h">Collaborations</h2>
+
+<dl class="cv-skills">
+  <dt>COMPACT</dt>
+  <dd>Cosmic topology collaboration — CWRU, Pittsburgh, Imperial College London, IFT Madrid, INFN Padova.</dd>
+  <dt>LiteBIRD</dt>
+  <dd>Satellite mission for CMB B-mode polarization.</dd>
+</dl>
+
+<h2 class="cv-h">Teaching</h2>
+
+<dl class="cv-skills">
+  <dt>CWRU</dt>
+  <dd>Computational Methods in Physics (2025) · General Physics Lab (2023–2024)</dd>
+  <dt>Sharif University</dt>
+  <dd>Cosmology · Special Relativity · Electrodynamics I &amp; II (2020–2021)</dd>
+</dl>
+
+<h2 class="cv-h">Talks</h2>
+
+<ul class="cv-talks">
+{% for post in site.talks reversed %}
+  <li>
+    <span class="cv-talks__year">{{ post.date | default: "1900-01-01" | date: "%Y" }}</span>
+    <span class="cv-talks__body">
+      <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>{% if post.type %} <em>({{ post.type }})</em>{% endif %}<br>
+      <span class="cv-talks__venue">{{ post.venue }}{% if post.location and post.location != "" %}, {{ post.location }}{% endif %}</span>
+    </span>
+  </li>
+{% endfor %}
+</ul>
+
+<h2 class="cv-h">Awards</h2>
+
+<ul class="cv-awards">
+  <li><strong>Art Walker Award for Outstanding Service</strong>, Department of Physics, Case Western Reserve University (2026)</li>
+  <li>Full graduate funding (Ph.D. in Physics), Case Western Reserve University</li>
+  <li>Iran National University Entrance Exams: ranked <strong>20th of 20,000</strong> (M.Sc.) and <strong>420th of 150,000</strong> (undergraduate, top 0.5%)</li>
+</ul>
+
+<h2 class="cv-h">References</h2>
+
+<ul class="cv-refs">
+  <li><strong>Glenn D. Starkman</strong> — Professor of Physics, Case Western Reserve University <em>(Ph.D. advisor)</em></li>
+  <li><strong>Craig J. Copi</strong> — Department of Physics, Case Western Reserve University <em>(Ph.D. co-advisor)</em></li>
+  <li><strong>Andrew H. Jaffe</strong> — Professor of Astrophysics, Imperial College London <em>(COMPACT)</em></li>
+  <li><strong>Yashar Akrami</strong> — Instituto de Física Teórica (IFT) UAM-CSIC, Madrid <em>(COMPACT)</em></li>
+  <li><strong>Michael Hinczewski</strong> — Professor of Physics, Case Western Reserve University <em>(machine learning)</em></li>
+</ul>

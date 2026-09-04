@@ -1,0 +1,102 @@
+# Research projects. Single source of truth for the homepage and /research/.
+# Keep in sync with the CV. Do not duplicate this content elsewhere.
+
+projects:
+  - id: detection-probability
+    title: "Detection Probability for Gaussian Model Comparison"
+    dates: "2025 – present"
+    role: "First author, project lead"
+    affiliation: "COMPACT Collaboration"
+    lead: "Turning an expected information gain into a probability of detection on the one sky we actually observe."
+    problem: >
+      The Kullback–Leibler divergence is the standard criterion for deciding whether a cosmological
+      model is distinguishable from the null. But KL is an <em>expected</em> information gain, averaged
+      over an ensemble of hypothetical universes. It says nothing about the probability of detection
+      on a single realization.
+    contribution: >
+      Derived the exact sampling distribution of the log-likelihood ratio between two Gaussian models —
+      a generalized non-central &chi;<sup>2</sup> — and used it to convert expected information gain into a
+      detection probability, with ROC curves and calibrated interval coverage.
+    result: >
+      Yields correctly calibrated error estimates in regimes where standard statistical errors mislead.
+      Supplies the frequentist validation layer that learned ratio estimators (NRE) currently lack, and
+      connects directly to Bayesian experimental design, where the KL divergence is the standard expected
+      utility. The framework is model-agnostic; cosmic topology is the case study.
+    tags: ["Likelihood-ratio inference", "Information theory", "Detection probability"]
+    status: "Manuscript in preparation"
+
+  - id: neural-likelihood
+    title: "Neural Likelihood Emulation: Simulation-Based Inference vs. MCMC"
+    dates: "2025 – present"
+    role: "Project lead"
+    affiliation: "COMPACT Collaboration"
+    lead: "Replacing an intractable MCMC scan with amortized neural inference — and proving the replacement is honest."
+    problem: >
+      MCMC-based Bayesian parameter estimation is the bottleneck in topology searches, which must scan
+      manifold size, orientation and observer position simultaneously.
+    contribution: >
+      Building amortized neural inference with variational-autoencoder likelihood emulators trained on
+      simulated CMB covariances, benchmarked against a validated MCMC baseline on the same posterior.
+      Simulation-based calibration and coverage tests are the acceptance criterion, not an afterthought.
+    result: >
+      Applied to <em>Planck</em> PR4 temperature likelihood analysis within the same framework.
+    tags: ["Simulation-based inference", "Neural emulators", "Bayesian computation"]
+    status: "In progress"
+
+  - id: cmb-covariance
+    title: "CMB Statistics and Covariance Modelling for Cosmic Topology"
+    dates: "2023 – present"
+    role: "First author, project lead"
+    affiliation: "COMPACT Collaboration"
+    lead: "If space is compact, the CMB is no longer described by a power spectrum. Someone has to compute what replaces it."
+    problem: >
+      Non-trivial topology breaks statistical isotropy, so the CMB is no longer described by an angular
+      power spectrum alone — it requires full non-diagonal covariance matrices across all
+      <em>&#8467;m</em>, <em>&#8467;'m'</em>.
+    contribution: >
+      Derived the first tensor-sector (spin-2) eigenmodes and covariances for compact Euclidean manifolds,
+      and showed that topology alone generates parity-odd TB/EB correlations — a new observational channel
+      for primordial gravitational waves. Built <strong>CMBtopology</strong>, a GPU-parallelized HPC package
+      now used collaboration-wide.
+    result: >
+      Three first-author <em>JCAP</em> papers; a fourth in preparation.
+    tags: ["CMB statistics", "Eigenmode analysis", "GPU / HPC"]
+    status: "Ongoing"
+
+  - id: learned-classification
+    title: "Learned Classification Benchmarked Against a Known Likelihood"
+    dates: "2023 – 2024"
+    role: "Co-author"
+    affiliation: "COMPACT Collaboration"
+    lead: "A rare machine-learning problem where the optimal answer is computable, so the network's loss can be measured rather than assumed."
+    problem: >
+      Likelihood-based identification of the underlying manifold from CMB maps is accurate but expensive.
+    contribution: >
+      Showed that classifiers trained on simulated CMB maps recover near-likelihood-level discrimination
+      between manifolds at a fraction of the cost.
+    result: >
+      Because the ground-truth likelihood is computable in this problem, the learned model's discrepancy
+      from the optimal decision rule can be measured rather than assumed — a property almost no
+      applied machine-learning setting offers.
+    tags: ["Machine learning", "Model comparison", "CMB"]
+    status: "JCAP 09 (2024) 057"
+
+  - id: llm-evaluation
+    title: "Calibrated Evaluation and Inference-Time Methods for Language Models"
+    dates: "2025 – present"
+    role: "Second author / co-author"
+    affiliation: "Case Western Reserve University"
+    lead: "The same question as the cosmology work, asked of a different system: how much evidence does one noisy measurement actually carry?"
+    problem: >
+      LLM benchmarks report accuracy without uncertainty, so rankings are unstable and the inference
+      procedure behind a reported number is rarely stated.
+    contribution: >
+      Co-developed a Bayesian evaluation framework replacing Pass@<em>k</em> with Dirichlet-posterior
+      estimates and credible intervals, giving stable rankings from far fewer samples; released as the
+      open-source <strong>Scorio</strong> toolkit. Also formalized test-time scaling as budgeted search
+      over a transformer's prefix tree, with reproducibility standards for reporting it.
+    result: >
+      Accepted to the ICLR 2026 main conference. The work is now being extended to reinforcement learning,
+      where calibrated evaluation shapes the training signal itself.
+    tags: ["Bayesian evaluation", "Inference-time scaling", "LLMs"]
+    status: "ICLR 2026"

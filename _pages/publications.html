@@ -5,32 +5,53 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<p class="lede">
+  Peer-reviewed and preprint work in cosmological statistics, CMB analysis and machine learning.
+  Author position is stated on every entry. Cosmology papers are COMPACT Collaboration papers, in
+  which the author list is ordered first by contribution and then alphabetically.
+</p>
 
+{% assign published = site.publications | where: "category", "published" %}
+{% assign review = site.publications | where: "category", "review" %}
+{% assign prep = site.publications | where: "category", "prep" %}
 
+<div class="pub-stats">
+  <div class="pub-stat"><span class="pub-stat__n">{{ published.size | plus: review.size }}</span><span class="pub-stat__l">Papers</span></div>
+  <div class="pub-stat"><span class="pub-stat__n">{{ published.size }}</span><span class="pub-stat__l">Published / accepted</span></div>
+  <div class="pub-stat"><span class="pub-stat__n">{{ review.size }}</span><span class="pub-stat__l">Under review</span></div>
+  <div class="pub-stat"><span class="pub-stat__n">78+</span><span class="pub-stat__l">Citations</span></div>
+</div>
 
+<p class="pub-note">
+  Citation counts from Google Scholar and INSPIRE-HEP.
+  The {{ prep.size }} manuscripts in preparation are listed separately below and are not counted in the total.
+  Full record: <a href="{{ site.author.googlescholar }}">Google Scholar</a> ·
+  <a href="{{ site.author.inspire-hep }}">INSPIRE-HEP</a> ·
+  <a href="{{ site.author.orcid }}">ORCID</a>.
+</p>
+
+<section class="pub-section">
+  <h2 class="pub-section__title">Published &amp; Accepted</h2>
+  <ul class="pub-list">
+    {% assign sorted = published | sort: "date" | reverse %}
+    {% for post in sorted %}{% include pub-card.html %}{% endfor %}
+  </ul>
+</section>
+
+<section class="pub-section">
+  <h2 class="pub-section__title">Submitted &amp; Under Review</h2>
+  <ul class="pub-list">
+    {% assign sorted = review | sort: "date" | reverse %}
+    {% for post in sorted %}{% include pub-card.html %}{% endfor %}
+  </ul>
+</section>
+
+<section class="pub-section">
+  <h2 class="pub-section__title">In Preparation</h2>
+  <ul class="pub-list">
+    {% assign sorted = prep | sort: "date" | reverse %}
+    {% for post in sorted %}{% include pub-card.html %}{% endfor %}
+  </ul>
+</section>
