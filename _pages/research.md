@@ -10,7 +10,8 @@ author_profile: true
 <p class="lede">
   My work sits at the intersection of statistical inference, cosmological data analysis and probabilistic
   machine learning. Each project below is stated as a problem, a contribution and a result, so the
-  specific technical claim is visible rather than implied.
+  specific technical claim is visible rather than implied. Where a project is a direction I intend to
+  develop rather than completed work, it says so.
 </p>
 
 <div class="method-strip">
@@ -22,9 +23,10 @@ author_profile: true
   </div>
   <div class="method-strip__group">
     <h3>Probabilistic machine learning</h3>
-    <p>Neural likelihood and likelihood-ratio estimation · variational autoencoders as likelihood
-    emulators · uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation of
-    stochastic model outputs. Working knowledge of normalizing flows and score-based generative models.</p>
+    <p>Uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation of stochastic
+    model outputs · classifiers benchmarked against a computable likelihood. Working knowledge of neural
+    likelihood and likelihood-ratio estimation, variational autoencoders as likelihood emulators,
+    normalizing flows and score-based generative models.</p>
   </div>
   <div class="method-strip__group">
     <h3>Computation</h3>

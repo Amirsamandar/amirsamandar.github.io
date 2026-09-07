@@ -12,7 +12,7 @@ site_theme               : "air" # Currently available options are "default", "a
 title                    : "Amirhossein Samandar"
 title_separator          : "-"
 name                     : &name "Amirhossein Samandar"
-description              : &description "Amirhossein Samandar — statistical inference for cosmological data: likelihood-ratio methods, simulation-based inference, CMB statistics and probabilistic machine learning."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Amirhossein Samandar — cosmologist working at the intersection of cosmological data analysis, statistical inference, probabilistic machine learning and computational methods."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://amirsamandar.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Amirhossein Samandar"
   pronouns         : # example: "she/her"  
-  bio              : "Statistical inference for cosmological data — likelihood-ratio methods, simulation-based inference, and CMB statistics."
+  bio              : "Cosmology · statistical inference · probabilistic machine learning · computational methods"
   location         : "Cleveland, Ohio, USA"
   employer         : "Case Western Reserve University"
   uri              : # URL

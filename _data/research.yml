@@ -30,18 +30,20 @@ projects:
     dates: "2025 – present"
     role: "Project lead"
     affiliation: "COMPACT Collaboration"
-    lead: "Replacing an intractable MCMC scan with amortized neural inference — and proving the replacement is honest."
+    lead: "A direction I am moving into: replacing an intractable MCMC scan with amortized neural inference, and proving the replacement is honest."
     problem: >
       MCMC-based Bayesian parameter estimation is the bottleneck in topology searches, which must scan
       manifold size, orientation and observer position simultaneously.
     contribution: >
-      Building amortized neural inference with variational-autoencoder likelihood emulators trained on
-      simulated CMB covariances, benchmarked against a validated MCMC baseline on the same posterior.
-      Simulation-based calibration and coverage tests are the acceptance criterion, not an afterthought.
+      The plan is amortized neural inference with variational-autoencoder likelihood emulators trained on
+      simulated CMB covariances, benchmarked against a validated MCMC baseline on the same posterior, with
+      simulation-based calibration and coverage tests as the acceptance criterion rather than an afterthought.
+      My existing work on the exact likelihood-ratio distribution is what makes that validation step
+      well-defined.
     result: >
-      Applied to <em>Planck</em> PR4 temperature likelihood analysis within the same framework.
+      Early stage — no results yet. This is a research direction I intend to develop, not completed work.
     tags: ["Simulation-based inference", "Neural emulators", "Bayesian computation"]
-    status: "In progress"
+    status: "Planned direction"
 
   - id: cmb-covariance
     title: "CMB Statistics and Covariance Modelling for Cosmic Topology"

@@ -13,20 +13,22 @@ redirect_from:
 <div class="hero">
   <p class="hero__kicker">Ph.D. Candidate in Physics · Case Western Reserve University</p>
   <p class="hero__statement">
-    I work on <strong>statistical inference for cosmological data</strong>, with a focus on
-    <strong>likelihood-ratio methods and their neural counterparts</strong>.
+    Cosmologist working at the intersection of <strong>cosmological data analysis</strong>,
+    <strong>statistical inference</strong>, <strong>probabilistic machine learning</strong>, and
+    <strong>computational methods</strong>.
   </p>
   <p class="hero__body">
-    My thesis develops exact <strong>detection-probability theory</strong> for Gaussian model comparison and applies
-    it to <strong>CMB statistics</strong>. Alongside it I build <strong>simulation-based inference</strong> pipelines
-    that replace intractable MCMC scans, and work on <strong>calibrated Bayesian evaluation</strong> of language
-    models. I move between analytic derivation, GPU/HPC implementation, and validation of learned inference.
+    My research covers <strong>Bayesian inference</strong>, <strong>information-theoretic model
+    comparison</strong>, <strong>simulation-based (likelihood-free) inference</strong> with deep generative
+    models, <strong>CMB statistics</strong>, and <strong>calibrated Bayesian evaluation</strong> of large
+    language models. I am comfortable moving between analytic derivation, GPU/HPC implementation, and
+    validation of learned inference.
   </p>
   <ul class="hero__tags">
     <li>Statistical inference</li>
     <li>Cosmological data analysis</li>
-    <li>Simulation-based inference</li>
     <li>Information theory</li>
+    <li>Simulation-based inference</li>
     <li>CMB &amp; cosmic topology</li>
     <li>Probabilistic machine learning</li>
   </ul>
@@ -35,7 +37,7 @@ redirect_from:
     <a class="btn-ghost" href="{{ base_path }}/publications/">Publications</a>
     <a class="btn-ghost" href="{{ base_path }}/cv/">CV</a>
   </p>
-  <p class="hero__seeking">Seeking postdoctoral positions beginning 2027.</p>
+  <p class="hero__seeking">Graduating Fall 2026 &middot; applying for postdoctoral positions.</p>
 </div>
 
 <section class="home-section">
@@ -43,8 +45,9 @@ redirect_from:
   <p class="section-lede">
     Cosmology gives us one universe and one sky. Nearly every statistic we use to decide whether a model
     is <em>detectable</em> is an average over an ensemble of universes we will never observe. My research
-    asks what those ensemble quantities actually tell us about the single measurement in hand — and builds
-    the machinery, analytic and learned, to answer that honestly.
+    asks what those ensemble quantities actually tell us about the single measurement in hand, and how to
+    answer that honestly — analytically where the distributions are tractable, and with learned inference
+    where they are not.
   </p>
   <p class="section-lede">
     The same question turns out to have teeth outside cosmology. A benchmark score for a language model is

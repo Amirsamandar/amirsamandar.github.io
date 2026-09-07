@@ -10,18 +10,19 @@ redirect_from:
 {% include base_path %}
 
 <p class="lede">
-  Cosmologist working on statistical inference for cosmological data, with a focus on likelihood-ratio
-  methods and their neural counterparts. Seeking postdoctoral positions beginning 2027.
+  Cosmologist working at the intersection of cosmological data analysis, statistical inference,
+  probabilistic machine learning, and computational methods. Graduating Fall 2026 and applying for
+  postdoctoral positions.
 </p>
 
 <h2 class="cv-h">Education</h2>
 
 <div class="cv-entry">
-  <div class="cv-entry__when">Aug 2023 – early 2027 (expected)</div>
+  <div class="cv-entry__when">Aug 2023 – Fall 2026 (expected)</div>
   <div class="cv-entry__what">
     <h3>Ph.D. in Physics</h3>
     <p class="cv-entry__org">Case Western Reserve University, Cleveland, Ohio, USA</p>
-    <p><strong>Direct Ph.D. from the B.Sc., to be completed in 3.5 years.</strong><br>
+    <p><strong>Direct Ph.D. from the B.Sc., completed in 3.5 years.</strong><br>
     Advisors: Glenn D. Starkman, Craig J. Copi · GPA 3.7/4.0</p>
   </div>
 </div>
@@ -57,7 +58,7 @@ redirect_from:
   <dd>Bayesian inference and MCMC · likelihood-ratio / Neyman–Pearson testing · exact sampling distributions of test statistics · KL divergence and information-theoretic model comparison · ROC analysis and coverage calibration · large-scale Monte Carlo design</dd>
 
   <dt>Probabilistic ML</dt>
-  <dd>Neural likelihood and likelihood-ratio estimation · variational autoencoders as likelihood emulators · uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation of stochastic model outputs. Working knowledge of normalizing flows and score-based generative models.</dd>
+  <dd>Uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation of stochastic model outputs (Scorio) · neural-network and classical classifiers benchmarked against a computable likelihood. Working knowledge of neural likelihood and likelihood-ratio estimation, variational autoencoders as likelihood emulators, normalizing flows and score-based generative models.</dd>
 
   <dt>Deep learning</dt>
   <dd>Transformer architectures and large language models — evaluation, uncertainty, inference-time (test-time) scaling · neural-network and classical classifiers for cosmological data · PyTorch, JAX, scikit-learn, Ray</dd>
