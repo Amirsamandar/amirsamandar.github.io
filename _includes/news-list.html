@@ -1,0 +1,15 @@
+{%- comment -%} Usage: {% include news-list.html limit=5 %} {%- endcomment -%}
+{%- assign limit = include.limit | default: 100 -%}
+<ol class="news">
+  {%- for n in site.data.news limit: limit %}
+  {%- case n.precision -%}
+    {%- when "day" -%}{%- assign fmt = "%-d %b %Y" -%}{%- assign iso = "%Y-%m-%d" -%}
+    {%- when "month" -%}{%- assign fmt = "%b %Y" -%}{%- assign iso = "%Y-%m" -%}
+    {%- else -%}{%- assign fmt = "%Y" -%}{%- assign iso = "%Y" -%}
+  {%- endcase %}
+  <li class="news__item">
+    <time class="news__date" datetime="{{ n.date | date: iso }}">{{ n.date | date: fmt }}</time>
+    <p class="news__text">{{ n.text }}{% if n.link %} <a href="{{ n.link | relative_url }}">{{ n.link_label | default: "Link" }}</a>{% endif %}</p>
+  </li>
+  {%- endfor %}
+</ol>

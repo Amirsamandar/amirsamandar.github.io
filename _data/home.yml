@@ -1,0 +1,35 @@
+# Homepage copy. Keep the whole homepage under ~600 words (excluding paper cards).
+
+headline: "Calibrated inference for the one universe we observe"
+positioning: >-
+  My research centers on how we extract physical information from cosmological data, determine what the data can distinguish, and make demanding analyses computationally feasible without compromising their statistical interpretation.
+
+question_title: "The question behind my work"
+# 90–130 words.
+question: >-
+  Cosmology gives us one universe and one sky. Yet the statistics we use to decide whether a model is detectable are mostly averages over an ensemble of universes we will never observe. My research asks what those ensemble quantities tell us about the single measurement in hand, and how to answer that honestly: analytically where the distributions are tractable, and with learned inference, validated against those analytic cases, where they are not. The same question applies outside cosmology. A benchmark score for a language model is also one noisy draw from a distribution, usually reported as if it were a fixed number. In both settings the task is to state what the data support, with an uncertainty that can be checked.
+
+# Four headline results: one concrete claim each, with a link.
+results:
+  - kicker: "Detectability · first author"
+    claim: "The KL divergence does not, by itself, say how often a search detects a signal. I derived Gaussian likelihood-ratio distributions and calibrated full parameter searches with simulations."
+    link_label: "arXiv:2610.17186"
+    url: "https://arxiv.org/abs/2610.17186"
+  - kicker: "CMB parity · first author"
+    claim: "Spatial topology by itself, with no parity-violating microphysics, can induce parity-odd TB and EB correlations in the CMB."
+    link_label: "JCAP 11 (2024) 020"
+    url: "https://arxiv.org/abs/2407.09400"
+  - kicker: "Tensor modes · first author"
+    claim: "First spin-2 eigenmodes and CMB correlation matrices for orientable compact flat spaces; tensor-mode topological information keeps growing with ℓ over the range computed."
+    link_label: "JCAP 08 (2025) 015"
+    url: "https://arxiv.org/abs/2503.08671"
+  - kicker: "LLM evaluation · second author"
+    claim: "A Dirichlet-posterior replacement for Pass@k gives credible intervals and more stable model rankings from far fewer samples."
+    link_label: "ICLR 2026"
+    url: "https://arxiv.org/abs/2510.04265"
+
+selected_title: "Selected papers"
+themes_title: "Research themes"
+software_title: "Software"
+news_title: "News"
+news_limit: 5

@@ -1,0 +1,14 @@
+{%- comment -%}
+  The ONLY place citation metrics are rendered. Values live in _data/profile.yml.
+{%- endcomment -%}
+{%- assign m = site.data.profile.metrics -%}
+{%- assign scholar = site.data.profile.links | where: "name", "Google Scholar" | first -%}
+{%- assign inspire = site.data.profile.links | where: "name", "INSPIRE-HEP" | first -%}
+<span class="metrics">
+{%- if m.citations != "" and m.citations -%}
+{{ m.citations }} citations{% if m.h_index != "" and m.h_index %}, h-index {{ m.h_index }}{% endif %} ({{ m.source }}, as of {{ m.as_of }}).
+{%- else -%}
+Citation record: <a href="{{ scholar.url }}">Google Scholar</a> · <a href="{{ inspire.url }}">INSPIRE-HEP</a>.
+{%- include todo.html note="citations and h-index from Google Scholar/INSPIRE, with source and date (set in _data/profile.yml)" -%}
+{%- endif -%}
+</span>

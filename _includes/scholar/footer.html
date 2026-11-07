@@ -1,0 +1,31 @@
+{%- assign profile = site.data.profile -%}
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <section class="site-footer__contact" aria-labelledby="footer-contact">
+      <h2 id="footer-contact" class="site-footer__h">Contact</h2>
+      <p><a href="mailto:{{ profile.email }}">{{ profile.email }}</a><br>
+      {{ profile.department }}, {{ profile.institution }}<br>
+      {{ profile.location }}</p>
+    </section>
+    <section aria-labelledby="footer-profiles">
+      <h2 id="footer-profiles" class="site-footer__h">Profiles</h2>
+      <ul class="site-footer__links">
+        {%- for l in profile.links %}
+        <li><a href="{{ l.url }}" rel="me">{{ l.name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+    <section aria-labelledby="footer-site">
+      <h2 id="footer-site" class="site-footer__h">This site</h2>
+      <ul class="site-footer__links">
+        <li><a href="{{ profile.cv_pdf | relative_url }}">CV (PDF)</a></li>
+        {%- for l in site.data.navigation.footer %}
+        <li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </div>
+  <div class="wrap site-footer__meta">
+    <p>© {{ site.time | date: "%Y" }} {{ profile.name }}. Site last updated <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: "%-d %B %Y" }}</time> (automatic build date). Built with Jekyll on GitHub Pages; no trackers or external scripts.</p>
+  </div>
+</footer>

@@ -1,355 +1,186 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# =============================================================================
+#  amirsamandar.github.io — site configuration
+#  GitHub Pages / Jekyll. Only GitHub-Pages-whitelisted plugins are used.
+#  Restart `jekyll serve` after editing this file.
+# =============================================================================
 
-# Basic Site Settings
+# -- Identity -----------------------------------------------------------------
 locale                   : "en-US"
-site_theme               : "air" # Currently available options are "default", "air"
 title                    : "Amirhossein Samandar"
-title_separator          : "-"
-name                     : &name "Amirhossein Samandar"
-description              : &description "Amirhossein Samandar — cosmologist working at the intersection of cosmological data analysis, statistical inference, probabilistic machine learning and computational methods."   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://amirsamandar.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+title_separator          : "·"
+name                     : "Amirhossein Samandar"
+description              : "Amirhossein Samandar, Ph.D. candidate in physics at Case Western Reserve University: likelihood-ratio detectability for cosmological models, CMB statistics and cosmic topology, and calibrated evaluation of machine-learning models."
+url                      : "https://amirsamandar.github.io"
+baseurl                  : ""
+# GitHub "owner/repo" for this site.
+repository               : "Amirsamandar/amirsamandar.github.io"
+timezone                 : America/New_York
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# -- Review switch --------------------------------------------------------------
+# true  = every unresolved [[TODO: ...]] placeholder is rendered as a visible,
+#         highlighted marker so you can find and resolve it in the browser.
+# false = placeholders are hidden and neutral fallback text is shown instead.
+#         Open items are listed under "Placeholders" in REPORT.md.
+show_todos               : false
+
+# -- Theme compatibility --------------------------------------------------------
+# The redesigned pages use _layouts/scholar.html and assets/css/custom.css.
+# The legacy AcademicPages layouts and assets/css/main.css are kept only so any
+# remaining legacy page still renders; nothing in the main navigation uses them.
+site_theme               : "air"
+
+# The `author` block is read by legacy theme includes. The redesigned pages read
+# _data/profile.yml, which is the single source of truth for identity and links.
 author:
-  # Biographic information
-  avatar           : "profile.jpg"
-  name             : "Amirhossein Samandar"
-  pronouns         : # example: "she/her"  
-  bio              : "Cosmology · statistical inference · probabilistic machine learning · computational methods"
-  location         : "Cleveland, Ohio, USA"
-  employer         : "Case Western Reserve University"
-  uri              : # URL
-  email            : "amirhossein.samandar@case.edu" 
+  avatar                 : "profile.jpg"
+  name                   : "Amirhossein Samandar"
+  bio                    : "Cosmology · statistical inference · probabilistic machine learning · computational methods"
+  location               : "Cleveland, Ohio, USA"
+  employer               : "Case Western Reserve University"
+  email                  : "amirhossein.samandar@case.edu"
+  arxiv                  : "https://arxiv.org/search/?searchtype=author&query=Samandar%2C+A"
+  googlescholar          : "https://scholar.google.com/citations?user=cst228UAAAAJ"
+  inspire-hep            : "https://inspirehep.net/authors/2778276"
+  orcid                  : "https://orcid.org/0009-0004-4051-1654"
+  researchgate           : "https://www.researchgate.net/profile/Amirhossein-Samandar"
+  github                 : "Amirsamandar"
 
-  # Academic websites
-  academia         : # URL
-  arxiv            : "https://arxiv.org/search/?searchtype=author&query=Samandar%2C+A" #- Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=cst228UAAAAJ&hl=en"
-  inspire-hep      : "https://inspirehep.net/authors/2778276?ui-citation-summary=true"
-  impactstory      : # URL
-  orcid            : "https://orcid.org/0009-0004-4051-1654"
-  semantic         : # URL
-  pubmed           : # URL
-  researchgate     : "https://www.researchgate.net/profile/Amirhossein-Samandar"
-  scopus           : # URL
-
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
-  github           : "Amirsamandar"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
-
-  # Social media
-  artstation       : # Username
-  bluesky          : # Username # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
-  linkedin         : # Username
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
-
-# Publication Category - The following the list of publication categories and their headings
-# Publication grouping is handled directly in _pages/publications.html using the
-# `category` front-matter field (published / review / prep). Left empty so the
-# theme's default category loop does not double-render the list.
 publication_category:
 
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
-breadcrumbs              : false # true, false (default)
+# -- Site settings ----------------------------------------------------------------
+breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+read_more                : "disabled"
+talkmap_link             : false
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  provider               : false
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
-
-
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-
-# Analytics
+  hide                   : true
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
+  provider               : false
 
+# Social sharing: the redesigned <head> builds OpenGraph tags and the
+# schema.org Person record from _data/profile.yml.
+og_image                 : "profile.jpg"
 
-# Reading Files
+# -- Reading files ------------------------------------------------------------------
 include:
-  - .htaccess
   - _pages
   - files
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
+  # build tooling and repository metadata
   - .github
-  - .jekyll-assets-cache
+  - .devcontainer
   - .sass-cache
+  - .jekyll-cache
+  - .bundle
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - Dockerfile
+  - docker-compose.yaml
+  - _config_docker.yml
+  - CONTRIBUTING.md
+  - LICENSE
+  - README.md
+  - INSTALL.md
+  - REPORT.md
+  - scripts
+  - markdown_generator
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
+  # template sample content that should never be published
+  - _posts
+  - _drafts
+  - _portfolio
+  - _teaching
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
+  # superseded route owners (replaced by publications.md / talks.md)
+  - _pages/publications.html
+  - _pages/talks.html
+  # old record replaced by _publications/2026-10-12-beyond-kl-divergence.md
+  # (its URL now redirects); excluded in case the file survives a copy-over
+  - _publications/2026-09-01-beyond-kl-divergence.md
 keep_files:
   - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding                 : "utf-8"
+markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
 
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-
-# Markdown Processing
+# -- Conversion -------------------------------------------------------------------------
+markdown                 : kramdown
+highlighter              : rouge
+excerpt_separator        : "\n\n"
 kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  input                  : GFM
+  hard_wrap              : false
+  auto_ids               : true
+  entity_output          : as_char
+  smart_quotes           : lsquo,rsquo,ldquo,rdquo
 
-
-# These settings control the types of collections used by the template
+# -- Collections ----------------------------------------------------------------------
+# Permalinks of existing records are set in each file's front matter and are
+# unchanged from the previous site, so external links keep working.
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
+    output               : true
+    permalink            : /publication/:path/
   talks:
-    output: true
-    permalink: /:collection/:path/
+    output               : true
+    permalink            : /talks/:path/
 
-
-# These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
+      layout: scholar
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
+      layout: publication
+      hide_title: true
+      body_class: "page page--publication"
   - scope:
       path: ""
       type: talks
     values:
-      layout: talk
-      author_profile: true
-      share: true
+      layout: talk-entry
+      hide_title: true
+      body_class: "page page--talk"
 
-
-# Sass/SCSS
+# -- Sass -----------------------------------------------------------------------------
 sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  sass_dir               : _sass
+  style                  : compressed
 
+# -- Output -----------------------------------------------------------------------------
+permalink                : /:categories/:title/
 
-# Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
-
-# Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - https://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

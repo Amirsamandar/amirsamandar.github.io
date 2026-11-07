@@ -1,0 +1,2 @@
+{%- assign a = include.authors | replace: "A. Samandar", "<strong class='me'>A. Samandar</strong>" -%}
+{{ a }}{% if include.collaboration %} ({{ include.collaboration }}){% endif %}

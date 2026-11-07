@@ -1,26 +1,46 @@
-{% include base_path %}
-<li class="pub-card">
-  <div class="pub-card__meta">
-    <span class="pub-card__year">{{ post.date | default: "1900-01-01" | date: "%Y" }}</span>
-    {% if post.role %}<span class="pub-card__role">{{ post.role }}</span>{% endif %}
-  </div>
-
-  <h3 class="pub-card__title">{{ post.title }}</h3>
-
-  {% if post.authors %}<p class="pub-card__authors">{{ post.authors }}</p>{% endif %}
-
-  <p class="pub-card__venue">
-    <span class="pub-card__venue-name">{{ post.venue }}</span>{% if post.venuenote %}<span class="pub-card__venue-note"> · {{ post.venuenote }}</span>{% endif %}
+{%- comment -%}
+  Publication card. Usage:
+    {% include pub-card.html pub=p %}              full card (publications page)
+    {% include pub-card.html pub=p compact=true %} homepage "Selected papers"
+    {% include pub-card.html pub=p heading="h3" %}  heading level (default h3)
+{%- endcomment -%}
+{%- assign p = include.pub -%}
+{%- assign h = include.heading | default: "h3" -%}
+{%- assign slug = p.url | split: "/" | last -%}
+<li class="pub{% if include.compact %} pub--compact{% endif %}" id="{{ slug }}">
+  <p class="pub__badges">
+    {%- include position-badge.html position=p.position -%}
+    {%- if p.lead %}<span class="badge badge--lead">Lead author</span>{% endif -%}
+    {%- case p.status -%}
+      {%- when "accepted" %}<span class="badge badge--status">Accepted</span>
+      {%- when "preprint" %}<span class="badge badge--status">{{ p.status_note | default: "Preprint" }}</span>
+      {%- when "prep" %}<span class="badge badge--status">In preparation</span>
+    {%- endcase -%}
   </p>
-
-  {% if post.excerpt %}<p class="pub-card__excerpt">{{ post.excerpt }}</p>{% endif %}
-
-  {% if post.tags_line %}<p class="pub-card__tags">{{ post.tags_line }}</p>{% endif %}
-
-  {% if post.arxiv or post.extraurl %}
-  <p class="pub-card__links">
-    {% if post.arxiv %}<a class="pub-link" href="https://arxiv.org/abs/{{ post.arxiv }}">arXiv:{{ post.arxiv }}{% if post.arxivcat %} [{{ post.arxivcat }}]{% endif %}</a>{% endif %}
-    {% if post.extraurl %}<a class="pub-link" href="{{ post.extraurl }}">{{ post.extraname | default: "Link" }}</a>{% endif %}
-  </p>
-  {% endif %}
+  <{{ h }} class="pub__title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></{{ h }}>
+  {%- unless include.compact %}
+  <p class="pub__authors">{% include authors.html authors=p.authors collaboration=p.collaboration %}{% include todo.html note=p.authors_todo %}</p>
+  {%- endunless %}
+  <p class="pub__venue">{{ p.venue_display | default: p.venue }}{% if p.date_display and p.status != "prep" %} · {{ p.date_display }}{% endif %}</p>
+  {%- if include.compact %}
+  {%- if p.why %}<p class="pub__why"><span class="pub__label">Why it matters:</span> {{ p.why }}</p>{% endif %}
+  <p class="pub__contrib"><span class="pub__label">My role:</span> {{ p.contribution }}</p>
+  {%- else %}
+  <p class="pub__summary">{{ p.summary }}</p>
+  {%- if p.detail %}<p class="pub__detail">{{ p.detail }}{% include todo.html note=p.detail_todo %}</p>{% endif %}
+  <p class="pub__contrib"><span class="pub__label">My contribution:</span> {{ p.contribution }}{% include todo.html note=p.lead_todo %}{% include todo.html note=p.contribution_todo %}</p>
+  {%- endif %}
+  {%- if p.arxiv or p.doi or p.links %}
+  <ul class="pub__links" aria-label="Links for {{ p.short_title | default: p.title | escape }}">
+    {%- if p.arxiv %}<li><a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}{% if p.arxivcat and p.arxivcat != "" %} [{{ p.arxivcat }}]{% endif %}</a></li>{% endif -%}
+    {%- if p.doi %}<li><a href="https://doi.org/{{ p.doi }}">DOI</a></li>{% endif -%}
+    {%- unless include.compact -%}{%- for l in p.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor -%}{%- endunless -%}
+  </ul>
+  {%- endif %}
+  {%- unless include.compact %}{% if p.bibtex %}
+  <details class="pub__bib">
+    <summary>BibTeX<span class="visually-hidden"> for {{ p.short_title | default: p.title | escape }}</span></summary>
+    <pre tabindex="0"><code>{{ p.bibtex | strip | escape }}</code></pre>
+  </details>
+  {%- endif %}{% endunless %}
 </li>

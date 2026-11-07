@@ -1,14 +1,19 @@
-# Order of the links in the site header.
-
+# Header navigation, in order. `url` is relative to the site root.
 main:
   - title: "Research"
     url: /research/
-
+  - title: "Research plan"
+    url: /research-plan/
   - title: "Publications"
     url: /publications/
-
   - title: "Talks"
     url: /talks/
-
   - title: "CV"
     url: /cv/
+
+# Footer-only links.
+footer:
+  - title: "News"
+    url: /news/
+  - title: "Sitemap"
+    url: /sitemap/

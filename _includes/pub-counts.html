@@ -1,0 +1,10 @@
+{%- comment -%}
+  Publication counts computed from _publications/. Output is a sentence.
+  Usage: {% include pub-counts.html %}
+{%- endcomment -%}
+{%- assign n_pub = site.publications | where: "status", "published" | size -%}
+{%- assign n_acc = site.publications | where: "status", "accepted" | size -%}
+{%- assign n_pre = site.publications | where: "status", "preprint" | size -%}
+{%- assign n_prep = site.publications | where: "status", "prep" | size -%}
+{%- assign n_total = n_pub | plus: n_acc | plus: n_pre -%}
+{{ n_total }} papers: {{ n_pub }} published, {{ n_acc }} accepted, {{ n_pre }} preprint{% if n_pre != 1 %}s{% endif %}{% if n_prep > 0 %}; {{ n_prep }} more in preparation, not counted{% endif -%}

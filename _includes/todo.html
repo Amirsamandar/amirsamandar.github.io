@@ -1,0 +1,7 @@
+{%- comment -%}
+  Renders a visible placeholder when site.show_todos is true.
+  Usage: {% include todo.html note="..." %}
+{%- endcomment -%}
+{%- if site.show_todos and include.note and include.note != "" -%}
+<mark class="todo">[[TODO: {{ include.note }}]]</mark>
+{%- endif -%}

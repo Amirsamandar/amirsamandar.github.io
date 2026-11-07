@@ -1,0 +1,11 @@
+---
+layout: scholar
+---
+<article class="wrap pub-detail">
+  <p class="kicker"><a href="{{ '/talks/' | relative_url }}">Talks</a></p>
+  <h1 class="page-head__title">{{ page.title }}</h1>
+  <p class="pub__venue">{{ page.type }} · {{ page.venue }}{% if page.location and page.location != "" %} · {{ page.location }}{% endif %} · {{ page.year }}</p>
+  {%- include todo.html note=page.todo %}
+  {{ content }}
+  <p class="section-more"><a href="{{ '/talks/' | relative_url }}">All talks</a></p>
+</article>

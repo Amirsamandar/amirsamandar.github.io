@@ -1,0 +1,55 @@
+---
+layout: scholar
+---
+{%- assign p = page -%}
+<article class="wrap pub-detail">
+  <p class="kicker"><a href="{{ '/publications/' | relative_url }}">Publications</a></p>
+  <h1 class="page-head__title">{{ p.title }}</h1>
+  <p class="pub__badges">
+    {%- include position-badge.html position=p.position -%}
+    {%- if p.lead %}<span class="badge badge--lead">Lead author</span>{% endif -%}
+    {%- case p.status -%}
+      {%- when "published" %}<span class="badge badge--status">Published</span>
+      {%- when "accepted" %}<span class="badge badge--status">Accepted</span>
+      {%- when "preprint" %}<span class="badge badge--status">{{ p.status_note | default: "Preprint" }}</span>
+      {%- when "prep" %}<span class="badge badge--status">In preparation</span>
+    {%- endcase -%}
+  </p>
+  <p class="pub__authors">{% include authors.html authors=p.authors collaboration=p.collaboration %}{% unless p.authors_complete %} <span class="muted">Abbreviated author list.</span>{% endunless %}{% include todo.html note=p.authors_todo %}</p>
+  <p class="pub__venue">{{ p.venue_display | default: p.venue }}{% if p.date_display and p.status != "prep" %} · {{ p.date_display }}{% endif %}</p>
+
+  <dl class="facts">
+    <dt>In brief</dt>
+    <dd>{{ p.summary }}</dd>
+    {%- if p.detail %}
+    <dt>Details</dt>
+    <dd>{{ p.detail }}{% include todo.html note=p.detail_todo %}</dd>
+    {%- endif %}
+    {%- if p.why %}
+    <dt>Why it matters</dt>
+    <dd>{{ p.why }}</dd>
+    {%- endif %}
+    <dt>My contribution</dt>
+    <dd>{{ p.contribution }}{% include todo.html note=p.lead_todo %}{% include todo.html note=p.contribution_todo %}</dd>
+    {%- if p.keywords %}
+    <dt>Keywords</dt>
+    <dd>{{ p.keywords }}</dd>
+    {%- endif %}
+  </dl>
+
+  {%- if p.arxiv or p.doi or p.links %}
+  <ul class="pub__links" aria-label="Links">
+    {%- if p.arxiv %}<li><a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a></li>{% endif -%}
+    {%- if p.doi %}<li><a href="https://doi.org/{{ p.doi }}">DOI: {{ p.doi }}</a></li>{% endif -%}
+    {%- for l in p.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor -%}
+  </ul>
+  {%- endif %}
+  {%- if p.bibtex %}
+  <details class="pub__bib" open>
+    <summary>BibTeX</summary>
+    <pre tabindex="0"><code>{{ p.bibtex | strip | escape }}</code></pre>
+  </details>
+  {%- endif %}
+  {{ content }}
+  <p class="section-more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+</article>

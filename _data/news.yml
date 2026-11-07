@@ -1,0 +1,36 @@
+# Reverse chronological. Keep the precision you actually know:
+#   precision: day | month | year
+# Items known only to the year are listed after dated items of that year.
+- date: 2026-10-12
+  precision: day
+  text: "Posted first-author preprint “Beyond the Kullback–Leibler divergence: the likelihood-ratio distribution as a detectability measure.”"
+  link: "/publication/2026-10-12-beyond-kl-divergence"
+  link_label: "arXiv:2610.17186"
+- date: 2026-10-01
+  precision: month
+  text: "COMPACT preprint Cosmic topology Part IId (lens-space eigenmodes) posted."
+  link: "https://arxiv.org/abs/2610.12418"
+  link_label: "arXiv:2610.12418"
+- date: 2026-09-11
+  precision: day
+  text: "COMPACT review “The topology of the Universe” published online in Nature Astronomy."
+  link: "https://doi.org/10.1038/s41550-026-02930-6"
+  link_label: "DOI"
+- date: 2026-07-01
+  precision: month
+  text: "Cosmic topology Part IIb published in JCAP 07 (2026) 004."
+  link: "https://doi.org/10.1088/1475-7516/2026/07/004"
+  link_label: "DOI"
+- date: 2026-01-01
+  precision: year
+  text: "Test-time scaling paper accepted at Transactions on Machine Learning Research."
+  link: "https://arxiv.org/abs/2608.04001"
+  link_label: "arXiv:2608.04001"
+- date: 2026-01-01
+  precision: year
+  text: "Received the Art Walker Award for Outstanding Service, Department of Physics, CWRU."
+- date: 2026-01-01
+  precision: year
+  text: "“Don't Pass@k” appeared at ICLR 2026 (main conference)."
+  link: "https://arxiv.org/abs/2510.04265"
+  link_label: "arXiv:2510.04265"

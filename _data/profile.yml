@@ -1,0 +1,65 @@
+# Single source of truth for identity, links, availability and shared metrics.
+# Every page, the footer, OpenGraph tags and the schema.org Person record read
+# from this file. Edit here, not in individual pages.
+
+name: "Amirhossein Samandar"
+given_name: "Amirhossein"
+family_name: "Samandar"
+role: "Ph.D. candidate in Physics"
+institution: "Case Western Reserve University"
+institution_short: "CWRU"
+department: "Department of Physics"
+city: "Cleveland"
+region: "OH"
+country: "US"
+location: "Cleveland, Ohio, USA"
+email: "amirhossein.samandar@case.edu"
+portrait: "/images/profile.jpg"
+portrait_alt: "Portrait of Amirhossein Samandar"
+tagline: "Cosmology · statistical inference · probabilistic machine learning · computational methods"
+advisor: "Glenn D. Starkman"
+coadvisor: "Craig J. Copi"
+
+# Degree timing. Source: supplied CV (16 January 2027, expected).
+phd_start: "Aug 2023"
+phd_expected: "January 2027"
+phd_expected_long: "16 January 2027 (expected)"
+phd_expected_iso: "2027-01-16"
+
+# Shown in the homepage hero. Do not equate the expected degree date with an
+# employment start date.
+availability: "Seeking postdoctoral positions starting 2027"
+
+# Downloads. Set statement_available to true once the PDF is in /files/.
+cv_pdf: "/files/Samandar_CV.pdf"
+statement_pdf: "/files/Samandar_Research_Statement.pdf"
+statement_available: false
+
+# Profile links (also used as schema.org sameAs).
+links:
+  - name: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=cst228UAAAAJ"
+  - name: "ORCID"
+    url: "https://orcid.org/0009-0004-4051-1654"
+  - name: "INSPIRE-HEP"
+    url: "https://inspirehep.net/authors/2778276"
+  - name: "arXiv"
+    url: "https://arxiv.org/search/?searchtype=author&query=Samandar%2C+A"
+  - name: "GitHub"
+    url: "https://github.com/Amirsamandar"
+  - name: "ResearchGate"
+    url: "https://www.researchgate.net/profile/Amirhossein-Samandar"
+
+# Citation metrics: rendered only through _includes/metrics.html so the same
+# figure appears everywhere. Leave values empty until verified.
+metrics:
+  citations: ""
+  h_index: ""
+  source: ""        # e.g. "Google Scholar" or "INSPIRE-HEP"
+  as_of: ""         # e.g. "12 January 2027"
+
+# Mentoring. The brief and the CV disagree (see REPORT.md), so no count or
+# start date is published until confirmed. Fill both fields to show them.
+mentoring:
+  count: ""         # brief: "seven"; CV: "several"
+  since: ""         # brief: "2025"; CV: "May 2026"

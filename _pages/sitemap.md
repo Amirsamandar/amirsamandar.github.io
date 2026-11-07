@@ -1,37 +1,26 @@
 ---
-layout: archive
 title: "Sitemap"
 permalink: /sitemap/
-author_profile: true
+description: "All pages on amirsamandar.github.io."
 ---
-
-{% include base_path %}
-
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
-
+<div markdown="0">
+<div class="wrap prose">
 <h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+<ul>
+  <li><a href="{{ '/' | relative_url }}">Home</a></li>
+  {%- for l in site.data.navigation.main %}<li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>{% endfor %}
+  {%- for l in site.data.navigation.footer %}{% if l.url != "/sitemap/" %}<li><a href="{{ l.url | relative_url }}">{{ l.title }}</a></li>{% endif %}{% endfor %}
+</ul>
+<h2>Publications</h2>
+<ul>
+  {%- assign pubs = site.publications | sort: "date" | reverse -%}
+  {%- for p in pubs %}{% if p.status != "prep" %}<li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>{% endif %}{% endfor %}
+</ul>
+<h2>Talks</h2>
+<ul>
+  {%- assign talks = site.talks | sort: "date" | reverse -%}
+  {%- for t in talks %}{% unless t.pending %}<li><a href="{{ t.url | relative_url }}">{{ t.title }} ({{ t.year }})</a></li>{% endunless %}{% endfor %}
+</ul>
+<p>Machine-readable version: <a href="{{ '/sitemap.xml' | relative_url }}">sitemap.xml</a>.</p>
+</div>
+</div>

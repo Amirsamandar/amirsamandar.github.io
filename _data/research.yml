@@ -1,104 +1,150 @@
-# Research projects. Single source of truth for the homepage and /research/.
-# Keep in sync with the CV. Do not duplicate this content elsewhere.
+# Research content shared by the homepage, /research/ and /cv/.
+# Every claim here must trace to a paper, the CV, or the publication list.
+# Status labels are deliberate: "Planned direction" means no results yet.
 
+# -- Homepage: four connected themes -------------------------------------------
+themes_intro: >-
+  Theme i is the shared question; ii supplies exact Gaussian likelihoods to check answers against; iii extends it where likelihoods are intractable; iv asks it of machine-learning systems.
+themes:
+  - numeral: "i"
+    title: "Detectability and calibrated inference"
+    text: "When does one data set favor a model? Likelihood-ratio distributions and calibrated searches, not expected information gain alone."
+    link: "/research/#detectability"
+  - numeral: "ii"
+    title: "CMB statistics and cosmic topology"
+    text: "Full non-diagonal CMB covariances in temperature and polarization for compact Euclidean spaces, computed with GPU code."
+    link: "/research/#cmb-topology"
+  - numeral: "iii"
+    title: "Simulation-based inference with validation"
+    text: "In development: neural likelihood emulators and amortized inference, validated against conventional Bayesian methods where the likelihood can be evaluated directly."
+    link: "/research/#sbi"
+    planned: true
+  - numeral: "iv"
+    title: "Calibrated evaluation of LLMs"
+    text: "A benchmark score is one noisy draw: posterior estimates and credible intervals in place of Pass@k."
+    link: "/research/#llm-evaluation"
+
+# -- /research/: projects (Problem / Contribution / Result / Status) -------------
 projects:
-  - id: detection-probability
-    title: "Detection Probability for Gaussian Model Comparison"
+  - id: detectability
+    title: "Detectability and detection probability for model comparison"
     dates: "2025 – present"
     role: "First author, project lead"
-    affiliation: "COMPACT Collaboration"
-    lead: "Turning an expected information gain into a probability of detection on the one sky we actually observe."
-    problem: >
-      The Kullback–Leibler divergence is the standard criterion for deciding whether a cosmological
-      model is distinguishable from the null. But KL is an <em>expected</em> information gain, averaged
-      over an ensemble of hypothetical universes. It says nothing about the probability of detection
-      on a single realization.
-    contribution: >
-      Derived the exact sampling distribution of the log-likelihood ratio between two Gaussian models —
-      a generalized non-central &chi;<sup>2</sup> — and used it to convert expected information gain into a
-      detection probability, with ROC curves and calibrated interval coverage.
-    result: >
-      Yields correctly calibrated error estimates in regimes where standard statistical errors mislead.
-      Supplies the frequentist validation layer that learned ratio estimators (NRE) currently lack, and
-      connects directly to Bayesian experimental design, where the KL divergence is the standard expected
-      utility. The framework is model-agnostic; cosmic topology is the case study.
-    tags: ["Likelihood-ratio inference", "Information theory", "Detection probability"]
-    status: "Manuscript in preparation"
+    affiliation: "COMPACT Collaboration · CWRU"
+    lead: "What an expected information gain does, and does not, say about detecting a model in the one data set we have."
+    problem: >-
+      The Kullback–Leibler (KL) divergence is widely used to forecast whether a model can be distinguished from a null hypothesis. For two specified models it gives the expected log-likelihood ratio when data are drawn from the model in its first argument; it does not, by itself, tell us how often a search will detect a signal or recover its parameters.
+    contribution: >-
+      Conceived the project and developed a forecasting pipeline connecting statistical distinguishability to detection probabilities and parameter recovery. For multivariate Gaussian data, derived the distribution of the log-likelihood ratio and its cumulants under both hypotheses, and examined its links to discovery potential and parameter-estimation accuracy when the null is a point and the alternative a continuous family. Calibrated parameter searches with simulations to quantify false-positive rates, detection probabilities, and the effect of the detection criterion on recovered parameters.
+    result: >-
+      Detectability depends not only on the KL divergence but on the size of the parameter space, the likelihood-ratio distributions, and the distance from parameter-space boundaries (the look-elsewhere effect). The KL–detectability relation therefore has to be calibrated for each model family and test statistic. Applications to a toy Gaussian model, the cubic three-torus, the tensor-to-scalar ratio from B-mode polarization, and dark energy from supernova distances show why a forecast needs to account for the behavior of the analysis that will actually be performed.
+    status: "Preprint"
+    status_kind: "done"
+    papers:
+      - label: "arXiv:2610.17186"
+        url: "https://arxiv.org/abs/2610.17186"
+    tags: ["Likelihood-ratio tests", "Information theory", "Look-elsewhere effect"]
 
-  - id: neural-likelihood
-    title: "Neural Likelihood Emulation: Simulation-Based Inference vs. MCMC"
-    dates: "2025 – present"
-    role: "Project lead"
-    affiliation: "COMPACT Collaboration"
-    lead: "A direction I am moving into: replacing an intractable MCMC scan with amortized neural inference, and proving the replacement is honest."
-    problem: >
-      MCMC-based Bayesian parameter estimation is the bottleneck in topology searches, which must scan
-      manifold size, orientation and observer position simultaneously.
-    contribution: >
-      The plan is amortized neural inference with variational-autoencoder likelihood emulators trained on
-      simulated CMB covariances, benchmarked against a validated MCMC baseline on the same posterior, with
-      simulation-based calibration and coverage tests as the acceptance criterion rather than an afterthought.
-      My existing work on the exact likelihood-ratio distribution is what makes that validation step
-      well-defined.
-    result: >
-      Early stage — no results yet. This is a research direction I intend to develop, not completed work.
-    tags: ["Simulation-based inference", "Neural emulators", "Bayesian computation"]
-    status: "Planned direction"
-
-  - id: cmb-covariance
-    title: "CMB Statistics and Covariance Modelling for Cosmic Topology"
+  - id: cmb-topology
+    title: "CMB statistics and covariance modeling for cosmic topology"
     dates: "2023 – present"
-    role: "First author, project lead"
-    affiliation: "COMPACT Collaboration"
-    lead: "If space is compact, the CMB is no longer described by a power spectrum. Someone has to compute what replaces it."
-    problem: >
-      Non-trivial topology breaks statistical isotropy, so the CMB is no longer described by an angular
-      power spectrum alone — it requires full non-diagonal covariance matrices across all
-      <em>&#8467;m</em>, <em>&#8467;'m'</em>.
-    contribution: >
-      Derived the first tensor-sector (spin-2) eigenmodes and covariances for compact Euclidean manifolds,
-      and showed that topology alone generates parity-odd TB/EB correlations — a new observational channel
-      for primordial gravitational waves. Built <strong>CMBtopology</strong>, a GPU-parallelized HPC package
-      now used collaboration-wide.
-    result: >
-      Three first-author <em>JCAP</em> papers; a fourth in preparation.
-    tags: ["CMB statistics", "Eigenmode analysis", "GPU / HPC"]
+    role: "Project lead"
+    affiliation: "COMPACT Collaboration · CWRU"
+    lead: "If space is finite, the CMB is no longer described by a power spectrum alone. This project computes what replaces it."
+    problem: >-
+      Non-trivial spatial topology breaks statistical isotropy, so the CMB requires full non-diagonal covariance matrices over (ℓ, m, ℓ′, m′) instead of an angular power spectrum.
+    contribution: >-
+      Derived the spin-2 (tensor) eigenmodes and CMB covariance matrices for orientable compact Euclidean manifolds, the first such computation, and showed that topology alone can induce parity-odd TB/EB correlations. Made a lead contribution to the eigenmodes, covariances and detectability of the non-orientable manifolds. Developed CMBtopology, the GPU-parallelized package used across the collaboration for tensor-mode likelihood analysis. In development: an end-to-end pipeline to constrain topology with Planck PR4 data, and, as a LiteBIRD adjoint member, a forecasting pipeline that uses E-mode polarization alongside temperature.
+    result: >-
+      Two first-author JCAP papers (Parts IIIa and IIIb) and a lead contribution as second author to a third (Part IIb). Over the multipole range computed, topological information in tensor-induced anisotropies keeps growing with ℓ rather than saturating as quickly as in the scalar case. A fourth paper (Part IIIc, first author) is in preparation.
     status: "Ongoing"
+    status_kind: "ongoing"
+    papers:
+      - label: "Part IIIa"
+        url: "https://arxiv.org/abs/2407.09400"
+      - label: "Part IIIb"
+        url: "https://arxiv.org/abs/2503.08671"
+      - label: "Part IIb"
+        url: "https://arxiv.org/abs/2510.05030"
+      - label: "CMBtopology"
+        url: "https://github.com/CompactCollaboration/CMBtopology"
+    tags: ["CMB polarization", "Eigenmode analysis", "GPU / HPC"]
+
+  - id: sbi
+    title: "Neural likelihood emulation and simulation-based inference"
+    dates: "Current"
+    dates_todo: "Start date conflict: the brief says 2025 – present; the CV says 2026 – present."
+    role: "Project lead"
+    affiliation: "COMPACT Collaboration · CWRU"
+    lead: "Learned inference that is checked: where does an approximation succeed, and where does it alter the inference?"
+    problem: >-
+      Machine learning can make demanding analyses computationally feasible, but an accurate prediction of an observable does not by itself establish that the inferred constraints are reliable. A narrow posterior may reflect information in the data, restrictive simulation assumptions, or errors in a learned approximation. Bayesian parameter estimation for topology is also expensive, because searches must cover manifold size, orientation and observer position together.
+    contribution: >-
+      Leading work on neural likelihood emulators (variational autoencoders trained on simulated CMB data) and amortized inference, validated against conventional Bayesian methods. Because the likelihood can be evaluated directly in these problems, the comparison shows where learned approximations succeed and where they alter the inference; simulation-based calibration and coverage tests are part of the acceptance criterion. In a separate ongoing project with a student at the University of Toronto, investigating whether Koopman-operator methods can reduce the computational cost of diffusion-based posterior estimation without distorting the inferred distribution.
+    result: >-
+      No results yet. This work is in development.
+    status: "In development"
+    status_kind: "planned"
+    tags: ["Simulation-based inference", "Neural emulators", "Calibration"]
 
   - id: learned-classification
-    title: "Learned Classification Benchmarked Against a Known Likelihood"
-    dates: "2023 – 2024"
+    title: "Learned classification benchmarked against a known likelihood"
+    dates: "Dec 2023 – Mar 2024"
     role: "Co-author"
-    affiliation: "COMPACT Collaboration"
-    lead: "A rare machine-learning problem where the optimal answer is computable, so the network's loss can be measured rather than assumed."
-    problem: >
-      Likelihood-based identification of the underlying manifold from CMB maps is accurate but expensive.
-    contribution: >
-      Showed that classifiers trained on simulated CMB maps recover near-likelihood-level discrimination
-      between manifolds at a fraction of the cost.
-    result: >
-      Because the ground-truth likelihood is computable in this problem, the learned model's discrepancy
-      from the optimal decision rule can be measured rather than assumed — a property almost no
-      applied machine-learning setting offers.
+    affiliation: "COMPACT Collaboration · CWRU / IFT Madrid"
+    lead: "A machine-learning problem where the optimal answer is computable, so the network's shortfall can be measured."
+    problem: >-
+      Identifying the manifold behind a CMB map with the full likelihood is accurate but expensive.
+    contribution: >-
+      Contributed to benchmarking learned topology classification against a directly computable likelihood, and helped prepare and revise the manuscript.
+    result: >-
+      The paper shows that classifiers trained on simulated CMB maps approach likelihood-level discrimination at a fraction of the cost, and, because the likelihood is computable, measures the gap to the optimal decision rule.
+    status: "Published"
+    status_kind: "done"
+    papers:
+      - label: "JCAP 09 (2024) 057"
+        url: "https://doi.org/10.1088/1475-7516/2024/09/057"
     tags: ["Machine learning", "Model comparison", "CMB"]
-    status: "JCAP 09 (2024) 057"
 
   - id: llm-evaluation
-    title: "Calibrated Evaluation and Inference-Time Methods for Language Models"
+    title: "Calibrated evaluation and inference-time methods for language models"
     dates: "2025 – present"
-    role: "Second author / co-author"
+    role: "Second author · co-author"
     affiliation: "Case Western Reserve University"
-    lead: "The same question as the cosmology work, asked of a different system: how much evidence does one noisy measurement actually carry?"
-    problem: >
-      LLM benchmarks report accuracy without uncertainty, so rankings are unstable and the inference
-      procedure behind a reported number is rarely stated.
-    contribution: >
-      Co-developed a Bayesian evaluation framework replacing Pass@<em>k</em> with Dirichlet-posterior
-      estimates and credible intervals, giving stable rankings from far fewer samples; released as the
-      open-source <strong>Scorio</strong> toolkit. Also formalized test-time scaling as budgeted search
-      over a transformer's prefix tree, with reproducibility standards for reporting it.
-    result: >
-      Accepted to the ICLR 2026 main conference. The work is now being extended to reinforcement learning,
-      where calibrated evaluation shapes the training signal itself.
-    tags: ["Bayesian evaluation", "Inference-time scaling", "LLMs"]
-    status: "ICLR 2026"
+    lead: "The question behind the cosmology work, asked of a different system: how much evidence does one noisy measurement carry?"
+    problem: >-
+      LLM benchmarks usually report a score without uncertainty, so rankings can be unstable and the inference procedure behind a reported number is rarely stated.
+    contribution: >-
+      Co-developed a Bayesian evaluation framework that replaces Pass@k with Dirichlet-posterior estimates and credible intervals, accounting for variation across repeated responses and for the uncertainty from a finite number of trials. Contributed to the evaluation and uncertainty methods of a framework for test-time scaling, and to the new version of the open-source Scorio toolkit.
+    result: >-
+      Don't Pass@k appeared at ICLR 2026 (main conference); the test-time-scaling paper is accepted at TMLR. An extension to reinforcement learning, where calibrated evaluation shapes the training signal, is underway.
+    status: "Published · accepted"
+    status_kind: "done"
+    papers:
+      - label: "ICLR 2026"
+        url: "https://arxiv.org/abs/2510.04265"
+      - label: "TMLR (accepted)"
+        url: "https://arxiv.org/abs/2608.04001"
+      - label: "Scorio"
+        url: "https://github.com/mohsenhariri/scorio"
+    tags: ["Bayesian evaluation", "Test-time scaling", "LLMs"]
+
+earlier:
+  dates: "Jan 2022 – Feb 2023"
+  place: "Institute for Research in Fundamental Sciences (IPM), Tehran"
+  items:
+    - "Complex scalar-field dark matter in the non-relativistic limit: effective field theory, canonical transformations and multi-field axion models (advisor: M. H. Namjoo)."
+    - "Cosmological perturbation theory, inflation and primordial non-Gaussianity using xAct (advisor: H. Firouzjahi)."
+
+# -- Methods (research page and CV) ------------------------------------------------
+methods:
+  - group: "Inference and statistics"
+    items: "Bayesian inference and MCMC · Neyman–Pearson likelihood-ratio testing · exact sampling distributions of test statistics · KL divergence and information-theoretic model comparison · ROC and coverage calibration · large-scale Monte Carlo design"
+  - group: "Probabilistic machine learning"
+    items: "Uncertainty quantification and posterior calibration · Dirichlet-posterior evaluation · working knowledge of neural likelihood and likelihood-ratio estimation, VAEs as likelihood emulators, normalizing flows, score-based generative models"
+  - group: "Deep learning"
+    items: "Transformers and LLMs (evaluation, uncertainty, test-time scaling) · PyTorch · JAX · scikit-learn · Ray"
+  - group: "Computation"
+    items: "GPU / HPC pipelines · numerical linear algebra on large covariance matrices · Python · Julia · Mathematica · C"
+  - group: "Cosmology"
+    items: "CMB temperature and polarization statistics · cosmic topology and eigenmode analysis · perturbation theory · primordial non-Gaussianity · Planck likelihood analysis"
