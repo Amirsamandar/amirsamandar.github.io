@@ -135,6 +135,12 @@ Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `file
 - **Profile card.** The portrait, contact details (with small email, building and location icons) and profile links (as two-column chips) are now one card in the hero's right column. On phones it becomes a compact card with a smaller photo, placed after the billboard.
 - The figures are static: GitHub Pages can't fetch Google Scholar live (Scholar has no public API and blocks automated requests), so refresh them by hand.
 
+## Update (sixth pass): stale-stylesheet fix
+
+- **Symptom on the live site.** New homepage HTML was shown with an older stylesheet: a huge unstyled photo, giant black icons, and citation figures as a plain list.
+- **Cause.** GitHub Pages lets browsers cache `custom.css` for 10 minutes, and a normal reload in Chrome reuses the cached stylesheet while fetching the new HTML. The other possible cause is that `assets/css/custom.scss` was not committed.
+- **Fix.** The stylesheet and script links now carry a build-time version (`custom.css?v=…`), so every deploy forces a fresh copy. The SVG icons also have built-in 18 px size and stroke attributes, so they stay small even without CSS.
+
 ## Placeholders (open items, hidden on the site)
 
 Shown on the pages only if you set `show_todos: true`. Search the source for `todo`.

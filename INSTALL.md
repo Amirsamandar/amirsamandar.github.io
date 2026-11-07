@@ -58,6 +58,12 @@ bundle exec jekyll serve      # http://localhost:4000
 Then push the branch, open a pull request, and merge to the branch GitHub Pages
 publishes from.
 
+## If the live site looks unstyled or half-styled
+
+1. Hard-refresh: Ctrl+Shift+R (Cmd+Shift+R on Mac).
+2. Open `https://amirsamandar.github.io/assets/css/custom.css` and search for `profile-card`. If it is missing, `assets/css/custom.scss` was not committed: run `git status`, then add, commit and push it.
+3. Check the repository's **Actions** tab (or Settings → Pages) to confirm the latest build succeeded.
+
 ## Where to edit things later
 
 | What | File |
