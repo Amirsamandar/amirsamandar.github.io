@@ -123,6 +123,12 @@ Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `file
 - Citation metrics are set once in `_data/profile.yml`, so they now appear on the Publications and CV pages. Refresh `as_of` whenever you update them.
 - Test-time scaling author list corrected from your Scholar listing (A. Samandar is sixth, after K. Ye), and the badge now reads "Sixth author".
 
+## Update (fourth pass, 7 Nov 2026)
+
+- **Research plan restructured.** Direction A is now "Cosmic topology with Planck and future CMB polarization observations", using your text (US spelling). It covers completing the Planck PR4 analysis and extending it to polarization, likelihood emulation checked against direct calculations, accuracy under masks, noise and foregrounds, Hermitian and positive-definite covariance emulation, and temperature versus polarization at a fixed false-positive rate. A "Proposed first-year deliverable" row was assembled from that text. Direction B is now "Validated simulation-based inference and calibrated forecasts beyond topology"; Direction C (ML evaluation) is unchanged.
+- **Homepage hero has a Contact and Profiles panel** under the portrait (it stacks below the buttons on phones). The footer keeps the same links.
+- **Layout fix.** Research plan, paper detail, sitemap and 404 pages were flush left; they now align with the header.
+
 ## Placeholders (open items, hidden on the site)
 
 Shown on the pages only if you set `show_todos: true`. Search the source for `todo`.

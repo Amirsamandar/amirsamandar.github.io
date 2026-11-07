@@ -1,7 +1,7 @@
 ---
 title: "Research directions, 2027 onward"
 permalink: /research-plan/
-description: "Research statement and proposed postdoctoral directions of Amirhossein Samandar: calibrated detectability for CMB and large-scale-structure data, validated simulation-based inference, and calibrated evaluation of ML systems used in science."
+description: "Research statement and proposed postdoctoral directions of Amirhossein Samandar: cosmic topology with Planck and future CMB polarization data, validated simulation-based inference and calibrated forecasts, and calibrated evaluation of ML systems used in science."
 kicker: "Research plan"
 lede: "My research statement, followed by three proposed directions for a postdoctoral position. The directions are prospective: deliverables are plans, not results."
 ---
@@ -40,27 +40,33 @@ I also work on statistical evaluation and inference methods in artificial intell
 
 <section class="direction" aria-labelledby="dir-a">
   <p class="direction__label">Direction A</p>
-  <h3 id="dir-a">Calibrated detectability for coming CMB and large-scale-structure data</h3>
+  <h3 id="dir-a">Cosmic topology with Planck and future CMB polarization observations</h3>
   <dl class="facts">
     <dt>Motivation</dt>
-    <dd>Detectability forecasts, including the cosmic-topology forecasts in my collaboration's papers, are commonly summarized by the KL divergence, an expected information gain. It does not, by itself, say how often a search will detect a signal or recover its parameters: the size of the parameter space, its boundaries and the detection criterion also matter, so the relation must be calibrated for each model family and test statistic. Missions such as LiteBIRD and Taurus, and large-scale-structure surveys, need forecasts that account for the analysis that will actually be performed.</dd>
+    <dd>I would like to bring my theoretical work on cosmic topology into closer contact with observations by completing the Planck PR4 analysis and extending it to polarization. The calculations developed within COMPACT tell us how a non-trivial topology changes CMB correlations, but searching for these signatures requires evaluating many models with different spatial scales and observer positions and orientations.</dd>
+    <dt>Likelihood emulation for the search</dt>
+    <dd>This is where I see a useful role for likelihood emulation. Building on my current work, I would investigate how much it can reduce the cost of the search while retaining the accuracy needed to distinguish topological signatures. Models and angular resolutions for which direct likelihood calculations remain feasible would allow me to examine how the approximation affects the inferred parameters and their uncertainties.</dd>
+    <dt>Accuracy on the observed sky</dt>
+    <dd>The accuracy needed from an emulator depends on the information available in the observed sky. Masks, instrumental noise, and residual foregrounds affect our sensitivity to topological correlations and may change which approximation errors matter most. Comparing emulated and direct analyses as these effects are included would help establish where emulation is sufficient and where direct calculations are still needed. If the covariance itself is emulated, its parametrization must preserve Hermitian symmetry and positive definiteness. The relevant test is whether the resulting likelihood reproduces the parameter constraints, rather than agreement between individual covariance elements alone.</dd>
+    <dt>What polarization adds</dt>
+    <dd>I am also interested in what polarization can tell us that temperature alone cannot. My likelihood-ratio framework allows this comparison in terms of detection probabilities and parameter recovery, while accounting for false detections introduced by searching over many models. Applying the same search to simulations of the simply connected model would establish detection thresholds; simulations with non-trivial topology would then show how often a signal is detected and how well its parameters are recovered. Comparing temperature and polarization at the same false-positive rate would reveal whether polarization makes a signature easier to detect, helps locate its parameters, or both. Building on my work with LiteBIRD, I would extend these forecasts to future observations, including the effects of sky coverage, noise, and foreground uncertainty.</dd>
     <dt>Proposed first-year deliverable</dt>
-    <dd>A calibrated detectability analysis for one forecast target, for example the tensor-to-scalar ratio from B-mode polarization or a topology search combining temperature and E-mode polarization: likelihood-ratio distributions, simulation-calibrated false-detection rates and detection probabilities, and parameter recovery, released with the code.</dd>
+    <dd>The completed Planck PR4 topology analysis, with an emulated likelihood checked against direct calculations on the models and angular resolutions where those remain feasible, and detection thresholds set by applying the same search to simulations of the simply connected model.</dd>
     <dt>What I bring</dt>
-    <dd>The likelihood-ratio framework for Gaussian data (arXiv:2610.17186), already applied to cosmic topology, primordial tensor modes and dark energy; full CMB covariance modeling in temperature and polarization; CMBtopology for GPU computation of large covariance matrices; the LiteBIRD topology forecasting pipeline and the Planck PR4 topology pipeline, both in development.</dd>
+    <dd>Spin-2 eigenmodes and CMB covariance matrices for compact Euclidean manifolds (JCAP 08 (2025) 015) and the parity-odd signatures of topology (JCAP 11 (2024) 020); CMBtopology for GPU computation of large covariance matrices; the Planck PR4 topology pipeline and the LiteBIRD forecasting pipeline, both in development; the likelihood-ratio framework for detection probabilities and parameter recovery (arXiv:2610.17186); and current work on neural likelihood emulators validated against conventional Bayesian methods.</dd>
   </dl>
 </section>
 
 <section class="direction" aria-labelledby="dir-b">
   <p class="direction__label">Direction B</p>
-  <h3 id="dir-b">Validated simulation-based inference for cosmology</h3>
+  <h3 id="dir-b">Validated simulation-based inference and calibrated forecasts beyond topology</h3>
   <dl class="facts">
     <dt>Motivation</dt>
-    <dd>Learned emulators and neural posterior estimators can make demanding analyses computationally feasible, but an accurate prediction of an observable does not by itself establish that the inferred constraints are reliable. A narrow posterior may reflect information in the data, restrictive simulation assumptions, or errors in the learned approximation. Problems where the likelihood can be evaluated directly, including Gaussian problems with known likelihood-ratio distributions, show where an approximation succeeds and where it alters the inference, alongside, not instead of, simulation-based calibration and coverage tests.</dd>
+    <dd>The same questions arise well beyond cosmic topology. An accurate prediction of an observable does not by itself establish that the inferred constraints are reliable: a narrow posterior may reflect information in the data, restrictive simulation assumptions, or errors in a learned approximation. Likewise, a forecast based on the KL divergence alone does not say how often a search will detect a signal or recover its parameters, so it needs to account for the analysis that will actually be performed.</dd>
     <dt>Proposed first-year deliverable</dt>
-    <dd>Inference from summary statistics in a setting where a reference analysis fixes the accuracy an approximation must reach: an amortized neural method compared with conventional Bayesian inference and accepted only after passing calibration and coverage tests, followed by a focused extension toward inference of the underlying field and cosmological parameters.</dd>
+    <dd>Inference from summary statistics, for example in large-scale structure, in a setting where a reference analysis fixes the accuracy an approximation must reach: an amortized neural method compared with conventional Bayesian inference and accepted only after passing calibration and coverage tests, followed by a focused extension toward inference of the underlying field and cosmological parameters.</dd>
     <dt>What I bring</dt>
-    <dd>Exact sampling distributions of test statistics; experience comparing learned classifiers of simulated CMB maps with a directly evaluable likelihood (JCAP 09 (2024) 057); GPU/HPC pipelines; ongoing work, which I lead, on neural likelihood emulators and amortized inference validated against conventional Bayesian methods (in development, no results yet); and an ongoing project on whether Koopman-operator methods can reduce the cost of diffusion-based posterior estimation without distorting the inferred distribution.</dd>
+    <dd>Exact sampling distributions of test statistics, and a likelihood-ratio framework already applied to primordial tensor modes and dark energy as well as topology (arXiv:2610.17186); experience comparing learned classifiers of simulated CMB maps with a directly evaluable likelihood (JCAP 09 (2024) 057); GPU/HPC pipelines; and an ongoing project on whether Koopman-operator methods can reduce the cost of diffusion-based posterior estimation without distorting the inferred distribution.</dd>
   </dl>
 </section>
 

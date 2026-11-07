@@ -34,6 +34,18 @@ redirect_from:
   <figure class="hero__portrait">
     <img src="{{ profile.portrait | relative_url }}" alt="{{ profile.portrait_alt }}" width="640" height="640">
   </figure>
+  <aside class="hero__side" aria-labelledby="side-contact">
+    <h2 id="side-contact" class="side__h">Contact</h2>
+    <p class="side__contact"><a href="mailto:{{ profile.email }}">{{ profile.email | replace: "@", "@<wbr>" }}</a><br>
+    {{ profile.department }}, {{ profile.institution }}<br>
+    {{ profile.location }}</p>
+    <h2 class="side__h">Profiles</h2>
+    <ul class="side__links">
+      {%- for l in profile.links %}
+      <li><a href="{{ l.url }}" rel="me">{{ l.name }}</a></li>
+      {%- endfor %}
+    </ul>
+  </aside>
 </section>
 
 <section class="section wrap" aria-labelledby="question">

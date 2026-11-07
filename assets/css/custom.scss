@@ -187,7 +187,7 @@ ul, ol { padding: 0; margin: 0; }
   padding-inline: var(--gutter);
 }
 
-.prose { max-width: calc(var(--measure) + 2 * var(--gutter)); margin-inline: 0; }
+.prose > p, .prose > ul, .prose > ol, .prose > h2, .prose > h3, .prose section > p { max-width: var(--measure); }
 .prose ul, .prose ol { padding-left: 1.25rem; margin-bottom: 1rem; }
 .prose h2 { font-size: 1.5rem; margin-top: 2.25rem; }
 
@@ -338,6 +338,7 @@ mark.todo {
 .hero {
   display: grid;
   gap: 1.5rem;
+  grid-template-areas: "photo" "text" "side";
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
@@ -365,7 +366,30 @@ mark.todo {
   font-weight: 550;
 }
 .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); flex: none; }
-.hero__portrait { margin: 0; order: -1; }
+.hero__text { grid-area: text; }
+.hero__portrait { grid-area: photo; margin: 0; }
+.hero__side {
+  grid-area: side;
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.side__h {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+.side__contact { margin-bottom: 1rem; }
+.side__contact a { overflow-wrap: normal; }
+.side__links { list-style: none; display: flex; flex-wrap: wrap; gap: 0 1rem; }
+.side__links a { display: inline-block; padding-block: 0.2rem; }
 .hero__portrait img {
   width: 7.5rem;
   height: 7.5rem;
@@ -375,11 +399,18 @@ mark.todo {
 }
 
 @media (min-width: 48rem) {
-  .hero { grid-template-columns: minmax(0, 1fr) auto; align-items: start; padding-top: 3.5rem; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 17rem;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "text photo" "text side";
+    column-gap: 3rem;
+    align-items: start;
+    padding-top: 3.5rem;
+  }
+  .side__links { display: block; }
   .hero__name { font-size: 3rem; }
   .hero__headline { font-size: 1.75rem; }
-  .hero__portrait { order: 0; }
-  .hero__portrait img { width: 12.5rem; height: 12.5rem; }
+  .hero__portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
 }
 
 .question {
@@ -529,7 +560,8 @@ mark.todo {
 .toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; padding-block: 0.25rem 1rem; font-size: 0.95rem; }
 .toc a { display: inline-block; padding-block: 0.3rem; }
 
-.pub-detail { padding-top: 2.5rem; padding-bottom: 2rem; max-width: calc(52rem + 2 * var(--gutter)); margin-inline: 0; }
+.pub-detail { padding-top: 2.5rem; padding-bottom: 2rem; }
+.pub-detail > * { max-width: 52rem; }
 .pub-detail .page-head__title { font-size: 1.9rem; }
 
 /* ==========================================================================
