@@ -29,22 +29,36 @@ redirect_from:
       <li><a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a></li>
       <li><a class="btn" href="mailto:{{ profile.email }}">Email</a></li>
     </ul>
+    {% include metrics-board.html %}
     {%- unless profile.statement_available %}{% include todo.html note="research statement PDF not yet in /files/; set statement_available: true in _data/profile.yml to show the download button" %}{% endunless %}
   </div>
-  <figure class="hero__portrait">
-    <img src="{{ profile.portrait | relative_url }}" alt="{{ profile.portrait_alt }}" width="640" height="640">
-  </figure>
-  <aside class="hero__side" aria-labelledby="side-contact">
-    <h2 id="side-contact" class="side__h">Contact</h2>
-    <p class="side__contact"><a href="mailto:{{ profile.email }}">{{ profile.email | replace: "@", "@<wbr>" }}</a><br>
-    {{ profile.department }}, {{ profile.institution }}<br>
-    {{ profile.location }}</p>
-    <h2 class="side__h">Profiles</h2>
-    <ul class="side__links">
-      {%- for l in profile.links %}
-      <li><a href="{{ l.url }}" rel="me">{{ l.name }}</a></li>
-      {%- endfor %}
-    </ul>
+  <aside class="profile-card" aria-labelledby="side-contact">
+    <img class="profile-card__photo" src="{{ profile.portrait | relative_url }}" alt="{{ profile.portrait_alt }}" width="640" height="640">
+    <div class="profile-card__body">
+      <h2 id="side-contact" class="side__h">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+          <a href="mailto:{{ profile.email }}">{{ profile.email | replace: "@", "@<wbr>" }}</a>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+          <span>{{ profile.department }}<br>{{ profile.institution }}</span>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></svg>
+          <span>{{ profile.location }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-card__links">
+      <h2 class="side__h">Profiles</h2>
+      <ul class="chips">
+        {%- for l in profile.links %}
+        <li><a class="chip" href="{{ l.url }}" rel="me">{{ l.name }}<span class="chip__arrow" aria-hidden="true">↗</span></a></li>
+        {%- endfor %}
+      </ul>
+    </div>
   </aside>
 </section>
 

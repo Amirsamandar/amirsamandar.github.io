@@ -129,6 +129,12 @@ Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `file
 - **Homepage hero has a Contact and Profiles panel** under the portrait (it stacks below the buttons on phones). The footer keeps the same links.
 - **Layout fix.** Research plan, paper detail, sitemap and 404 pages were flush left; they now align with the header.
 
+## Update (fifth pass, 7 Nov 2026)
+
+- **Citation billboard** on the homepage (inside the hero, under the buttons) and on the Publications page: 122 citations, h-index 7, i10-index 6, Google Scholar, as of 7 November 2026, with a link to the profile. It reads from `metrics` in `_data/profile.yml` (`citations`, `h_index`, `i10_index`, `source`, `as_of`), so updating that one block updates both pages and the CV sentence. It shows nothing if `citations` is empty.
+- **Profile card.** The portrait, contact details (with small email, building and location icons) and profile links (as two-column chips) are now one card in the hero's right column. On phones it becomes a compact card with a smaller photo, placed after the billboard.
+- The figures are static: GitHub Pages can't fetch Google Scholar live (Scholar has no public API and blocks automated requests), so refresh them by hand.
+
 ## Placeholders (open items, hidden on the site)
 
 Shown on the pages only if you set `show_todos: true`. Search the source for `todo`.

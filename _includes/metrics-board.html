@@ -1,0 +1,22 @@
+{%- comment -%}
+  Citation billboard. Values come from _data/profile.yml (metrics), the same
+  source as _includes/metrics.html. Renders nothing until citations are set.
+  Usage: {% include metrics-board.html %}
+{%- endcomment -%}
+{%- assign m = site.data.profile.metrics -%}
+{%- assign scholar = site.data.profile.links | where: "name", "Google Scholar" | first -%}
+{%- if m.citations and m.citations != "" -%}
+<section class="board" aria-labelledby="board-title">
+  <h2 id="board-title" class="visually-hidden">Citation metrics</h2>
+  <dl class="board__stats">
+    <div class="board__stat"><dt>Citations</dt><dd>{{ m.citations }}</dd></div>
+    {%- if m.h_index and m.h_index != "" %}
+    <div class="board__stat"><dt>h-index</dt><dd>{{ m.h_index }}</dd></div>
+    {%- endif %}
+    {%- if m.i10_index and m.i10_index != "" %}
+    <div class="board__stat"><dt>i10-index</dt><dd>{{ m.i10_index }}</dd></div>
+    {%- endif %}
+  </dl>
+  <p class="board__source">{{ m.source }}, as of {{ m.as_of }} · <a href="{{ scholar.url }}">View profile</a></p>
+</section>
+{%- endif -%}

@@ -12,7 +12,8 @@ description: "Publications of Amirhossein Samandar in cosmic topology, CMB stati
 <div class="wrap">
   <div class="pub-intro">
     <p class="lede">{% include pub-counts.html %}. Each entry gives my position in the author list and, separately, what I contributed.</p>
-    <p>COMPACT Collaboration author lists are ordered first by contribution, then alphabetically. Long author lists are abbreviated; full lists are on arXiv, the journal page and INSPIRE-HEP. {% include metrics.html %}</p>
+    <p>COMPACT Collaboration author lists are ordered first by contribution, then alphabetically. Long author lists are abbreviated; full lists are on arXiv, the journal page and INSPIRE-HEP.</p>
+    {% include metrics-board.html %}
     <nav class="toc toc--inline" aria-label="Sections">
       <ul>
         <li><a href="#published">Published ({{ published.size }})</a></li>
