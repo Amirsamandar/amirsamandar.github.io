@@ -1,6 +1,11 @@
 # Reverse chronological. Keep the precision you actually know:
 #   precision: day | month | year
 # Items known only to the year are listed after dated items of that year.
+- date: 2026-11-07
+  precision: day
+  text: "Google Scholar citations reached 122, with an h-index of 7."
+  link: "https://scholar.google.com/citations?user=cst228UAAAAJ"
+  link_label: "Google Scholar"
 - date: 2026-10-12
   precision: day
   text: "Posted first-author preprint “Beyond the Kullback–Leibler divergence: the likelihood-ratio distribution as a detectability measure.”"

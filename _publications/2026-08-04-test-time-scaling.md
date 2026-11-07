@@ -5,9 +5,9 @@ permalink: /publication/2026-08-04-test-time-scaling
 date: 2026-08-04
 date_display: "2026"
 status: accepted
-authors: "M. Hariri, W. Chen, N. Shahini, V. Singh, et al., including A. Samandar"
+authors: "M. Hariri, W. Chen, N. Shahini, V. Singh, K. Ye, A. Samandar, D. Ganguly, et al."
 authors_complete: false
-authors_todo: "Author position conflict: the publication list shows A. Samandar fifth (after V. Singh); the brief shows K. Ye fifth and A. Samandar sixth. Confirm and update."
+position: 6
 venue: "Transactions on Machine Learning Research (TMLR)"
 venue_display: "Accepted for publication in TMLR"
 arxiv: "2608.04001"
@@ -21,7 +21,7 @@ contribution: >-
 bibtex: |
   % Abbreviated author list; see arXiv for the full record.
   @article{Hariri:2026tts,
-    author        = {Hariri, Mohsen and Chen, Weicong and Shahini, Nahal and Singh, Vikash and others},
+    author        = {Hariri, Mohsen and Chen, Weicong and Shahini, Nahal and Singh, Vikash and Ye, K. and Samandar, Amirhossein and Ganguly, D. and others},
     title         = {Test-Time Scaling in Reasoning {LLMs}: Inference Regimes, Evaluation, and Reproducibility},
     journal       = {Transactions on Machine Learning Research},
     note          = {Accepted},

@@ -117,19 +117,25 @@ Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `file
   - Don't Pass@k now mentions variation across repeated responses and finite-trial uncertainty.
 - The SBI start-date conflict (brief: 2025; CV: 2026) is still open; the site shows "Current".
 
+## Update (third pass, 7 Nov 2026)
+
+- News item added: Google Scholar citations reached 122, h-index 7.
+- Citation metrics are set once in `_data/profile.yml`, so they now appear on the Publications and CV pages. Refresh `as_of` whenever you update them.
+- Test-time scaling author list corrected from your Scholar listing (A. Samandar is sixth, after K. Ye), and the badge now reads "Sixth author".
+
 ## Placeholders (open items, hidden on the site)
 
 Shown on the pages only if you set `show_todos: true`. Search the source for `todo`.
 
 | # | Placeholder | Where to fix |
 |---|---|---|
-| 1 | Citations and h-index, with source and date | `_data/profile.yml` → `metrics` |
+| 1 | ~~Citations and h-index~~ (done: 122 citations, h-index 7, Google Scholar, 7 Nov 2026) | `_data/profile.yml` |
 | 2 | Optional: research statement PDF; then `statement_available: true` | `files/`, `_data/profile.yml` |
 | 3 | ~~Research statement text~~ (done: integrated in `/research-plan/`) | — |
 | 4 | Mentoring count (brief: seven; CV: several) and start (brief: 2025; CV: May 2026) | `_data/profile.yml` → `mentoring` |
 | 5 | Outcome of the student manuscript that was expected by end of Sept 2026 | `_pages/cv.md` |
 | 6 | Part IIb label: second author vs documented lead contribution | `_publications/2026-07-01-cosmic-topology-iib.md` (`lead_todo`) |
-| 7 | Test-time scaling author position conflict | `_publications/2026-08-04-test-time-scaling.md` (`authors_todo`) |
+| 7 | ~~Test-time scaling author position~~ (done: sixth author, per your Google Scholar listing) | — |
 | 8 | Part IIIc contribution line | `_publications/2026-09-01-cosmic-topology-iiic.md` |
 | 9 | Part Va quantitative result (optional, after checking definitions) | `_publications/2026-08-25-cosmic-topology-va.md` |
 | 10 | Which preprints are under review, and where | `_publications/*.md` → `status_note` |

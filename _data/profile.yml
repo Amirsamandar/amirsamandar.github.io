@@ -53,10 +53,10 @@ links:
 # Citation metrics: rendered only through _includes/metrics.html so the same
 # figure appears everywhere. Leave values empty until verified.
 metrics:
-  citations: ""
-  h_index: ""
-  source: ""        # e.g. "Google Scholar" or "INSPIRE-HEP"
-  as_of: ""         # e.g. "12 January 2027"
+  citations: "122"
+  h_index: "7"
+  source: "Google Scholar"
+  as_of: "7 November 2026"
 
 # Mentoring. The brief and the CV disagree (see REPORT.md), so no count or
 # start date is published until confirmed. Fill both fields to show them.
