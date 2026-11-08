@@ -1,16 +1,13 @@
-/* Theme toggle. Without JavaScript the site follows the system color scheme and
-   the button stays hidden. The choice is stored per browser when storage works. */
+/* Theme toggle. The site is dark by default; the toggle switches to light.
+   Without JavaScript the site stays dark and the button stays hidden.
+   The choice is stored per browser when storage works. */
 (function () {
   "use strict";
   var root = document.documentElement;
   var button = document.querySelector(".theme-toggle");
   if (!button) { return; }
-  var media = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-
   function current() {
-    var t = root.getAttribute("data-theme");
-    if (t === "light" || t === "dark") { return t; }
-    return media && media.matches ? "dark" : "light";
+    return root.getAttribute("data-theme") === "light" ? "light" : "dark";
   }
   function sync() {
     var isDark = current() === "dark";
@@ -24,7 +21,6 @@
     try { window.localStorage.setItem("theme", next); } catch (e) {}
     sync();
   });
-  if (media && media.addEventListener) { media.addEventListener("change", sync); }
   button.hidden = false;
   sync();
 })();

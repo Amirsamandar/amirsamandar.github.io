@@ -4,10 +4,15 @@ headline: "Calibrated inference for the one universe we observe"
 positioning: >-
   My research centers on how we extract physical information from cosmological data, determine what the data can distinguish, and make demanding analyses computationally feasible without compromising their statistical interpretation.
 
-question_title: "The question behind my work"
-# 90–130 words.
-question: >-
-  Cosmology gives us one universe and one sky. Yet the statistics we use to decide whether a model is detectable are mostly averages over an ensemble of universes we will never observe. My research asks what those ensemble quantities tell us about the single measurement in hand, and how to answer that honestly: analytically where the distributions are tractable, and with learned inference, validated against those analytic cases, where they are not. The same question applies outside cosmology. A benchmark score for a language model is also one noisy draw from a distribution, usually reported as if it were a fixed number. In both settings the task is to state what the data support, with an uncertainty that can be checked.
+question_title: "One universe, one sky"
+# One entry per paragraph.
+question:
+  - >-
+    We observe exactly one universe. There is no second sky to check our answers against, so knowing what we can reliably learn from the one we have is central to cosmology. This question connects my work across cosmological data analysis, statistics, probabilistic machine learning, and AI. How do we extract information, quantify uncertainty, and know when to trust an answer?
+  - >-
+    In cosmology, I investigate whether non-trivial cosmic topology leaves detectable traces in the cosmic microwave background (CMB). In statistics, I study how often a search can recover a real signal and constrain its underlying parameters. Through probabilistic machine learning, I develop methods that learn from simulations to accelerate inference while testing the reliability of their uncertainties.
+  - >-
+    I also work on calibrated Bayesian evaluation of large language models and explore how AI agents can support scientific research. Across these directions, my aim is to make scientific conclusions and the tools behind them more trustworthy, with a clear account of what the evidence supports and what remains uncertain.
 
 # Four headline results: one concrete claim each, with a link.
 results:

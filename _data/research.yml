@@ -4,24 +4,23 @@
 
 # -- Homepage: four connected themes -------------------------------------------
 themes_intro: >-
-  Theme i is the shared question; ii supplies exact Gaussian likelihoods to check answers against; iii extends it where likelihoods are intractable; iv asks it of machine-learning systems.
+  Four areas, one question: how much can a single, noisy measurement really tell us?
 themes:
   - numeral: "i"
-    title: "Detectability and calibrated inference"
-    text: "When does one data set favor a model? Likelihood-ratio distributions and calibrated searches, not expected information gain alone."
-    link: "/research/#detectability"
-  - numeral: "ii"
-    title: "CMB statistics and cosmic topology"
-    text: "Full non-diagonal CMB covariances in temperature and polarization for compact Euclidean spaces, computed with GPU code."
+    title: "Cosmology"
+    text: "Could space be finite? I compute how its topology would imprint the CMB and build pipelines to search Planck data for it."
     link: "/research/#cmb-topology"
+  - numeral: "ii"
+    title: "Statistics and data analysis"
+    text: "Detection probabilities, not just averages: likelihood-ratio tests calibrated for the search actually performed."
+    link: "/research/#detectability"
   - numeral: "iii"
-    title: "Simulation-based inference with validation"
-    text: "In development: neural likelihood emulators and amortized inference, validated against conventional Bayesian methods where the likelihood can be evaluated directly."
+    title: "Probabilistic machine learning"
+    text: "Neural emulators and amortized inference that make demanding analyses fast, checked against exact likelihoods (in development)."
     link: "/research/#sbi"
-    planned: true
   - numeral: "iv"
-    title: "Calibrated evaluation of LLMs"
-    text: "A benchmark score is one noisy draw: posterior estimates and credible intervals in place of Pass@k."
+    title: "LLMs and agentic AI"
+    text: "Bayesian evaluation of language models, inference-time scaling, and AI agents in research, with checks on their reasoning and code."
     link: "/research/#llm-evaluation"
 
 # -- /research/: projects (Problem / Contribution / Result / Status) -------------

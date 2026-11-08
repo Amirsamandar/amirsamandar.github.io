@@ -1,7 +1,8 @@
 ---
 permalink: /
 title: "Amirhossein Samandar"
-description: "Amirhossein Samandar, Ph.D. candidate in physics at Case Western Reserve University: likelihood-ratio detectability for cosmological models, CMB statistics and cosmic topology, and calibrated evaluation of machine-learning models. Seeking postdoctoral positions starting 2027."
+seo_title: "Amirhossein Samandar | Cosmology and Statistical Inference"
+description: "Ph.D. candidate in physics at Case Western Reserve University working on statistical inference for cosmology, cosmic topology, and calibrated ML evaluation."
 hide_title: true
 body_class: home
 redirect_from:
@@ -64,7 +65,16 @@ redirect_from:
 
 <section class="section wrap" aria-labelledby="question">
   <h2 id="question" class="section__title">{{ home.question_title }}</h2>
-  <p class="question">{{ home.question }}</p>
+  <div class="question">
+    {%- for para in home.question %}
+    <p>{{ para }}</p>
+    {%- endfor %}
+  </div>
+  <ul class="areas" aria-label="Research areas">
+    {%- for t in site.data.research.themes %}
+    <li><a href="#themes">{{ t.title }}</a></li>
+    {%- endfor %}
+  </ul>
 </section>
 
 <section class="section wrap" aria-labelledby="results">

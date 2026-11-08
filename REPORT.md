@@ -58,7 +58,7 @@ New or rewritten (complete files):
 Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `files/bibtex_*.bib` (their content is now inline per paper), and `.github/workflows/scrape_talks.yml`. See `INSTALL.md` for the matching `git rm` commands.
 
 **Design notes.**
-- **Palette.** A warm ivory background with soft violet and amber "nebula" glows and a faint, sparse starfield. The dark mode uses a deep plum-indigo night sky. The accent is #693C7C, taken from your publication-list PDF.
+- **Palette.** Dark "midnight" by default (near-black with a faint indigo glow and starfield); a cool blue-white "daylight" theme is on the toggle. The accent is #693C7C, taken from your publication-list PDF.
 - **Typography.** A serif display face for headings and a system sans for body text. There are no web fonts, no animation, and no external requests.
 
 ---
@@ -140,6 +140,50 @@ Removed from the package: `_pages/publications.html`, `_pages/talks.html`, `file
 - **Symptom on the live site.** New homepage HTML was shown with an older stylesheet: a huge unstyled photo, giant black icons, and citation figures as a plain list.
 - **Cause.** GitHub Pages lets browsers cache `custom.css` for 10 minutes, and a normal reload in Chrome reuses the cached stylesheet while fetching the new HTML. The other possible cause is that `assets/css/custom.scss` was not committed.
 - **Fix.** The stylesheet and script links now carry a build-time version (`custom.css?v=…`), so every deploy forces a fresh copy. The SVG icons also have built-in 18 px size and stroke attributes, so they stay small even without CSS.
+
+## Update (seventh pass): Google search appearance
+
+- **Title.** The homepage title is now "Amirhossein Samandar | Cosmology and Statistical Inference", replacing the old "Amirhossein Samandar - Amirhossein Samandar". Other pages use "Publications | Amirhossein Samandar" and so on. To change the homepage title, edit `seo_title` in `_pages/about.md`.
+- **Description.** The homepage description is now 157 characters, short enough not to be cut off, and no longer starts with your name.
+- **Icon.** The template's graduation-cap icon is replaced by an "AS" monogram in the site's purple. It ships as `/favicon.ico` (16/32/48) plus 48, 96, 192 and 512 px PNGs and a 180 px Apple touch icon. The legacy favicon files are overwritten too, so the cap no longer appears anywhere.
+- **Site name.** WebSite structured data with the name "Amirhossein Samandar" was added alongside the Person record. Google chooses the site name itself and may keep showing "GitHub" for a github.io address.
+- **When it changes.** Google only updates after it recrawls the page. In Search Console, use URL Inspection on `https://amirsamandar.github.io/` and click "Request indexing". The icon can take days to weeks to update.
+
+## Update (eighth pass): tone and theme
+
+- **"One universe, one sky"** (was "The question behind my work") is rewritten in plainer language, at 122 words. It moves from cosmology through statistics and probabilistic ML to language models and AI agents, and four subject tags under it link to the themes.
+- **Homepage themes** renamed to the four areas: Cosmology; Statistics and data analysis; Probabilistic machine learning; LLMs and agentic AI. The intro line is "Four areas, one question: how much can a single, noisy measurement really tell us?" The agentic-AI wording is limited to what your CV supports: using AI agents in research and checking their generated reasoning and code. It does not claim agentic-AI research results.
+- **Default theme is now a darker "midnight" palette** (background #0B0B12, lavender accent, faint indigo glow and starfield). It applies regardless of the visitor's system setting; the ivory light theme remains available on the toggle, and the choice is remembered. Both themes pass the automated accessibility audit.
+- Homepage copy is now about 630 words excluding paper cards; the profile card and citation figures account for the overshoot past 600.
+
+## Update (ninth pass): your "One universe, one sky" text
+
+- Your three-paragraph version is used with two edits: "leave" → "leaves", and "whether the non-trivial topology of the Universe leave…" → "whether the Universe has a non-trivial topology that leaves…". The section is now 193 words, and the homepage about 700 words excluding paper cards.
+
+## Update (ninth pass)
+
+- **"One universe, one sky"** now uses your own three-paragraph text, word for word (166 words, over the 90–130 range in the original brief). A slightly different variant that had been written into `_data/home.yml` outside this session was replaced with your wording. Edit the paragraphs in `_data/home.yml` (`question:`, one entry per paragraph).
+- **New light theme ("daylight")**, clearly distinct from the dark default: cool blue-white background (#F3F4FA), white cards, soft lavender and sky-blue glows, deep-violet accent (#5A3696). Dark "midnight" stays the default. Both pass the automated accessibility audit, and the toggle was tested from every saved state.
+- Homepage copy is now about 680 words excluding paper cards, because of the longer introduction.
+
+## Update (tenth pass): image background
+
+- **New background.** An original image generated for this site: a simulated CMB-like polarization field (smooth random Stokes Q/U fields) drawn with line-integral convolution, the technique used for the Planck polarization maps. Faint posterior contour ellipses (statistics and probabilistic ML) and a sparse node network (AI) are overlaid on the right. It is not Planck data, and the footer says so.
+- **Two versions.** A dark one (navy, teal, lavender and gold strands) and a light "daylight" one (soft lavender strands on blue-white), each at 2400 px for desktop and 1200 px for phones. Total size is about 500 KB.
+- **Readability.** The image is placed top-right, behind the header and hero, and fades into the page background. Adaptive fade layers keep text on a calm surface: top-down below 1024 px, left-to-right above. Contrast was measured on actual pixels behind every hero, header and publication text line at six widths in both themes; the worst case is 6.6:1 (AA requires 4.5:1).
+- **Reproducible.** The generator is in `scripts/background/make_bg.py`. Change the seeds, colors or composition mask and rerun to get a different but similar image.
+
+## Update (eleventh pass): full-page, more vivid background
+
+- **Redesigned background** (the v10 version was too dark and the light one too plain).
+  - Dark: teal, blue and violet aurora strands with gold and rose flares.
+  - Light: iridescent pastel silk in lavender, sky blue and peach.
+  - Both still show faint posterior ellipses and a node network.
+- **Fixed full-page backdrop.** It stays behind the whole site at every scroll position, instead of only behind the hero.
+- **Frosted glass for readability.** The header bar, main content and footer are frosted-glass sheets (60% tint plus blur), so the colors glow around and through them.
+- **Contrast.** Measured on rendered pixels for 256 text-element/width/theme combinations across the home, publications and research pages; minimum 5.95:1 (AA requires 4.5:1). The axe audits are clean in both themes.
+- **Files.** `images/bg/site-bg-{dark,light}-{2000,1000}.jpg`: about 450 KB on desktop and 125 KB on phones. The old `images/bg/hero-bg-*.jpg` files are no longer used; delete them from your repository (`git rm images/bg/hero-bg-*`).
+- **Generator.** `scripts/background/make_bg.py` (cached fields; rerendering colors takes seconds).
 
 ## Placeholders (open items, hidden on the site)
 
