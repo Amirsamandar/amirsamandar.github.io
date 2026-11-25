@@ -1,0 +1,45 @@
+name: Update citation metrics
+
+# Refreshes citations, h-index and i10-index in _data/profile.yml from
+# Google Scholar every Monday, and on demand from the Actions tab.
+# Optional: add a repository secret SERPAPI_KEY (serpapi.com) as a fallback
+# for when Google Scholar blocks the GitHub runner.
+
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays 09:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholar-metrics
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch metrics and update profile.yml
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/update_scholar_metrics.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- _data/profile.yml; then
+            echo "No metric changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/profile.yml
+          git commit -m "Update citation metrics from Google Scholar"
+          git push
