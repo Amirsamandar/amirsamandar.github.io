@@ -1,6 +1,11 @@
 # Reverse chronological. Keep the precision you actually know:
 #   precision: day | month | year
 # Items known only to the year are listed after dated items of that year.
+- date: 2026-11-25
+  precision: day
+  text: "Google Scholar citations in 2026 alone passed 100, a new record for a single year."
+  link: "https://scholar.google.com/citations?user=cst228UAAAAJ"
+  link_label: "Google Scholar"
 - date: 2026-11-07
   precision: day
   text: "Google Scholar citations reached 122, with an h-index of 7."
