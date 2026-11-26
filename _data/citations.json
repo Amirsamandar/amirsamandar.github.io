@@ -1,12 +1,15 @@
 {
  "updated": "2026-11-26",
  "summary": {
-  "citing_papers": 79,
-  "citing_papers_noself": 57,
-  "citations": 158,
-  "citations_noself": 85,
+  "citing_papers": 71,
+  "citing_papers_noself": 49,
+  "citations": 149,
+  "citations_noself": 76,
+  "verified": 144,
   "h_index": 9,
-  "papers_cited": 13
+  "papers_cited": 13,
+  "unconfirmed": 8,
+  "rejected": 0
  },
  "sources": [
   {
@@ -29,9 +32,9 @@
    "id": "s2",
    "name": "Semantic Scholar",
    "status": "ok",
-   "note": "2 paper(s) failed this run; previous data kept for them",
+   "note": "4 paper(s) failed this run; previous data kept for them",
    "as_of": "2026-11-26",
-   "links": 111
+   "links": 118
   },
   {
    "id": "openalex",
@@ -70,8 +73,10 @@
     "openalex": 15,
     "scholar": null
    },
-   "total": 17,
-   "total_noself": 8
+   "total": 16,
+   "total_noself": 7,
+   "verified": 16,
+   "unconfirmed": 1
   },
   {
    "slug": "2024-11-01-cosmic-topology-iiia",
@@ -93,7 +98,9 @@
     "scholar": null
    },
    "total": 24,
-   "total_noself": 14
+   "total_noself": 14,
+   "verified": 23,
+   "unconfirmed": 0
   },
   {
    "slug": "2025-01-01-cosmic-topology-ic",
@@ -102,6 +109,7 @@
    "doi": "10.1088/1475-7516/2025/01/004",
    "ids": {
     "inspire": 2824834,
+    "s2": "4cf11ff2cd01dc6bc77cb759f4ace43ed204cdba",
     "openalex": [
      "W4406170517"
     ]
@@ -113,8 +121,10 @@
     "openalex": 10,
     "scholar": null
    },
-   "total": 12,
-   "total_noself": 5
+   "total": 11,
+   "total_noself": 4,
+   "verified": 11,
+   "unconfirmed": 1
   },
   {
    "slug": "2025-08-01-cosmic-topology-iiib",
@@ -123,7 +133,6 @@
    "doi": "10.1088/1475-7516/2025/08/015",
    "ids": {
     "inspire": 2898851,
-    "s2": "26969b37ac6ed2a4159623e8c959ca122ffe8808",
     "openalex": [
      "W4413021652"
     ]
@@ -136,7 +145,9 @@
     "scholar": null
    },
    "total": 16,
-   "total_noself": 7
+   "total_noself": 7,
+   "verified": 16,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-02-01-dont-pass-k",
@@ -156,8 +167,10 @@
     "openalex": 25,
     "scholar": null
    },
-   "total": 27,
-   "total_noself": 21
+   "total": 23,
+   "total_noself": 17,
+   "verified": 21,
+   "unconfirmed": 3
   },
   {
    "slug": "2026-02-15-cosmic-topology-iic",
@@ -178,8 +191,10 @@
     "openalex": 7,
     "scholar": null
    },
-   "total": 9,
-   "total_noself": 4
+   "total": 8,
+   "total_noself": 3,
+   "verified": 8,
+   "unconfirmed": 1
   },
   {
    "slug": "2026-03-12-quantum-signatures",
@@ -201,7 +216,9 @@
     "scholar": null
    },
    "total": 9,
-   "total_noself": 4
+   "total_noself": 4,
+   "verified": 8,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-07-01-cosmic-topology-iib",
@@ -223,7 +240,9 @@
     "scholar": null
    },
    "total": 12,
-   "total_noself": 3
+   "total_noself": 3,
+   "verified": 12,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-08-01-topology-of-the-universe",
@@ -232,7 +251,6 @@
    "doi": "10.1038/s41550-026-02930-6",
    "ids": {
     "inspire": 3171567,
-    "s2": "22c35b164b399f0128650c91ab609ab6648a269f",
     "openalex": [
      "W7165730755"
     ]
@@ -245,7 +263,9 @@
     "scholar": null
    },
    "total": 9,
-   "total_noself": 6
+   "total_noself": 6,
+   "verified": 8,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-08-04-test-time-scaling",
@@ -265,8 +285,10 @@
     "openalex": 14,
     "scholar": null
    },
-   "total": 16,
-   "total_noself": 12
+   "total": 14,
+   "total_noself": 10,
+   "verified": 14,
+   "unconfirmed": 2
   },
   {
    "slug": "2026-08-25-cosmic-topology-va",
@@ -275,7 +297,6 @@
    "doi": "",
    "ids": {
     "inspire": 3196213,
-    "s2": "19f2e49d1ed3677dee4400ea99765520cd61c2cf",
     "openalex": [
      "W7204454093"
     ]
@@ -288,7 +309,9 @@
     "scholar": null
    },
    "total": 3,
-   "total_noself": 0
+   "total_noself": 0,
+   "verified": 3,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-10-01-cosmic-topology-iid",
@@ -297,6 +320,7 @@
    "doi": "",
    "ids": {
     "inspire": 3212982,
+    "s2": "6753799d42fa88cd35156c64caa1236132eb1ab4",
     "openalex": [
      "W7221159679"
     ]
@@ -309,7 +333,9 @@
     "scholar": null
    },
    "total": 2,
-   "total_noself": 1
+   "total_noself": 1,
+   "verified": 2,
+   "unconfirmed": 0
   },
   {
    "slug": "2026-10-12-beyond-kl-divergence",
@@ -318,7 +344,6 @@
    "doi": "",
    "ids": {
     "inspire": 3214436,
-    "s2": "93345e035372f5cc064c780a1e23fe80b5df7b1b",
     "openalex": [
      "W7221805728"
     ]
@@ -331,7 +356,9 @@
     "scholar": null
    },
    "total": 2,
-   "total_noself": 0
+   "total_noself": 0,
+   "verified": 2,
+   "unconfirmed": 0
   }
  ],
  "citing": [
@@ -371,7 +398,27 @@
    "self_for": [],
    "date_display": "22 Nov 2026",
    "id": "cffba244128",
-   "search": "on the subtleties of statistical isotropy in cosmic topology r. aurich m. j. france f. steiner  "
+   "search": "on the subtleties of statistical isotropy in cosmic topology r. aurich m. j. france f. steiner  ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-01-topology-of-the-universe": "ref",
+    "2026-10-01-cosmic-topology-iid": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-07-01-cosmic-topology-iib",
+    "2026-08-01-topology-of-the-universe",
+    "2026-10-01-cosmic-topology-iid"
+   ]
   },
   {
    "title": "Variance-adaptive confidence regions for fixed-benchmark binomial mixtures, with application to LLM evaluation",
@@ -400,7 +447,13 @@
    "self_for": [],
    "date_display": "16 Nov 2026",
    "id": "cafb6514d6a",
-   "search": "variance-adaptive confidence regions for fixed-benchmark binomial mixtures, with application to llm evaluation k. ye  "
+   "search": "variance-adaptive confidence regions for fixed-benchmark binomial mixtures, with application to llm evaluation k. ye  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "A Hierarchical Statistical Framework for Evaluating Agent Reliability",
@@ -432,7 +485,13 @@
    "self_for": [],
    "date_display": "14 Nov 2026",
    "id": "c6e394aa691",
-   "search": "a hierarchical statistical framework for evaluating agent reliability m. milletari t. kundu  "
+   "search": "a hierarchical statistical framework for evaluating agent reliability m. milletari t. kundu  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Parity conservation of the isotropic galaxy 4PCF in redshift space",
@@ -466,7 +525,13 @@
    "self_for": [],
    "date_display": "13 Nov 2026",
    "id": "c5bef721f60",
-   "search": "parity conservation of the isotropic galaxy 4pcf in redshift space c. kongprachaya n. bartolo d. bertacca s. matarrese  "
+   "search": "parity conservation of the isotropic galaxy 4pcf in redshift space c. kongprachaya n. bartolo d. bertacca s. matarrese  ",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "ProofPaths: An AI Agent Framework for Assessing Student Reasoning",
@@ -502,7 +567,15 @@
    ],
    "date_display": "2 Nov 2026",
    "id": "c13e02de434",
-   "search": "proofpaths: an ai agent framework for assessing student reasoning m. hariri v. chaudhary  "
+   "search": "proofpaths: an ai agent framework for assessing student reasoning m. hariri v. chaudhary  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref",
+    "2026-08-04-test-time-scaling": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k",
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "LEANGUARD: Lean-Verified Guardrails for Tool-Using Agents",
@@ -544,7 +617,13 @@
    ],
    "date_display": "2 Nov 2026",
    "id": "ce49dfdd299",
-   "search": "leanguard: lean-verified guardrails for tool-using agents s. sankar d. ganguly v. singh m. hariri w.-c. chen y.-y. zhang s. wang w. yang c.-d. song a. nemecek  "
+   "search": "leanguard: lean-verified guardrails for tool-using agents s. sankar d. ganguly v. singh m. hariri w.-c. chen y.-y. zhang s. wang w. yang c.-d. song a. nemecek  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning",
@@ -580,7 +659,13 @@
    "self_for": [],
    "date_display": "31 Oct 2026",
    "id": "cec3a389d5f",
-   "search": "from apparent search gains to selection failures: auditing test-time inference in structured workflow planning z.-t. chen w.-f. zhang k. yin z.-y. wang a. mostafavi j. caverlee  "
+   "search": "from apparent search gains to selection failures: auditing test-time inference in structured workflow planning z.-t. chen w.-f. zhang k. yin z.-y. wang a. mostafavi j. caverlee  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Few Trials, Many Metrics: Beta Mixtures for Low-Budget AI Evaluation",
@@ -613,7 +698,13 @@
    "self_for": [],
    "date_display": "31 Oct 2026",
    "id": "cbf453a1c66",
-   "search": "few trials, many metrics: beta mixtures for low-budget ai evaluation g. tironi f. polo d. m. mesquita  "
+   "search": "few trials, many metrics: beta mixtures for low-budget ai evaluation g. tironi f. polo d. m. mesquita  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Which Answers Agree? Evaluating Self-Consistency from Incomplete Logs",
@@ -647,7 +738,15 @@
    "self_for": [],
    "date_display": "19 Oct 2026",
    "id": "c703412eb09",
-   "search": "which answers agree? evaluating self-consistency from incomplete logs z.-t. gui z.-x. chen w.-n. shen  "
+   "search": "which answers agree? evaluating self-consistency from incomplete logs z.-t. gui z.-x. chen w.-n. shen  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref",
+    "2026-08-04-test-time-scaling": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k",
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Using Ricci flow in the construction of homogeneous cosmological models",
@@ -679,7 +778,13 @@
    "self_for": [],
    "date_display": "19 Oct 2026",
    "id": "c3ab732e50a",
-   "search": "using ricci flow in the construction of homogeneous cosmological models f. zhang l. lindblom  phys.rev.d 114 103528 (2026)"
+   "search": "using ricci flow in the construction of homogeneous cosmological models f. zhang l. lindblom  phys.rev.d 114 103528 (2026)",
+   "checks": {
+    "2026-08-01-topology-of-the-universe": "ref"
+   },
+   "verified": [
+    "2026-08-01-topology-of-the-universe"
+   ]
   },
   {
    "title": "A Casimir turning point as the beginning of a small flat universe",
@@ -713,7 +818,15 @@
    "self_for": [],
    "date_display": "17 Oct 2026",
    "id": "c31ec528cd7",
-   "search": "a casimir turning point as the beginning of a small flat universe a. zhang  "
+   "search": "a casimir turning point as the beginning of a small flat universe a. zhang  ",
+   "checks": {
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-08-01-topology-of-the-universe": "ref"
+   },
+   "verified": [
+    "2026-03-12-quantum-signatures",
+    "2026-08-01-topology-of-the-universe"
+   ]
   },
   {
    "title": "Beyond the Kullback--Leibler divergence: the likelihood-ratio distribution as a detectability measure",
@@ -771,7 +884,27 @@
    ],
    "date_display": "12 Oct 2026",
    "id": "cb1da60ccd2",
-   "search": "beyond the kullback--leibler divergence: the likelihood-ratio distribution as a detectability measure a. samandar m. martin barandiaran l. h. lu a. h. jaffe d. p. mihaylov g. d. starkman c. trendafilova y. akrami s. anselmi j. carron duque compact "
+   "search": "beyond the kullback--leibler divergence: the likelihood-ratio distribution as a detectability measure a. samandar m. martin barandiaran l. h. lu a. h. jaffe d. p. mihaylov g. d. starkman c. trendafilova y. akrami s. anselmi j. carron duque compact ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-01-topology-of-the-universe": "ref",
+    "2026-08-25-cosmic-topology-va": "ref",
+    "2026-10-01-cosmic-topology-iid": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-07-01-cosmic-topology-iib",
+    "2026-08-01-topology-of-the-universe",
+    "2026-08-25-cosmic-topology-va",
+    "2026-10-01-cosmic-topology-iid"
+   ]
   },
   {
    "title": "Collaborative Learning and Reasoning over Model Slices",
@@ -811,7 +944,13 @@
    "self_for": [],
    "date_display": "9 Oct 2026",
    "id": "ca313d8df36",
-   "search": "collaborative learning and reasoning over model slices y.-h. wang r.-d. yang z.-h. bao q.-r. zhang h.-t. li y. zheng l.-n. wu j.-r. fan s.-y. yao y.-h. li  "
+   "search": "collaborative learning and reasoning over model slices y.-h. wang r.-d. yang z.-h. bao q.-r. zhang h.-t. li y. zheng l.-n. wu j.-r. fan s.-y. yao y.-h. li  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Cosmic topology. Part IId. Eigenmodes and correlation matrices of lens spaces",
@@ -871,7 +1010,29 @@
    ],
    "date_display": "8 Oct 2026",
    "id": "c4743840805",
-   "search": "cosmic topology. part iid. eigenmodes and correlation matrices of lens spaces m. martin barandiaran c. petretti s. anselmi d. p. mihaylov a. negro g. d. starkman a. tamosiunas y. akrami g. alestas j. carron duque compact "
+   "search": "cosmic topology. part iid. eigenmodes and correlation matrices of lens spaces m. martin barandiaran c. petretti s. anselmi d. p. mihaylov a. negro g. d. starkman a. tamosiunas y. akrami g. alestas j. carron duque compact ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-25-cosmic-topology-va": "ref",
+    "2026-10-12-beyond-kl-divergence": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-03-12-quantum-signatures",
+    "2026-07-01-cosmic-topology-iib",
+    "2026-08-25-cosmic-topology-va",
+    "2026-10-12-beyond-kl-divergence"
+   ]
   },
   {
    "title": "Cosmic Birefringence from Large Lepton Asymmetry",
@@ -905,7 +1066,13 @@
    "self_for": [],
    "date_display": "7 Oct 2026",
    "id": "c895e24168c",
-   "search": "cosmic birefringence from large lepton asymmetry k. kasai i. obata  "
+   "search": "cosmic birefringence from large lepton asymmetry k. kasai i. obata  ",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "Adaptive Power Sampling for LLM Reasoning",
@@ -940,7 +1107,13 @@
    "self_for": [],
    "date_display": "6 Oct 2026",
    "id": "cfec836fc17",
-   "search": "adaptive power sampling for llm reasoning b.-n. xiao c.-h. yang b.-c. li w. ni x. wang  "
+   "search": "adaptive power sampling for llm reasoning b.-n. xiao c.-h. yang b.-c. li w. ni x. wang  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Limited Impact of CMB B-mode Polarization on Constraints on Cosmic Topology",
@@ -976,7 +1149,15 @@
    "self_for": [],
    "date_display": "5 Oct 2026",
    "id": "cf0001ec0a9",
-   "search": "limited impact of cmb b-mode polarization on constraints on cosmic topology r. himeno a. j. nishizawa k. ichiki  "
+   "search": "limited impact of cmb b-mode polarization on constraints on cosmic topology r. himeno a. j. nishizawa k. ichiki  ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2025-08-01-cosmic-topology-iiib"
+   ]
   },
   {
    "title": "Budget Boundary Effects in Test-Time Mathematical Reasoning",
@@ -1014,7 +1195,13 @@
    "self_for": [],
    "date_display": "30 Sep 2026",
    "id": "c6436c246d5",
-   "search": "budget boundary effects in test-time mathematical reasoning g.-l. zhang z.-q. tan w.-l. guo k. zhao h.-y. yang m. luo q. ning f. yang  "
+   "search": "budget boundary effects in test-time mathematical reasoning g.-l. zhang z.-q. tan w.-l. guo k. zhao h.-y. yang m. luo q. ning f. yang  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Anytime-Valid LLM Leaderboards via Benchmark-weighted and Block-Factorized e-Processes",
@@ -1050,43 +1237,11 @@
    "self_for": [],
    "date_display": "26 Sep 2026",
    "id": "c1c91bcef10",
-   "search": "anytime-valid llm leaderboards via benchmark-weighted and block-factorized e-processes h.-f. gao s.-x. zhang z.-j. xie b.-y. jing z. wang y.-m. liu  "
-  },
-  {
-   "title": "Machine Learning Stacking Ensemble for Condition Assessment of Power Cable Networks",
-   "authors": [
-    "M. Mohammadagha",
-    "A. Khoshkonesh",
-    "S. Sharifi",
-    "A. A. Belbasi",
-    "V. Ghanbarizadeh",
-    "S. Ataei",
-    "K. Lahsaei",
-    "M. Sarajzadeh"
-   ],
-   "n_authors": 8,
-   "collab": "",
-   "date": "2026-09-23",
-   "venue": "Engineering Archive (engrXiv)",
-   "arxiv": "",
-   "doi": "10.31224/6564",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W7133990793"
+   "search": "anytime-valid llm leaderboards via benchmark-weighted and block-factorized e-processes h.-f. gao s.-x. zhang z.-j. xie b.-y. jing z. wang y.-m. liu  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "multi"
    },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-04-test-time-scaling"
-   ],
-   "year": "2026",
-   "url": "https://doi.org/10.31224/6564",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "23 Sep 2026",
-   "id": "c6f80db6d60",
-   "search": "machine learning stacking ensemble for condition assessment of power cable networks m. mohammadagha a. khoshkonesh s. sharifi a. a. belbasi v. ghanbarizadeh s. ataei k. lahsaei m. sarajzadeh  engineering archive (engrxiv)"
+   "verified": []
   },
   {
    "title": "Breaking de Sitter Symmetry with Cosmic Topology: Cosmological Role of Infrared Vacuum Freedom",
@@ -1142,7 +1297,27 @@
    ],
    "date_display": "23 Sep 2026",
    "id": "ce3d1ae986f",
-   "search": "breaking de sitter symmetry with cosmic topology: cosmological role of infrared vacuum freedom a. negro k. hinterbichler g. d. starkman y. akrami s. anselmi j. carron duque m. martin barandiaran a. tamosiunas compact "
+   "search": "breaking de sitter symmetry with cosmic topology: cosmological role of infrared vacuum freedom a. negro k. hinterbichler g. d. starkman y. akrami s. anselmi j. carron duque m. martin barandiaran a. tamosiunas compact ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-25-cosmic-topology-va": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-03-12-quantum-signatures",
+    "2026-07-01-cosmic-topology-iib",
+    "2026-08-25-cosmic-topology-va"
+   ]
   },
   {
    "title": "1% of Tokens Can Be Enough: On Gradient Estimation in On-Policy Distillation",
@@ -1178,7 +1353,13 @@
    "self_for": [],
    "date_display": "21 Sep 2026",
    "id": "c9e096b4508",
-   "search": "1% of tokens can be enough: on gradient estimation in on-policy distillation h.-x. sheng z.-l. ye h.-n. wang j. wang j.-j. gu j. kang  "
+   "search": "1% of tokens can be enough: on gradient estimation in on-policy distillation h.-x. sheng z.-l. ye h.-n. wang j. wang j.-j. gu j. kang  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "How to Run Statistics over LLM Judges and Trust the Results: Calibrated Inference for Small-Sample AI Evaluation with evalstats",
@@ -1209,7 +1390,13 @@
    "self_for": [],
    "date_display": "20 Sep 2026",
    "id": "ce35d073305",
-   "search": "how to run statistics over llm judges and trust the results: calibrated inference for small-sample ai evaluation with evalstats i. arawjo  "
+   "search": "how to run statistics over llm judges and trust the results: calibrated inference for small-sample ai evaluation with evalstats i. arawjo  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "When Pass@k Crossovers Are Real - and Why: Paired Inference and the Markov Kernel of RLVR",
@@ -1240,7 +1427,13 @@
    "self_for": [],
    "date_display": "18 Sep 2026",
    "id": "ca4b93c6f2d",
-   "search": "when pass@k crossovers are real - and why: paired inference and the markov kernel of rlvr c. yang  "
+   "search": "when pass@k crossovers are real - and why: paired inference and the markov kernel of rlvr c. yang  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Topological classification through knotted graphs: Fermi surface dispersions and Lifshitz transitions",
@@ -1271,7 +1464,13 @@
    "self_for": [],
    "date_display": "11 Sep 2026",
    "id": "c26f7f8880b",
-   "search": "topological classification through knotted graphs: fermi surface dispersions and lifshitz transitions h. akgun x. yan c. h. lee  "
+   "search": "topological classification through knotted graphs: fermi surface dispersions and lifshitz transitions h. akgun x. yan c. h. lee  ",
+   "checks": {
+    "2026-08-01-topology-of-the-universe": "manual"
+   },
+   "verified": [
+    "2026-08-01-topology-of-the-universe"
+   ]
   },
   {
    "title": "What Fixed-Rollout pass@k Evaluations Can Identify",
@@ -1303,7 +1502,13 @@
    "self_for": [],
    "date_display": "8 Sep 2026",
    "id": "c03ff159952",
-   "search": "what fixed-rollout pass@k evaluations can identify p. singh p. singh  "
+   "search": "what fixed-rollout pass@k evaluations can identify p. singh p. singh  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Filament-Arm Node Systems (FANS): A New Probe of the Winding and Chirality of the Cosmic Web",
@@ -1337,7 +1542,13 @@
    "self_for": [],
    "date_display": "7 Sep 2026",
    "id": "ce0f390e804",
-   "search": "filament-arm node systems (fans): a new probe of the winding and chirality of the cosmic web p. da silveira ferreira r. cen  astrophys.j.lett. 1011 l47 (2026)"
+   "search": "filament-arm node systems (fans): a new probe of the winding and chirality of the cosmic web p. da silveira ferreira r. cen  astrophys.j.lett. 1011 l47 (2026)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "The variance of the CMB temperature gradient: a dependence on the spatial orientation and anisotropy of a multiply connected Universe",
@@ -1373,7 +1584,15 @@
    "self_for": [],
    "date_display": "27 Aug 2026",
    "id": "cc2f9db77c7",
-   "search": "the variance of the cmb temperature gradient: a dependence on the spatial orientation and anisotropy of a multiply connected universe r. aurich m. j. france f. steiner  class.quant.grav. 43 195011 (2026)"
+   "search": "the variance of the cmb temperature gradient: a dependence on the spatial orientation and anisotropy of a multiply connected universe r. aurich m. j. france f. steiner  class.quant.grav. 43 195011 (2026)",
+   "checks": {
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-08-01-topology-of-the-universe": "ref"
+   },
+   "verified": [
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-08-01-topology-of-the-universe"
+   ]
   },
   {
    "title": "Recursive Agentic Reasoning",
@@ -1407,7 +1626,13 @@
    "self_for": [],
    "date_display": "25 Aug 2026",
    "id": "c842f253301",
-   "search": "recursive agentic reasoning s. zhang x.-m. wu x.-y. wu j.-y. xie  "
+   "search": "recursive agentic reasoning s. zhang x.-m. wu x.-y. wu j.-y. xie  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Cosmic topology. Part Va. Information content of the observable Universe",
@@ -1465,7 +1690,27 @@
    ],
    "date_display": "25 Aug 2026",
    "id": "c981430e28e",
-   "search": "cosmic topology. part va. information content of the observable universe d. p. mihaylov m. martin barandiaran s. anselmi j. carron duque g. d. starkman y. akrami c. j. copi a. h. jaffe a. kosowsky j. b. mertens compact "
+   "search": "cosmic topology. part va. information content of the observable universe d. p. mihaylov m. martin barandiaran s. anselmi j. carron duque g. d. starkman y. akrami c. j. copi a. h. jaffe a. kosowsky j. b. mertens compact ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-01-topology-of-the-universe": "ref",
+    "2026-10-12-beyond-kl-divergence": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-03-12-quantum-signatures",
+    "2026-07-01-cosmic-topology-iib",
+    "2026-08-01-topology-of-the-universe",
+    "2026-10-12-beyond-kl-divergence"
+   ]
   },
   {
    "title": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
@@ -1499,7 +1744,13 @@
    "self_for": [],
    "date_display": "20 Aug 2026",
    "id": "c93e4c1e93d",
-   "search": "phantom gains: auditing self-improvement against a measured null c. xu n. yan l.-m. chen m.-t. kechadi  "
+   "search": "phantom gains: auditing self-improvement against a measured null c. xu n. yan l.-m. chen m.-t. kechadi  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "How Inflation Might Explain Large-Scale Anisotropy",
@@ -1530,7 +1781,13 @@
    "self_for": [],
    "date_display": "20 Aug 2026",
    "id": "c2cb0fc1b54",
-   "search": "how inflation might explain large-scale anisotropy b. mcinnes  "
+   "search": "how inflation might explain large-scale anisotropy b. mcinnes  ",
+   "checks": {
+    "2026-08-01-topology-of-the-universe": "ref"
+   },
+   "verified": [
+    "2026-08-01-topology-of-the-universe"
+   ]
   },
   {
    "title": "Faults That Fortify: CNN Adversarial Robustness via GPU Undervolting",
@@ -1567,7 +1824,13 @@
    "self_for": [],
    "date_display": "20 Aug 2026",
    "id": "ca64db3465d",
-   "search": "faults that fortify: cnn adversarial robustness via gpu undervolting b. omidi a. tahmasivand h. alsyouri s. al-sayouri c.-z. fang i. alouani k. n. khasawneh  "
+   "search": "faults that fortify: cnn adversarial robustness via gpu undervolting b. omidi a. tahmasivand h. alsyouri s. al-sayouri c.-z. fang i. alouani k. n. khasawneh  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Cross-frequency stochastic gravitational-wave background anisotropy from compact topology: CMB <math display=\"inline\"><mi>B</mi></math>-mode covariance as a transfer probe",
@@ -1600,7 +1863,15 @@
    "self_for": [],
    "date_display": "10 Aug 2026",
    "id": "ca58b29d73d",
-   "search": "cross-frequency stochastic gravitational-wave background anisotropy from compact topology: cmb <math display=\"inline\"><mi>b</mi></math>-mode covariance as a transfer probe l.-e. qiang p. xu  phys.rev.d 114 l081301 (2026)"
+   "search": "cross-frequency stochastic gravitational-wave background anisotropy from compact topology: cmb <math display=\"inline\"><mi>b</mi></math>-mode covariance as a transfer probe l.-e. qiang p. xu  phys.rev.d 114 l081301 (2026)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-08-01-cosmic-topology-iiib"
+   ]
   },
   {
    "title": "ZOMP: Zeroth-Order Multi-Modal Prompt Tuning for Vision-Language Models",
@@ -1632,7 +1903,13 @@
    "self_for": [],
    "date_display": "8 Aug 2026",
    "id": "c25661d7aee",
-   "search": "zomp: zeroth-order multi-modal prompt tuning for vision-language models s. ghiasvand y. yang m. alizadeh r. pedarsani  "
+   "search": "zomp: zeroth-order multi-modal prompt tuning for vision-language models s. ghiasvand y. yang m. alizadeh r. pedarsani  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "ref"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "GRASP: Reinforcing Language Model Anonymizers with Group Relative Policy Optimization",
@@ -1664,7 +1941,13 @@
    "self_for": [],
    "date_display": "6 Aug 2026",
    "id": "c43f41cfb2f",
-   "search": "grasp: reinforcing language model anonymizers with group relative policy optimization s. ghiasvand n. sehatbakhsh  "
+   "search": "grasp: reinforcing language model anonymizers with group relative policy optimization s. ghiasvand n. sehatbakhsh  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
@@ -1704,65 +1987,13 @@
    ],
    "date_display": "4 Aug 2026",
    "id": "c9d839f5e08",
-   "search": "test-time scaling in reasoning llms: inference regimes, evaluation, and reproducibility m. hariri w. chen n. shahini v. singh k. ye a. samandar d. ganguly s. sankar y. zhang s. wang  "
-  },
-  {
-   "title": "Towards Evaluating Agentic Large Language Models in Digital System Design",
-   "authors": [
-    "P. Link"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2026-07-08",
-   "venue": "",
-   "arxiv": "",
-   "doi": "10.11575/prism/51673",
-   "doctype": "dissertation",
-   "ids": {
-    "openalex": "W7168249549"
+   "search": "test-time scaling in reasoning llms: inference regimes, evaluation, and reproducibility m. hariri w. chen n. shahini v. singh k. ye a. samandar d. ganguly s. sankar y. zhang s. wang  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "manual"
    },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
+   "verified": [
     "2026-02-01-dont-pass-k"
-   ],
-   "year": "2026",
-   "url": "https://doi.org/10.11575/prism/51673",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "8 Jul 2026",
-   "id": "cd95931853d",
-   "search": "towards evaluating agentic large language models in digital system design p. link  "
-  },
-  {
-   "title": "What Does a Routing Oracle Measure Under Stochastic Decoding? Coupling, Scorer Choice, and Single-Commit Ceilings",
-   "authors": [
-    "T.-R. Chen"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2026-07-03",
-   "venue": "",
-   "arxiv": "2607.03436",
-   "doi": "",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W7167621680"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-02-01-dont-pass-k"
-   ],
-   "year": "2026",
-   "url": "https://arxiv.org/abs/2607.03436",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "3 Jul 2026",
-   "id": "c159e57c45a",
-   "search": "what does a routing oracle measure under stochastic decoding? coupling, scorer choice, and single-commit ceilings t.-r. chen  "
+   ]
   },
   {
    "title": "The topology of the Universe",
@@ -1812,7 +2043,19 @@
    ],
    "date_display": "23 Jun 2026",
    "id": "c4e069bf729",
-   "search": "the topology of the universe c. j. copi d. p. mihaylov a. negro a. samandar g. d. starkman y. akrami g. alestas s. anselmi j. carron duque f. cornet-gomez compact nature astron. 10 1437 (2026)"
+   "search": "the topology of the universe c. j. copi d. p. mihaylov a. negro a. samandar g. d. starkman y. akrami g. alestas s. anselmi j. carron duque f. cornet-gomez compact nature astron. 10 1437 (2026)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-03-12-quantum-signatures",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Generative Responsible AI Data Evaluation Schema (GRAIDES) for AI Assurance in Local Government",
@@ -1847,7 +2090,11 @@
    "self_for": [],
    "date_display": "18 Jun 2026",
    "id": "c1d10b75646",
-   "search": "generative responsible ai data evaluation schema (graides) for ai assurance in local government e. knights c. conlan t. gbolahan s. waterman g. muctor  "
+   "search": "generative responsible ai data evaluation schema (graides) for ai assurance in local government e. knights c. conlan t. gbolahan s. waterman g. muctor  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "multi"
+   },
+   "verified": []
   },
   {
    "title": "How Much Can Repeated Running Buy? A Measured Variance Ceiling for LLM Code Evaluation",
@@ -1880,7 +2127,13 @@
    "self_for": [],
    "date_display": "30 May 2026",
    "id": "c4530c75f10",
-   "search": "how much can repeated running buy? a measured variance ceiling for llm code evaluation y.-x. zhou l.-y. choi j.-x. wen w.-b. ye j.-w. yao  "
+   "search": "how much can repeated running buy? a measured variance ceiling for llm code evaluation y.-x. zhou l.-y. choi j.-x. wen w.-b. ye j.-w. yao  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "manual"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "CUDABeaver: Benchmarking LLM-Based Automated CUDA Debugging",
@@ -1914,7 +2167,13 @@
    "self_for": [],
    "date_display": "8 May 2026",
    "id": "cad4b581f06",
-   "search": "cudabeaver: benchmarking llm-based automated cuda debugging s.-y. li h.-y. chen m. fazzini c.-w. ding  "
+   "search": "cudabeaver: benchmarking llm-based automated cuda debugging s.-y. li h.-y. chen m. fazzini c.-w. ding  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Inflation and topology from the no-boundary state",
@@ -1948,7 +2207,15 @@
    "self_for": [],
    "date_display": "6 May 2026",
    "id": "cd105f2417d",
-   "search": "inflation and topology from the no-boundary state v. godet  "
+   "search": "inflation and topology from the no-boundary state v. godet  ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2026-03-12-quantum-signatures": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2026-03-12-quantum-signatures"
+   ]
   },
   {
    "title": "Path-Lock Expert: Separating Reasoning Mode in Hybrid Thinking via Architecture-Level Separation",
@@ -1988,7 +2255,13 @@
    ],
    "date_display": "29 Apr 2026",
    "id": "c3005dab0bb",
-   "search": "path-lock expert: separating reasoning mode in hybrid thinking via architecture-level separation s. wang w. yang c. ma d. ganguly v. singh c.-d. song x.-p. li x.-x. long v. chaudhary x.-t. han  "
+   "search": "path-lock expert: separating reasoning mode in hybrid thinking via architecture-level separation s. wang w. yang c. ma d. ganguly v. singh c.-d. song x.-p. li x.-x. long v. chaudhary x.-t. han  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "ref"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Unruh–DeWitt detector response in toroidal spacetime",
@@ -2028,7 +2301,25 @@
    "self_for": [],
    "date_display": "22 Apr 2026",
    "id": "c981d0ac03c",
-   "search": "unruhdewitt detector response in toroidal spacetime n. kajuri s. siddh  phys.lett.b 883 141161 (2026)"
+   "search": "unruhdewitt detector response in toroidal spacetime n. kajuri s. siddh  phys.lett.b 883 141161 (2026)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-03-12-quantum-signatures": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-03-12-quantum-signatures",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Explaining Neural Networks on the Sky: Machine Learning Interpretability for Cosmic Microwave Background Maps",
@@ -2061,7 +2352,15 @@
    "self_for": [],
    "date_display": "7 Apr 2026",
    "id": "c42de6bcb51",
-   "search": "explaining neural networks on the sky: machine learning interpretability for cosmic microwave background maps i. ocampo g. canas-herrera  "
+   "search": "explaining neural networks on the sky: machine learning interpretability for cosmic microwave background maps i. ocampo g. canas-herrera  ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2026-02-15-cosmic-topology-iic"
+   ]
   },
   {
    "title": "Universe originating from an empty Planck-size torus",
@@ -2094,7 +2393,13 @@
    "self_for": [],
    "date_display": "25 Mar 2026",
    "id": "c216a4530ec",
-   "search": "universe originating from an empty planck-size torus b. fornal  phys.rev.d 114 l021303 (2026)"
+   "search": "universe originating from an empty planck-size torus b. fornal  phys.rev.d 114 l021303 (2026)",
+   "checks": {
+    "2026-03-12-quantum-signatures": "ref"
+   },
+   "verified": [
+    "2026-03-12-quantum-signatures"
+   ]
   },
   {
    "title": "More Than Power: Revisiting the CMB Hemispherical Power Asymmetry with Morphological Descriptors",
@@ -2133,7 +2438,17 @@
    ],
    "date_display": "23 Mar 2026",
    "id": "cfccf79a811",
-   "search": "more than power: revisiting the cmb hemispherical power asymmetry with morphological descriptors j. carron duque m. martin barandiaran j. martinez-arrizabalaga  "
+   "search": "more than power: revisiting the cmb hemispherical power asymmetry with morphological descriptors j. carron duque m. martin barandiaran j. martinez-arrizabalaga  ",
+   "checks": {
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Medical Image Spatial Grounding with Semantic Sampling",
@@ -2171,7 +2486,13 @@
    ],
    "date_display": "15 Mar 2026",
    "id": "c3904542426",
-   "search": "medical image spatial grounding with semantic sampling a. yu m. hariri k. nakamura m.-r. yang x.-j. li v. chaudhary  international conference on medical image computing and computer-assisted intervention"
+   "search": "medical image spatial grounding with semantic sampling a. yu m. hariri k. nakamura m.-r. yang x.-j. li v. chaudhary  international conference on medical image computing and computer-assisted intervention",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Scorio.jl: A Julia package for ranking stochastic responses",
@@ -2206,7 +2527,13 @@
    ],
    "date_display": "14 Mar 2026",
    "id": "cb6ad694aef",
-   "search": "scorio.jl: a julia package for ranking stochastic responses m. hariri m. hinczewski v. chaudhary  "
+   "search": "scorio.jl: a julia package for ranking stochastic responses m. hariri m. hinczewski v. chaudhary  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Quantum Signatures of Cosmic Topology: How Casimir Backreaction Transmits Isotropy Violation",
@@ -2260,7 +2587,22 @@
    ],
    "date_display": "12 Mar 2026",
    "id": "ca6f8067d86",
-   "search": "quantum signatures of cosmic topology: how casimir backreaction transmits isotropy violation a. negro k. hinterbichler g. d. starkman y. akrami s. anselmi j. carron duque m. martin barandiaran t. s. pereira g. alestas c. j. copi compact physical review d"
+   "search": "quantum signatures of cosmic topology: how casimir backreaction transmits isotropy violation a. negro k. hinterbichler g. d. starkman y. akrami s. anselmi j. carron duque m. martin barandiaran t. s. pereira g. alestas c. j. copi compact physical review d",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-02-15-cosmic-topology-iic": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref",
+    "2026-08-01-topology-of-the-universe": "inspire"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-02-15-cosmic-topology-iic",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Cosmic topology. Part IIc. Detectability with non-standard primordial power spectrum",
@@ -2310,7 +2652,21 @@
    ],
    "date_display": "17 Feb 2026",
    "id": "c146fe9404e",
-   "search": "cosmic topology. part iic. detectability with non-standard primordial power spectrum j. noltmann a. tamosiunas d. p. mihaylov y. akrami j. carron duque t. s. pereira g. d. starkman g. alestas s. anselmi c. j. copi compact hal"
+   "search": "cosmic topology. part iic. detectability with non-standard primordial power spectrum j. noltmann a. tamosiunas d. p. mihaylov y. akrami j. carron duque t. s. pereira g. d. starkman g. alestas s. anselmi c. j. copi compact hal",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Constraining physics beyond ΛCDM through the cosmic microwave background and the large scale structure of the Universe",
@@ -2339,7 +2695,13 @@
    "self_for": [],
    "date_display": "17 Feb 2026",
    "id": "c14ec1e5ae5",
-   "search": "constraining physics beyond cdm through the cosmic microwave background and the large scale structure of the universe s. s. sirletti  thesis"
+   "search": "constraining physics beyond cdm through the cosmic microwave background and the large scale structure of the universe s. s. sirletti  thesis",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "manual"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "EBPO: Empirical Bayes Shrinkage for Stabilizing Group-Relative Policy Optimization",
@@ -2378,7 +2740,13 @@
    "self_for": [],
    "date_display": "5 Feb 2026",
    "id": "c5722759bbd",
-   "search": "ebpo: empirical bayes shrinkage for stabilizing group-relative policy optimization k. han y.-h. zhou m.-z. gao g.-d. zhou s. li a. kumar x.-j. fan w.-w. li l.-z. zhang  "
+   "search": "ebpo: empirical bayes shrinkage for stabilizing group-relative policy optimization k. han y.-h. zhou m.-z. gao g.-d. zhou s. li a. kumar x.-j. fan w.-w. li l.-z. zhang  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Evaluating LLMs When They Do Not Know the Answer: Statistical Evaluation of Mathematical Reasoning via Comparative Signals",
@@ -2414,7 +2782,13 @@
    "self_for": [],
    "date_display": "3 Feb 2026",
    "id": "c71750aea84",
-   "search": "evaluating llms when they do not know the answer: statistical evaluation of mathematical reasoning via comparative signals z.-h. dong z. zhang y. zhou c. jin r.-j. wu l.-j. zhang  international conference on machine learning"
+   "search": "evaluating llms when they do not know the answer: statistical evaluation of mathematical reasoning via comparative signals z.-h. dong z. zhang y. zhou c. jin r.-j. wu l.-j. zhang  international conference on machine learning",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Ranking Reasoning LLMs under Test-Time Scaling",
@@ -2450,36 +2824,13 @@
    ],
    "date_display": "1 Jan 2026",
    "id": "c8a5352bdf7",
-   "search": "ranking reasoning llms under test-time scaling m. hariri m. hinczewski j. ma v. chaudhary  proceedings of the conference - association for computational linguistics. meeting"
-  },
-  {
-   "title": "Generative Calculus II: Capability Attribution Under Augmentation Whole-Envelope Interaction Accounting for Resources, Information, Interfaces, and Rules",
-   "authors": [
-    "M. A. K. Akhtar"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2026-01-01",
-   "venue": "",
-   "arxiv": "",
-   "doi": "10.2139/ssrn.7434745",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W7211989060"
+   "search": "ranking reasoning llms under test-time scaling m. hariri m. hinczewski j. ma v. chaudhary  proceedings of the conference - association for computational linguistics. meeting",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
    },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-04-test-time-scaling"
-   ],
-   "year": "2026",
-   "url": "https://doi.org/10.2139/ssrn.7434745",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 Jan 2026",
-   "id": "cf7012e292f",
-   "search": "generative calculus ii: capability attribution under augmentation whole-envelope interaction accounting for resources, information, interfaces, and rules m. a. k. akhtar  "
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Efficient Agent Evaluation via Diversity-Guided User Simulation",
@@ -2512,7 +2863,13 @@
    "self_for": [],
    "date_display": "1 Jan 2026",
    "id": "c2773fa038a",
-   "search": "efficient agent evaluation via diversity-guided user simulation i. nakash g. kour a. anaby-tavor  proceedings of the conference - association for computational linguistics. meeting"
+   "search": "efficient agent evaluation via diversity-guided user simulation i. nakash g. kour a. anaby-tavor  proceedings of the conference - association for computational linguistics. meeting",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Does CoT-Pass@k Really Check the CoT? A Multilingual Mathematical Audit",
@@ -2545,37 +2902,13 @@
    "self_for": [],
    "date_display": "1 Jan 2026",
    "id": "c9b322d05bc",
-   "search": "does cot-pass@k really check the cot? a multilingual mathematical audit t. t. tasalt b. hudaverdi d. semedo  workshop on multilingual representation learning (mrl)"
-  },
-  {
-   "title": "Bayesian World Models",
-   "authors": [
-    "N. G. Polson",
-    "V. Sokolov"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2026-01-01",
-   "venue": "",
-   "arxiv": "",
-   "doi": "10.2139/ssrn.7048978",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W7170142241"
+   "search": "does cot-pass@k really check the cot? a multilingual mathematical audit t. t. tasalt b. hudaverdi d. semedo  workshop on multilingual representation learning (mrl)",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
    },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
+   "verified": [
     "2026-02-01-dont-pass-k"
-   ],
-   "year": "2026",
-   "url": "https://doi.org/10.2139/ssrn.7048978",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 Jan 2026",
-   "id": "c6abf92effe",
-   "search": "bayesian world models n. g. polson v. sokolov  "
+   ]
   },
   {
    "title": "A new understanding of Einstein–Rosen bridges",
@@ -2608,7 +2941,13 @@
    "self_for": [],
    "date_display": "23 Dec 2025",
    "id": "cb81362c580",
-   "search": "a new understanding of einsteinrosen bridges e. gaztanaga k. s. kumar j. marto  class.quant.grav. 43 015023 (2026)"
+   "search": "a new understanding of einsteinrosen bridges e. gaztanaga k. s. kumar j. marto  class.quant.grav. 43 015023 (2026)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "New insights into cosmological tensions",
@@ -2637,7 +2976,11 @@
    "self_for": [],
    "date_display": "10 Dec 2025",
    "id": "cd8254eeb44",
-   "search": "new insights into cosmological tensions a. favale  thesis"
+   "search": "new insights into cosmological tensions a. favale  thesis",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "inspire"
+   },
+   "verified": []
   },
   {
    "title": "Bianchi cosmologies in a Thurston-based theory of gravity",
@@ -2675,7 +3018,21 @@
    "self_for": [],
    "date_display": "8 Dec 2025",
    "id": "ca3878fba83",
-   "search": "bianchi cosmologies in a thurston-based theory of gravity q. vigneron h. barzegar  gen.rel.grav. 58 34 (2026)"
+   "search": "bianchi cosmologies in a thurston-based theory of gravity q. vigneron h. barzegar  gen.rel.grav. 58 34 (2026)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib",
+    "2026-07-01-cosmic-topology-iib"
+   ]
   },
   {
    "title": "Sequential Bayesian Evaluation of Large Language Model Behavior",
@@ -2710,7 +3067,13 @@
    "self_for": [],
    "date_display": "4 Nov 2025",
    "id": "ca1714667e6",
-   "search": "sequential bayesian evaluation of large language model behavior s. kher s. wu r. longjohn c. g. belem p. smyth  "
+   "search": "sequential bayesian evaluation of large language model behavior s. kher s. wu r. longjohn c. g. belem p. smyth  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Demystifying Hybrid Thinking: Can LLMs Truly Switch Between Think and No-Think?",
@@ -2749,7 +3112,13 @@
    ],
    "date_display": "14 Oct 2025",
    "id": "cc371cca311",
-   "search": "demystifying hybrid thinking: can llms truly switch between think and no-think? s. wang w. yang x.-x. long d. ganguly q.-f. wang v. chaudhary x.-t. han  conference on empirical methods in natural language processing (emnlp)"
+   "search": "demystifying hybrid thinking: can llms truly switch between think and no-think? s. wang w. yang x.-x. long d. ganguly q.-f. wang v. chaudhary x.-t. han  conference on empirical methods in natural language processing (emnlp)",
+   "checks": {
+    "2026-08-04-test-time-scaling": "manual"
+   },
+   "verified": [
+    "2026-08-04-test-time-scaling"
+   ]
   },
   {
    "title": "Cosmic topology. Part IIb. Eigenmodes, correlation matrices, and detectability of non-orientable Euclidean manifolds",
@@ -2801,7 +3170,20 @@
    ],
    "date_display": "6 Oct 2025",
    "id": "cf64769122b",
-   "search": "cosmic topology. part iib. eigenmodes, correlation matrices, and detectability of non-orientable euclidean manifolds c. j. copi a. samandar g. d. starkman j. carron duque y. akrami s. anselmi a. h. jaffe a. kosowsky f. cornet-gomez j. r. eskilt compact jcap 07 004 (2026)"
+   "search": "cosmic topology. part iib. eigenmodes, correlation matrices, and detectability of non-orientable euclidean manifolds c. j. copi a. samandar g. d. starkman j. carron duque y. akrami s. anselmi a. h. jaffe a. kosowsky f. cornet-gomez j. r. eskilt compact jcap 07 004 (2026)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref",
+    "2026-03-12-quantum-signatures": "inspire"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib"
+   ]
   },
   {
    "title": "Planck constraints on the scale dependence of isotropic cosmic birefringence",
@@ -2836,7 +3218,13 @@
    "self_for": [],
    "date_display": "22 Jul 2025",
    "id": "c9fe4921a6b",
-   "search": "planck constraints on the scale dependence of isotropic cosmic birefringence m. ballardini a. gruppuso s. paradiso s. s. sirletti p. natoli  jcap 09 075 (2025)"
+   "search": "planck constraints on the scale dependence of isotropic cosmic birefringence m. ballardini a. gruppuso s. paradiso s. s. sirletti p. natoli  jcap 09 075 (2025)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "Probing the Universe’s topology through a quantum system?",
@@ -2873,7 +3261,19 @@
    "self_for": [],
    "date_display": "13 May 2025",
    "id": "c01183991ed",
-   "search": "probing the universes topology through a quantum system? e. a. paraskevas l. perivolaropoulos  phys.rev.d 112 043524 (2025)"
+   "search": "probing the universes topology through a quantum system? e. a. paraskevas l. perivolaropoulos  phys.rev.d 112 043524 (2025)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref",
+    "2025-08-01-cosmic-topology-iiib": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic",
+    "2025-08-01-cosmic-topology-iiib"
+   ]
   },
   {
    "title": "Cosmic topology. Part IIIb. Eigenmodes and correlation matrices of spin-2 perturbations in orientable Euclidean manifolds",
@@ -2921,7 +3321,17 @@
    ],
    "date_display": "11 Mar 2025",
    "id": "c5c697882c1",
-   "search": "cosmic topology. part iiib. eigenmodes and correlation matrices of spin-2 perturbations in orientable euclidean manifolds a. samandar j. carron duque c. j. copi m. martin barandiaran d. p. mihaylov g. d. starkman y. akrami s. anselmi f. cornet-gomez j. r. eskilt compact jcap 08 015 (2025)"
+   "search": "cosmic topology. part iiib. eigenmodes and correlation matrices of spin-2 perturbations in orientable euclidean manifolds a. samandar j. carron duque c. j. copi m. martin barandiaran d. p. mihaylov g. d. starkman y. akrami s. anselmi f. cornet-gomez j. r. eskilt compact jcap 08 015 (2025)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref",
+    "2025-01-01-cosmic-topology-ic": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia",
+    "2025-01-01-cosmic-topology-ic"
+   ]
   },
   {
    "title": "Quantize What Counts: More for Keys, Less for Values",
@@ -2962,7 +3372,13 @@
    ],
    "date_display": "20 Feb 2025",
    "id": "c10a6572d40",
-   "search": "quantize what counts: more for keys, less for values m. hariri a. luo w.-c. chen s.-c. zhong t.-y. zhang q.-f. wang x. b. hu x.-t. han v. chaudhary  annual meeting of the association for computational linguistics"
+   "search": "quantize what counts: more for keys, less for values m. hariri a. luo w.-c. chen s.-c. zhong t.-y. zhang q.-f. wang x. b. hu x.-t. han v. chaudhary  annual meeting of the association for computational linguistics",
+   "checks": {
+    "2026-02-01-dont-pass-k": "ref"
+   },
+   "verified": [
+    "2026-02-01-dont-pass-k"
+   ]
   },
   {
    "title": "Illustrating the consequences of a misuse of <math display=\"inline\"><mrow><msub><mrow><mi>σ</mi></mrow><mrow><mn>8</mn></mrow></msub></mrow></math> in cosmology",
@@ -2995,7 +3411,13 @@
    "self_for": [],
    "date_display": "20 Jan 2025",
    "id": "c64d5f364ad",
-   "search": "illustrating the consequences of a misuse of <math display=\"inline\"><mrow><msub><mrow><mi></mi></mrow><mrow><mn>8</mn></mrow></msub></mrow></math> in cosmology m. forconi a. favale a. gomez-valent  phys.rev.d 112 023517 (2025)"
+   "search": "illustrating the consequences of a misuse of <math display=\"inline\"><mrow><msub><mrow><mi></mi></mrow><mrow><mn>8</mn></mrow></msub></mrow></math> in cosmology m. forconi a. favale a. gomez-valent  phys.rev.d 112 023517 (2025)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "Probing the Cosmological Principle with weak lensing shear",
@@ -3031,7 +3453,13 @@
    "self_for": [],
    "date_display": "13 Nov 2024",
    "id": "c20f86464c8",
-   "search": "probing the cosmological principle with weak lensing shear j. adam r. maartens j. larena c. clarkson  jcap 02 016 (2025)"
+   "search": "probing the cosmological principle with weak lensing shear j. adam r. maartens j. larena c. clarkson  jcap 02 016 (2025)",
+   "checks": {
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "Cosmic topology. Part Ic. Limits on lens spaces from circle searches",
@@ -3077,7 +3505,15 @@
    ],
    "date_display": "3 Sep 2024",
    "id": "c7d02451116",
-   "search": "cosmic topology. part ic. limits on lens spaces from circle searches s. saha c. j. copi g. d. starkman s. anselmi j. carron duque m. martin barandiaran y. akrami f. cornet-gomez a. h. jaffe a. kosowsky compact jcap 01 004 (2025)"
+   "search": "cosmic topology. part ic. limits on lens spaces from circle searches s. saha c. j. copi g. d. starkman s. anselmi j. carron duque m. martin barandiaran y. akrami f. cornet-gomez a. h. jaffe a. kosowsky compact jcap 01 004 (2025)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref",
+    "2024-11-01-cosmic-topology-iiia": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva",
+    "2024-11-01-cosmic-topology-iiia"
+   ]
   },
   {
    "title": "Cosmic topology. Part IIIa. Microwave background parity violation without parity-violating microphysics",
@@ -3121,7 +3557,13 @@
    ],
    "date_display": "12 Jul 2024",
    "id": "c530148ccbe",
-   "search": "cosmic topology. part iiia. microwave background parity violation without parity-violating microphysics a. samandar j. carron duque c. j. copi m. m. barandiaran d. p. mihaylov t. s. pereira g. d. starkman y. akrami s. anselmi f. cornet-gomez compact jcap 11 020 (2024)"
+   "search": "cosmic topology. part iiia. microwave background parity violation without parity-violating microphysics a. samandar j. carron duque c. j. copi m. m. barandiaran d. p. mihaylov t. s. pereira g. d. starkman y. akrami s. anselmi f. cornet-gomez compact jcap 11 020 (2024)",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "ref"
+   },
+   "verified": [
+    "2024-09-01-cosmic-topology-iva"
+   ]
   },
   {
    "title": "Cosmic topology. Part IIa. Eigenmodes, correlation matrices, and detectability of orientable Euclidean manifolds",
@@ -3161,7 +3603,155 @@
    ],
    "date_display": "1 Mar 2024",
    "id": "c0e1b4f19ff",
-   "search": "cosmic topology. part iia. eigenmodes, correlation matrices, and detectability of orientable euclidean manifolds j. r. eskilt y. akrami s. anselmi c. j. copi a. h. jaffe a. b. kosowsky d. p. mihaylov g. d. starkman a. tamosiunas j. b. mertens  journal of cosmology and astroparticle physics"
+   "search": "cosmic topology. part iia. eigenmodes, correlation matrices, and detectability of orientable euclidean manifolds j. r. eskilt y. akrami s. anselmi c. j. copi a. h. jaffe a. b. kosowsky d. p. mihaylov g. d. starkman a. tamosiunas j. b. mertens  journal of cosmology and astroparticle physics",
+   "checks": {
+    "2026-07-01-cosmic-topology-iib": "ref"
+   },
+   "verified": [
+    "2026-07-01-cosmic-topology-iib"
+   ]
+  }
+ ],
+ "unconfirmed": [
+  {
+   "title": "Machine Learning Stacking Ensemble for Condition Assessment of Power Cable Networks",
+   "authors": [
+    "M. Mohammadagha",
+    "A. Khoshkonesh",
+    "S. Sharifi",
+    "A. A. Belbasi",
+    "V. Ghanbarizadeh",
+    "S. Ataei",
+    "K. Lahsaei",
+    "M. Sarajzadeh"
+   ],
+   "n_authors": 8,
+   "collab": "",
+   "date": "2026-09-23",
+   "venue": "Engineering Archive (engrXiv)",
+   "arxiv": "",
+   "doi": "10.31224/6564",
+   "doctype": "preprint",
+   "ids": {
+    "openalex": "W7133990793"
+   },
+   "sources": [
+    "openalex"
+   ],
+   "cites": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "year": "2026",
+   "url": "https://doi.org/10.31224/6564",
+   "self_own": false,
+   "self_for": [],
+   "date_display": "23 Sep 2026",
+   "id": "c6f80db6d60",
+   "search": "machine learning stacking ensemble for condition assessment of power cable networks m. mohammadagha a. khoshkonesh s. sharifi a. a. belbasi v. ghanbarizadeh s. ataei k. lahsaei m. sarajzadeh  engineering archive (engrxiv)",
+   "checks": {
+    "2026-08-04-test-time-scaling": "unconfirmed"
+   },
+   "verified": []
+  },
+  {
+   "title": "Towards Evaluating Agentic Large Language Models in Digital System Design",
+   "authors": [
+    "P. Link"
+   ],
+   "n_authors": 1,
+   "collab": "",
+   "date": "2026-07-08",
+   "venue": "",
+   "arxiv": "",
+   "doi": "10.11575/prism/51673",
+   "doctype": "dissertation",
+   "ids": {
+    "openalex": "W7168249549"
+   },
+   "sources": [
+    "openalex"
+   ],
+   "cites": [
+    "2026-02-01-dont-pass-k"
+   ],
+   "year": "2026",
+   "url": "https://doi.org/10.11575/prism/51673",
+   "self_own": false,
+   "self_for": [],
+   "date_display": "8 Jul 2026",
+   "id": "cd95931853d",
+   "search": "towards evaluating agentic large language models in digital system design p. link  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "unconfirmed"
+   },
+   "verified": []
+  },
+  {
+   "title": "Generative Calculus II: Capability Attribution Under Augmentation Whole-Envelope Interaction Accounting for Resources, Information, Interfaces, and Rules",
+   "authors": [
+    "M. A. K. Akhtar"
+   ],
+   "n_authors": 1,
+   "collab": "",
+   "date": "2026-01-01",
+   "venue": "",
+   "arxiv": "",
+   "doi": "10.2139/ssrn.7434745",
+   "doctype": "preprint",
+   "ids": {
+    "openalex": "W7211989060"
+   },
+   "sources": [
+    "openalex"
+   ],
+   "cites": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "year": "2026",
+   "url": "https://doi.org/10.2139/ssrn.7434745",
+   "self_own": false,
+   "self_for": [],
+   "date_display": "1 Jan 2026",
+   "id": "cf7012e292f",
+   "search": "generative calculus ii: capability attribution under augmentation whole-envelope interaction accounting for resources, information, interfaces, and rules m. a. k. akhtar  ",
+   "checks": {
+    "2026-08-04-test-time-scaling": "unconfirmed"
+   },
+   "verified": []
+  },
+  {
+   "title": "Bayesian World Models",
+   "authors": [
+    "N. G. Polson",
+    "V. Sokolov"
+   ],
+   "n_authors": 2,
+   "collab": "",
+   "date": "2026-01-01",
+   "venue": "",
+   "arxiv": "",
+   "doi": "10.2139/ssrn.7048978",
+   "doctype": "preprint",
+   "ids": {
+    "openalex": "W7170142241"
+   },
+   "sources": [
+    "openalex"
+   ],
+   "cites": [
+    "2026-02-01-dont-pass-k"
+   ],
+   "year": "2026",
+   "url": "https://doi.org/10.2139/ssrn.7048978",
+   "self_own": false,
+   "self_for": [],
+   "date_display": "1 Jan 2026",
+   "id": "c6abf92effe",
+   "search": "bayesian world models n. g. polson v. sokolov  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "unconfirmed"
+   },
+   "verified": []
   },
   {
    "title": "TOWARDS A HIGH GENUS COSMIC MANIFOLD",
@@ -3190,7 +3780,11 @@
    "self_for": [],
    "date_display": "",
    "id": "c3644aa0632",
-   "search": "towards a high genus cosmic manifold a. tozzi  "
+   "search": "towards a high genus cosmic manifold a. tozzi  ",
+   "checks": {
+    "2024-09-01-cosmic-topology-iva": "unconfirmed"
+   },
+   "verified": []
   },
   {
    "title": "Extrapolation Is an Assumption: Sharp Limits for Pass@k Forecasting",
@@ -3219,7 +3813,11 @@
    "self_for": [],
    "date_display": "",
    "id": "c613e1f51ce",
-   "search": "extrapolation is an assumption: sharp limits for pass@k forecasting p. dewasurendra  "
+   "search": "extrapolation is an assumption: sharp limits for pass@k forecasting p. dewasurendra  ",
+   "checks": {
+    "2026-02-01-dont-pass-k": "unconfirmed"
+   },
+   "verified": []
   },
   {
    "title": "Conditional Reconstruction of a Quasi-Local Observable Domain within Compact S³ Geometry",
@@ -3250,7 +3848,13 @@
    "self_for": [],
    "date_display": "",
    "id": "ca40e934184",
-   "search": "conditional reconstruction of a quasi-local observable domain within compact s3 geometry a. preece b. batenin  philpapers (philpapers foundation)"
+   "search": "conditional reconstruction of a quasi-local observable domain within compact s3 geometry a. preece b. batenin  philpapers (philpapers foundation)",
+   "checks": {
+    "2025-01-01-cosmic-topology-ic": "unconfirmed",
+    "2026-02-15-cosmic-topology-iic": "unconfirmed"
+   },
+   "verified": []
   }
- ]
+ ],
+ "rejected": []
 }
