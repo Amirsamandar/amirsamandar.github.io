@@ -263,6 +263,15 @@ def clean_date(d: str | None) -> str:
 # Publications
 # --------------------------------------------------------------------------
 
+def first_year(fm: dict) -> int:
+    """Year the paper first appeared: from the arXiv id (YYMM.xxxxx), else its date."""
+    m = re.match(r"^(\d{2})(\d{2})\.", str(fm.get("arxiv") or ""))
+    if m:
+        return 2000 + int(m.group(1))
+    d = fm.get("date")
+    return int(str(d)[:4]) if d else 0
+
+
 def load_publications() -> list[dict]:
     pubs = []
     for f in sorted(PUB_DIR.glob("*.md")):
@@ -280,6 +289,7 @@ def load_publications() -> list[dict]:
             "arxiv": norm_arxiv(str(fm.get("arxiv") or "")),
             "doi": norm_doi(str(fm.get("doi") or "")),
             "authors_fm": fm.get("authors", ""),
+            "year": first_year(fm),
         })
     return pubs
 
@@ -553,14 +563,24 @@ def run_openalex(p, pin, ctx) -> dict:
                 raise
         time.sleep(0.3)
     # Other versions of the same paper (preprint vs journal) are separate
-    # OpenAlex works; find them by exact title.
+    # OpenAlex works; find them by exact title. Titles are not unique ("The
+    # topology of the Universe" has several unrelated namesakes), so a
+    # namesake only counts if it shares an author and is not older than the
+    # paper itself.
     words = re.sub(r"[^\w\s]", " ", ascii_fold(p["title"]))
     words = " ".join(words.split()[:20])
     if words:
         data = http_get(f"{OA}/works?{oa_params({'filter': f'title.search:{words}', 'per-page': 25, 'select': OA_SELECT})}")
+        known = ctx["author_keys"].get(p["slug"]) or {ME}
         for w in data.get("results") or []:
-            if norm_title(w.get("title")) == norm_title(p["title"]):
+            if w["id"] in works or norm_title(w.get("title")) != norm_title(p["title"]):
+                continue
+            year = w.get("publication_year") or 0
+            authors = {name_key((a.get("author") or {}).get("display_name", "")) for a in w.get("authorships") or []}
+            if year >= p["year"] - 1 and authors & known:
                 works[w["id"]] = w
+            else:
+                log(f"  {p['slug']}: ignoring OpenAlex namesake {w['id'].rsplit('/', 1)[-1]} ({year})")
         time.sleep(0.3)
     if not works:
         return {"count": None, "records": [], "note": "not found"}
@@ -1121,6 +1141,15 @@ def main() -> int:
             st["as_of"] = prev_status.get(src, {}).get("as_of", "")
         log(f"{name}: {st['status']} ({n_links} citation links) {st['note']}")
         status.append(st)
+
+    # A paper cannot be cited before it existed. Allow a year of slack for
+    # conference versions and dating differences between databases.
+    start = {p["slug"]: p["year"] for p in pubs}
+    kept = [(slug, r) for slug, r in raw
+            if not (year_of(r["date"]) and start.get(slug) and int(year_of(r["date"])) < start[slug] - 1)]
+    if len(kept) != len(raw):
+        log(f"dropped {len(raw) - len(kept)} citation links dated before the cited paper appeared")
+    raw = kept
 
     merged = merge(raw, pubs, ctx, overrides)
 
