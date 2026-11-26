@@ -671,6 +671,10 @@ mark.todo {
 .cite__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--muted); }
 .src { display: inline-block; padding: 0 0.4rem; border-radius: var(--radius-sm); background: var(--surface-2); line-height: 1.6; }
 .badge--self { border-color: var(--border-strong); color: var(--muted); font-size: 0.72rem; }
+.badge--ok { border-color: transparent; background: var(--accent-soft); color: var(--accent-strong); font-size: 0.72rem; }
+.badge--warn { border-color: var(--todo-border); color: var(--text); font-size: 0.72rem; }
+details.pub__bib + details.pub__bib { margin-top: 0.75rem; }
+details.pub__bib > .section__intro { margin-top: 0.75rem; }
 .cite-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.75rem 1.25rem; margin: 0.25rem 0 1rem; font-size: 0.9rem; }
 .cite-filters[hidden] { display: none; }
 .cite-filters label { display: flex; flex-direction: column; gap: 0.25rem; font-weight: 600; color: var(--muted); }

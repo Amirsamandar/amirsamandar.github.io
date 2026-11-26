@@ -61,7 +61,7 @@ layout: scholar
       {%- assign n = cp.counts[s.id] -%}
       {%- if n != nil %}{% assign per_db = per_db | append: ", " | append: s.name | append: " (" | append: n | append: ")" %}{% endif -%}
     {%- endfor %}
-    <p class="section__intro">{{ cp.total_noself }} excluding self-citations. Combined from {{ per_db | remove_first: ", " }}; each citing paper is listed once. <a href="{{ '/citations/' | relative_url }}?paper={{ slug }}#citing">All citations</a></p>
+    <p class="section__intro">{{ cp.total_noself }} excluding self-citations. Combined from {{ per_db | remove_first: ", " }}; each citing paper is listed once. {{ cp.verified }} confirmed in the citing paper's own reference list (&#10003;){% if cp.unconfirmed > 0 %}; {{ cp.unconfirmed }} more unconfirmed match{% if cp.unconfirmed != 1 %}es are{% else %} is{% endif %} <a href="{{ '/citations/' | relative_url }}#unconfirmed">not counted</a>{% endif %}. <a href="{{ '/citations/' | relative_url }}?paper={{ slug }}#citing">All citations</a></p>
     <ol class="cites">
       {%- for c in citing %}{% include citing-item.html c=c paper=slug %}{% endfor %}
     </ol>

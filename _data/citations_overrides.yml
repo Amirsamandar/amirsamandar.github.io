@@ -4,7 +4,11 @@
 
 # Citing papers to drop (false matches a database made). Match by arxiv, doi
 # or the exact title. The reason is for you; it is not shown on the site.
-exclude: []
+exclude:
+  - arxiv: "2607.03436"
+    reason: "OpenAlex links it to Don't Pass@k, but its reference list (26 entries) cites neither Don't Pass@k nor the test-time-scaling paper. Checked by hand 26 Nov 2026."
+  - doi: "10.4236/jhepgc.2025.112033"
+    reason: "Published April 2025, over a year before 'The topology of the Universe' appeared (June 2026); it cites an older paper with the same title."
 #  - arxiv: "2501.01234"
 #    reason: "OpenAlex mis-resolved a reference"
 #  - title: "Some unrelated paper"
@@ -18,6 +22,27 @@ add: []
 #    venue: "PhD thesis, Some University"
 #    url: "https://example.edu/thesis.pdf"
 #    cites: ["2024-09-01-cosmic-topology-iva"]
+
+# Citations confirmed by hand (the citing paper's reference list was read).
+# They count even if a database or the arXiv check misses them. Without
+# `cites`, every link of that citing paper is confirmed.
+confirm:
+  # reference lists read on arxiv.org, 26 Nov 2026
+  - {arxiv: "2611.00474", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2608.06526", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2608.20572", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2608.23956", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2609.38699", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2610.08563", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2610.12927", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2611.00579", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2611.02332", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2510.12680", cites: ["2026-08-04-test-time-scaling"]}
+  - {arxiv: "2608.04001", cites: ["2026-02-01-dont-pass-k"]}
+  - {arxiv: "2606.00920", cites: ["2026-02-01-dont-pass-k"]}
+  - {arxiv: "2609.13390", cites: ["2026-08-01-topology-of-the-universe"]}
+  # INSPIRE record 3132215 (Trento thesis) lists Part IIIa as reference [110]
+  - {title: "Constraining physics beyond ΛCDM through the cosmic microwave background and the large scale structure of the Universe", cites: ["2024-11-01-cosmic-topology-iiia"]}
 
 # Pin database ids when automatic matching picks the wrong record or misses
 # one. Keys are publication file names; all fields optional.

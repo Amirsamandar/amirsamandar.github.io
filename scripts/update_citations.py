@@ -29,6 +29,9 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import difflib
+import gzip
+import io
+import tarfile
 import hashlib
 import html
 import json
@@ -383,7 +386,7 @@ def inspire_venue(md: dict) -> str:
 
 
 def inspire_lookup(pub: dict, pin: dict) -> dict | None:
-    fields = "control_number,titles,authors.full_name,citation_count,citation_count_without_self_citations"
+    fields = "control_number,titles,authors.full_name,citation_count,citation_count_without_self_citations,texkeys"
     if pin.get("inspire_recid"):
         q = f"recid:{pin['inspire_recid']}"
     elif pub["arxiv"]:
@@ -441,6 +444,7 @@ def run_inspire(p, pin, ctx) -> dict:
     ctx["author_keys"][p["slug"]].update(
         k for k in (name_key(a.get("full_name", "")) for a in md.get("authors") or []) if k)
     ctx["ids"][p["slug"]]["inspire"] = recid
+    ctx["texkeys"][p["slug"]] = list(md.get("texkeys") or [])
     records = inspire_citing(recid)
     time.sleep(0.5)
     return {"count": md.get("citation_count"), "records": records}
@@ -883,6 +887,148 @@ RUNNERS = {
 
 
 # --------------------------------------------------------------------------
+# Verification: is the cited paper really in the citing paper's references?
+# --------------------------------------------------------------------------
+#
+# Every database makes mistakes when it links references to papers. For each
+# (citing paper, cited paper) link the status is one of:
+#   "ref"         the citing paper's arXiv source (LaTeX, .bbl, .bib) contains
+#                 the cited paper's arXiv number, DOI, INSPIRE key or title
+#   "inspire"     found by INSPIRE-HEP (curated reference matching)
+#   "multi"       found independently by two or more databases
+#   "manual"      confirmed by hand in _data/citations_overrides.yml
+#   "unconfirmed" found by a single database and could not be checked
+#   "absent"      single database, and the reference list does NOT contain it
+# "absent" links are rejected; "unconfirmed" ones are listed separately and
+# not counted. Results of the arXiv check are cached in citations.json.
+
+ARXIV_EPRINT = "https://arxiv.org/e-print/"
+MAX_EPRINT_BYTES = 40 * 1024 * 1024
+TEXT_EXT = (".tex", ".bbl", ".bib", ".txt", ".ltx", ".cls", ".sty", "")
+
+
+def fetch_arxiv_source(arxiv_id: str) -> str | None:
+    """Concatenated text of an arXiv submission's source, or None (PDF-only/unavailable)."""
+    req = urllib.request.Request(ARXIV_EPRINT + arxiv_id, headers={
+        "User-Agent": "amirsamandar.github.io citation checker (mailto:"
+                      + os.environ.get("OPENALEX_MAILTO", "") + ")"})
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=90) as r:
+                blob = r.read(MAX_EPRINT_BYTES + 1)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return None
+            time.sleep(10 * (attempt + 1))
+        except Exception:  # noqa: BLE001
+            time.sleep(10 * (attempt + 1))
+    else:
+        return None
+    if len(blob) > MAX_EPRINT_BYTES or blob[:4] == b"%PDF":
+        return None
+    texts = []
+    try:
+        with tarfile.open(fileobj=io.BytesIO(blob), mode="r:*") as tf:
+            for mem in tf.getmembers():
+                name = mem.name.lower()
+                if mem.isfile() and mem.size < 5_000_000 and \
+                        (name.endswith(TEXT_EXT[:-1]) or "." not in name.rsplit("/", 1)[-1]):
+                    f = tf.extractfile(mem)
+                    if f:
+                        texts.append(f.read().decode("utf-8", "replace"))
+    except (tarfile.TarError, EOFError, OSError):
+        try:
+            texts.append(gzip.decompress(blob).decode("utf-8", "replace"))
+        except OSError:
+            texts.append(blob.decode("utf-8", "replace"))
+    text = "\n".join(texts)
+    return text if text.strip() else None
+
+
+def has_bibliography(text: str) -> bool:
+    return bool(re.search(r"\\bibitem|\\begin\{thebibliography\}|@article\s*\{|@misc\s*\{|\\entry\{", text, re.I))
+
+
+def cites_in_text(text: str, text_norm: str, pub: dict, texkeys: list[str]) -> bool:
+    if pub["arxiv"] and re.search(r"(?<![\d.])" + re.escape(pub["arxiv"]) + r"(?!\d)", text):
+        return True
+    if pub["doi"] and pub["doi"] in text.lower():
+        return True
+    if any(k and k in text for k in texkeys):
+        return True
+    t = norm_title(pub["title"])
+    if len(t) >= 25 and t[:60] in text_norm:
+        return True
+    # Journal-only references, e.g. "JCAP 09 (2024) 057" or "JCAP 2024, 057".
+    m = re.match(r"10\.1088/1475-7516/(\d{4})/(\d{2})/(\d+)$", pub["doi"] or "")
+    if m:
+        year, issue, page = m.group(1), m.group(2).lstrip("0"), m.group(3).lstrip("0")
+        for hit in re.finditer(r"(JCAP|J\.\s*Cosmol\.?\s*Astropart|Cosmology and Astroparticle)", text, re.I):
+            window = text[hit.end():hit.end() + 80]
+            if re.search(rf"\b0*{page}\b", window) and year in window and re.search(rf"\b0*{issue}\b", window):
+                return True
+    return False
+
+
+def verify_links(merged: list[dict], pubs: list[dict], ctx: dict, prev: dict, overrides: dict) -> None:
+    """Fill m['checks'] = {cited_slug: status} for every merged citing paper."""
+    by_slug = {p["slug"]: p for p in pubs}
+    cache = {}
+    for lst in ("citing", "unconfirmed", "rejected"):
+        for c in prev.get(lst) or []:
+            for slug, st in (c.get("checks") or {}).items():
+                if st in ("ref", "absent"):
+                    cache[(c.get("id"), slug)] = st
+    confirm = overrides.get("confirm") or []
+    budget = int(os.environ.get("ARXIV_CHECK_LIMIT", "150"))
+    checked = 0
+    for m in merged:
+        m["checks"] = {}
+        manual = [o for o in confirm if override_matches(m, o)]
+        src = [s for s in m["sources"] if s != "manual"]
+        need_text = []
+        for slug in m["cites"]:
+            if any(not o.get("cites") or slug in o["cites"] for o in manual) or m["sources"] == ["manual"]:
+                m["checks"][slug] = "manual"
+            elif (m["id"], slug) in cache:
+                m["checks"][slug] = cache[(m["id"], slug)]
+            elif m["arxiv"]:
+                need_text.append(slug)
+            else:
+                m["checks"][slug] = None
+        if need_text and checked < budget:
+            checked += 1
+            text = fetch_arxiv_source(m["arxiv"])
+            time.sleep(3)  # arXiv asks for at most one request every 3 seconds
+            if text and has_bibliography(text):
+                text_norm = norm_title(text)
+                for slug in need_text:
+                    hit = cites_in_text(text, text_norm, by_slug[slug], ctx["texkeys"].get(slug, []))
+                    m["checks"][slug] = "ref" if hit else "absent"
+        for slug in m["cites"]:
+            st = m["checks"].get(slug)
+            if st in ("ref", "manual"):
+                continue
+            # No positive reference check: fall back on the databases.
+            if "inspire" in src:
+                fallback = "inspire"
+            elif len(src) >= 2:
+                fallback = "multi"
+            else:
+                fallback = None
+            if st == "absent":
+                # Missing from the reference list. Physics bibliographies
+                # sometimes give only a journal reference, which this check
+                # cannot match, so keep the link if INSPIRE or several
+                # databases agree; reject it otherwise.
+                m["checks"][slug] = fallback or "absent"
+            else:
+                m["checks"][slug] = fallback or "unconfirmed"
+    log(f"checked {checked} arXiv reference lists ({len(cache)} cached results reused)")
+
+
+# --------------------------------------------------------------------------
 # Merging
 # --------------------------------------------------------------------------
 
@@ -1048,7 +1194,7 @@ def h_index(counts: list[int]) -> int:
 def previous_raw(prev: dict, source: str, slug: str) -> list[dict]:
     """Rebuild raw records of `source` for `slug` from the last data file."""
     out = []
-    for c in prev.get("citing") or []:
+    for c in [c for lst in ("citing", "unconfirmed", "rejected") for c in prev.get(lst) or []]:
         if source in c.get("sources", []) and slug in c.get("cites", []):
             r = rec(source, title=c["title"], authors=c.get("authors"), n_authors=c.get("n_authors"),
                     collab=c.get("collab", ""), date=c.get("date", ""), venue=c.get("venue", ""),
@@ -1087,6 +1233,7 @@ def main() -> int:
                         re.split(r",\s*", re.sub(r"et al\.?|including", ",", p["authors_fm"] or ""))) if k}
                         for p in pubs},
         "ids": {p["slug"]: {} for p in pubs},
+        "texkeys": {p["slug"]: [] for p in pubs},
         "previous_counts": prev_counts,
         "force_scholar": args.force_scholar,
     }
@@ -1152,6 +1299,26 @@ def main() -> int:
     raw = kept
 
     merged = merge(raw, pubs, ctx, overrides)
+    verify_links(merged, pubs, ctx, prev, overrides)
+
+    def part(m, keep):
+        slugs = [s_ for s_ in m["cites"] if keep(m["checks"][s_])]
+        if not slugs:
+            return None
+        x = dict(m)
+        x["cites"] = slugs
+        x["self_for"] = [s_ for s_ in m["self_for"] if s_ in slugs]
+        x["verified"] = [s_ for s_ in slugs if m["checks"][s_] in ("ref", "manual")]
+        return x
+
+    CONFIRMED = ("ref", "manual", "inspire", "multi")
+    confirmed = [x for x in (part(m, lambda st: st in CONFIRMED) for m in merged) if x]
+    unconfirmed = [x for x in (part(m, lambda st: st == "unconfirmed") for m in merged) if x]
+    rejected = [x for x in (part(m, lambda st: st == "absent") for m in merged) if x]
+    log(f"links: {sum(len(x['cites']) for x in confirmed)} confirmed, "
+        f"{sum(len(x['cites']) for x in unconfirmed)} unconfirmed, "
+        f"{sum(len(x['cites']) for x in rejected)} rejected (not in the citing paper's references)")
+    merged = confirmed
 
     papers = []
     for p in pubs:
@@ -1162,6 +1329,8 @@ def main() -> int:
             "counts": counts[p["slug"]],
             "total": len(cit),
             "total_noself": sum(1 for m in cit if p["slug"] not in m["self_for"]),
+            "verified": sum(1 for m in cit if p["slug"] in m["verified"]),
+            "unconfirmed": sum(1 for m in unconfirmed if p["slug"] in m["cites"]),
         })
     totals = [x["total"] for x in papers]
     data = {
@@ -1171,12 +1340,17 @@ def main() -> int:
             "citing_papers_noself": sum(1 for m in merged if set(m["cites"]) - set(m["self_for"])),
             "citations": sum(totals),
             "citations_noself": sum(x["total_noself"] for x in papers),
+            "verified": sum(len(m["verified"]) for m in merged),
             "h_index": h_index(totals),
             "papers_cited": sum(1 for t in totals if t),
+            "unconfirmed": sum(len(m["cites"]) for m in unconfirmed),
+            "rejected": sum(len(m["cites"]) for m in rejected),
         },
         "sources": status,
         "papers": papers,
         "citing": merged,
+        "unconfirmed": unconfirmed,
+        "rejected": rejected,
     }
 
     log(f"{len(merged)} unique citing papers, {sum(totals)} citations, h={data['summary']['h_index']}")

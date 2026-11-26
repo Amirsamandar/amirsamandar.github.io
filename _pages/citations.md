@@ -25,6 +25,7 @@ description: "Papers citing the work of Amirhossein Samandar, collected from INS
     <p class="board__source">All databases combined and deduplicated · updated {{ cd.updated | date: "%-d %B %Y" }}</p>
   </section>
   <p class="section__intro">A citing paper that cites two of my papers is one citing paper but two citations. Self-citations follow INSPIRE-HEP's definition: the citing paper shares at least one author with the cited paper.</p>
+  <p class="section__intro">Every citation is checked. Where the citing paper is on arXiv, its own bibliography is searched for my paper ({{ cd.summary.verified }} of {{ cd.summary.citations }} confirmed this way, marked &#10003;). The rest are counted only if INSPIRE-HEP or at least two databases agree.{% if cd.summary.unconfirmed > 0 or cd.summary.rejected > 0 %} Matches that could not be confirmed are <a href="#unconfirmed">listed separately</a> and not counted.{% endif %}</p>
 
   <section class="pub-group" aria-labelledby="by-paper">
     <h2 id="by-paper" class="section__title">By publication</h2>
@@ -99,6 +100,27 @@ description: "Papers citing the work of Amirhossein Samandar, collected from INS
       {%- for c in cd.citing %}{% include citing-item.html c=c %}{% endfor %}
     </ol>
   </section>
+
+  {%- if cd.unconfirmed.size > 0 or cd.rejected.size > 0 %}
+  <section class="pub-group" aria-labelledby="unconfirmed">
+    <h2 id="unconfirmed" class="section__title">Not counted</h2>
+    <p class="section__intro">Database matches that are not included in the totals above.</p>
+    {%- if cd.unconfirmed.size > 0 %}
+    <details class="pub__bib">
+      <summary>Unconfirmed ({{ cd.unconfirmed.size }})</summary>
+      <p class="section__intro">Found by only one database, and the citing paper's reference list could not be checked (not on arXiv). They may be correct.</p>
+      <ol class="cites">{% for c in cd.unconfirmed %}{% include citing-item.html c=c status="unconfirmed" %}{% endfor %}</ol>
+    </details>
+    {%- endif %}
+    {%- if cd.rejected.size > 0 %}
+    <details class="pub__bib">
+      <summary>Rejected ({{ cd.rejected.size }})</summary>
+      <p class="section__intro">A database linked these, but the citing paper's own reference list does not contain my paper.</p>
+      <ol class="cites">{% for c in cd.rejected %}{% include citing-item.html c=c status="rejected" %}{% endfor %}</ol>
+    </details>
+    {%- endif %}
+  </section>
+  {%- endif %}
   {%- endif %}
 </div>
 </div>

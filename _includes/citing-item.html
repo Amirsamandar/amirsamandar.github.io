@@ -7,8 +7,10 @@
 {%- assign c = include.c -%}
 {%- if include.paper -%}
   {%- if c.self_for contains include.paper %}{% assign is_self = true %}{% else %}{% assign is_self = false %}{% endif -%}
+  {%- if c.verified contains include.paper %}{% assign is_verified = true %}{% else %}{% assign is_verified = false %}{% endif -%}
 {%- else -%}
   {%- if c.self_for.size > 0 %}{% assign is_self = true %}{% else %}{% assign is_self = false %}{% endif -%}
+  {%- if c.verified.size > 0 %}{% assign is_verified = true %}{% else %}{% assign is_verified = false %}{% endif -%}
 {%- endif -%}
 <li class="cite" data-cites="{{ c.cites | join: ' ' }}" data-self="{{ c.self_for | join: ' ' }}" data-sources="{{ c.sources | join: ' ' }}" data-search="{{ c.search | escape }}">
   <p class="cite__title">{% if c.url != "" %}<a href="{{ c.url }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</p>
@@ -37,6 +39,9 @@
   </p>
   {%- endunless %}
   <p class="cite__meta">
+    {%- if include.status == "unconfirmed" %}<span class="badge badge--warn" title="Found by a single database; the citing paper's reference list could not be checked">Unconfirmed</span>{% endif -%}
+    {%- if include.status == "rejected" %}<span class="badge badge--warn" title="Its reference list was checked and does not contain the paper">Not in reference list</span>{% endif -%}
+    {%- if is_verified %}<span class="badge badge--ok" title="The citing paper's own bibliography contains this reference">&#10003; In reference list</span>{% endif -%}
     {%- if is_self %}<span class="badge badge--self" title="Shares at least one author with the cited paper (INSPIRE-HEP's definition)">Self-citation</span>{% endif -%}
     <span class="cite__found">Found in:
       {%- for s in c.sources -%}
