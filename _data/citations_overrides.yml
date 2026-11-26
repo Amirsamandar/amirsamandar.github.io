@@ -1,0 +1,30 @@
+# Manual corrections for the citation data in _data/citations.json.
+# scripts/update_citations.py reads this file on every run (weekly, by the
+# "Update citations" GitHub Action), so edits here persist.
+
+# Citing papers to drop (false matches a database made). Match by arxiv, doi
+# or the exact title. The reason is for you; it is not shown on the site.
+exclude: []
+#  - arxiv: "2501.01234"
+#    reason: "OpenAlex mis-resolved a reference"
+#  - title: "Some unrelated paper"
+
+# Citing papers no database has picked up (theses, books, talks...).
+# `cites` lists publication file names from _publications/ (without .md).
+add: []
+#  - title: "A thesis that cites Part IVa"
+#    authors: ["Jane Doe"]
+#    year: 2026
+#    venue: "PhD thesis, Some University"
+#    url: "https://example.edu/thesis.pdf"
+#    cites: ["2024-09-01-cosmic-topology-iva"]
+
+# Pin database ids when automatic matching picks the wrong record or misses
+# one. Keys are publication file names; all fields optional.
+papers: {}
+#  2026-02-01-dont-pass-k:
+#    inspire_recid: 1234567
+#    ads_bibcode: "2025arXiv251004265X"
+#    s2_id: "abc123..."              # Semantic Scholar paperId
+#    openalex_ids: ["W123", "W456"]   # every version (preprint + journal)
+#    scholar_title: "Title exactly as on Google Scholar"

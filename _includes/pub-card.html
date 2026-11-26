@@ -30,11 +30,13 @@
   {%- if p.detail %}<p class="pub__detail">{{ p.detail }}{% include todo.html note=p.detail_todo %}</p>{% endif %}
   <p class="pub__contrib"><span class="pub__label">My contribution:</span> {{ p.contribution }}{% include todo.html note=p.lead_todo %}{% include todo.html note=p.contribution_todo %}</p>
   {%- endif %}
+  {%- assign cp = site.data.citations.papers | where: "slug", slug | first -%}
   {%- if p.arxiv or p.doi or p.links %}
   <ul class="pub__links" aria-label="Links for {{ p.short_title | default: p.title | escape }}">
     {%- if p.arxiv %}<li><a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}{% if p.arxivcat and p.arxivcat != "" %} [{{ p.arxivcat }}]{% endif %}</a></li>{% endif -%}
     {%- if p.doi %}<li><a href="https://doi.org/{{ p.doi }}">DOI</a></li>{% endif -%}
     {%- unless include.compact -%}{%- for l in p.links %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor -%}{%- endunless -%}
+    {%- if cp and cp.total > 0 %}<li><a href="{{ p.url | relative_url }}#cited-by">Cited by {{ cp.total }}</a></li>{% endif -%}
   </ul>
   {%- endif %}
   {%- unless include.compact %}{% if p.bibtex %}

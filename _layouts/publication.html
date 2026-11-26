@@ -50,6 +50,23 @@ layout: scholar
     <pre tabindex="0"><code>{{ p.bibtex | strip | escape }}</code></pre>
   </details>
   {%- endif %}
+  {%- assign slug = p.url | split: "/" | last -%}
+  {%- assign cp = site.data.citations.papers | where: "slug", slug | first -%}
+  {%- if cp and cp.total > 0 %}
+  {%- assign citing = site.data.citations.citing | where_exp: "c", "c.cites contains slug" -%}
+  <section class="cited-by" id="cited-by" aria-labelledby="cited-by-title">
+    <h2 id="cited-by-title" class="section__title">Cited by {{ cp.total }}</h2>
+    {%- assign per_db = "" -%}
+    {%- for s in site.data.citations.sources -%}
+      {%- assign n = cp.counts[s.id] -%}
+      {%- if n != nil %}{% assign per_db = per_db | append: ", " | append: s.name | append: " (" | append: n | append: ")" %}{% endif -%}
+    {%- endfor %}
+    <p class="section__intro">{{ cp.total_noself }} excluding self-citations. Combined from {{ per_db | remove_first: ", " }}; each citing paper is listed once. <a href="{{ '/citations/' | relative_url }}?paper={{ slug }}#citing">All citations</a></p>
+    <ol class="cites">
+      {%- for c in citing %}{% include citing-item.html c=c paper=slug %}{% endfor %}
+    </ol>
+  </section>
+  {%- endif %}
   {{ content }}
   <p class="section-more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
 </article>

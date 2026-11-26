@@ -1,0 +1,75 @@
+name: Update citations
+
+# Collects every paper citing my publications from INSPIRE-HEP, Semantic
+# Scholar, OpenAlex, NASA ADS and Google Scholar, merges them, and commits
+# _data/citations.json (shown on /citations/ and on each publication page).
+#
+# Runs every Monday, whenever publications or the script change, and on
+# demand from the Actions tab ("Run workflow").
+#
+# Optional repository secrets (Settings -> Secrets and variables -> Actions):
+#   ADS_TOKEN        NASA ADS API token (ui.adsabs.harvard.edu -> Settings -> API Token)
+#   SERPAPI_KEY      serpapi.com key, for Google Scholar's list of citing papers
+#   S2_API_KEY       Semantic Scholar API key (higher rate limit)
+#   OPENALEX_API_KEY OpenAlex API key (higher daily limit)
+# A source without its secret is skipped; the others still run.
+
+on:
+  schedule:
+    - cron: "41 8 * * 1"   # Mondays 08:41 UTC
+  push:
+    branches: [master, main]
+    paths:
+      - "_publications/**"
+      - "_data/citations_overrides.yml"
+      - "scripts/update_citations.py"
+      - ".github/workflows/update_citations.yml"
+  workflow_dispatch:
+    inputs:
+      force_scholar:
+        description: "Re-fetch Google Scholar citing lists even if counts are unchanged"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: citations
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Collect citations
+        env:
+          ADS_TOKEN: ${{ secrets.ADS_TOKEN }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: |
+          python scripts/update_citations.py ${{ inputs.force_scholar && '--force-scholar' || '' }}
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- _data/citations.json; then
+            echo "No citation changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/citations.json
+          git commit -m "Update citations"
+          git pull --rebase
+          git push

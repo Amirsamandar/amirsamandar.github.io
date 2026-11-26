@@ -652,6 +652,53 @@ mark.todo {
 .pub-detail > * { max-width: 52rem; }
 .pub-detail .page-head__title { font-size: 1.9rem; }
 
+/* Citations (citations page and "Cited by" on publication pages) */
+.cited-by { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+.cites { list-style: none; max-width: 52rem; }
+.cite { padding-block: 0.9rem; border-bottom: 1px solid var(--border); }
+.cite:last-child { border-bottom: 0; }
+.cite[hidden] { display: none; }
+.cite p { margin-bottom: 0.15rem; }
+.cite__title { font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+.cite__title a { color: var(--text); text-decoration: none; }
+.cite__title a:hover { color: var(--accent); text-decoration: underline; }
+.cite__authors { font-size: 0.92rem; color: var(--muted); }
+.cite__venue { font-size: 0.92rem; font-style: italic; }
+.cite__venue:empty, .cite__authors:empty { display: none; }
+.cite__links { list-style: none; display: flex; flex-wrap: wrap; gap: 0 0.9rem; font-size: 0.88rem; margin: 0.1rem 0 0.15rem; }
+.cite__links a { display: inline-block; padding-block: 0.15rem; }
+.cite__cites { font-size: 0.9rem; }
+.cite__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--muted); }
+.src { display: inline-block; padding: 0 0.4rem; border-radius: var(--radius-sm); background: var(--surface-2); line-height: 1.6; }
+.badge--self { border-color: var(--border-strong); color: var(--muted); font-size: 0.72rem; }
+.cite-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.75rem 1.25rem; margin: 0.25rem 0 1rem; font-size: 0.9rem; }
+.cite-filters[hidden] { display: none; }
+.cite-filters label { display: flex; flex-direction: column; gap: 0.25rem; font-weight: 600; color: var(--muted); }
+.cite-filters label.check { flex-direction: row; align-items: center; gap: 0.45rem; padding-bottom: 0.45rem; color: var(--text); font-weight: 500; }
+.cite-filters select, .cite-filters input[type="search"] {
+  min-height: 2.25rem;
+  padding: 0.3rem 0.55rem;
+  font: inherit;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  max-width: 100%;
+}
+.cite-filters input[type="search"] { min-width: 14rem; }
+.cite-filters input[type="checkbox"] { width: 1.05rem; height: 1.05rem; accent-color: var(--accent); }
+.cite-count { font-size: 0.92rem; color: var(--muted); }
+.table-scroll { overflow-x: auto; max-width: 100%; margin-bottom: 0.75rem; }
+.cite-table { border-collapse: collapse; font-size: 0.92rem; min-width: 40rem; }
+.cite-table th, .cite-table td { padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.cite-table thead th { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--border-strong); }
+.cite-table tbody th { font-weight: 550; min-width: 11rem; }
+.cite-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cite-table tbody tr:hover { background: var(--accent-soft); }
+.src-status { list-style: none; display: flex; flex-wrap: wrap; gap: 0.2rem 1.5rem; font-size: 0.85rem; color: var(--muted); }
+.notice-empty { padding: 1rem 1.25rem; border: 1px dashed var(--border-strong); border-radius: var(--radius); max-width: var(--measure); color: var(--muted); }
+
 /* ==========================================================================
    7. Definition-list blocks (research, plan, CV)
    ========================================================================== */
@@ -737,7 +784,7 @@ mark.todo {
    ========================================================================== */
 
 @media print {
-  .site-nav, .theme-toggle, .skip-link, .pub__bib, .actions { display: none !important; }
+  .site-nav, .theme-toggle, .skip-link, .pub__bib, .actions, .cite-filters { display: none !important; }
   body { background: #fff; color: #000; font-size: 11pt; }
   a { color: #000; }
   .card, .theme { break-inside: avoid; }

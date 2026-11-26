@@ -14,6 +14,9 @@ description: "Publications of Amirhossein Samandar in cosmic topology, CMB stati
     <p class="lede">{% include pub-counts.html %}. Each entry gives my position in the author list and, separately, what I contributed.</p>
     <p>COMPACT Collaboration author lists are ordered first by contribution, then alphabetically. Long author lists are abbreviated; full lists are on arXiv, the journal page and INSPIRE-HEP.</p>
     {% include metrics-board.html %}
+    {%- if site.data.citations.citing.size > 0 %}
+    <p>Who cites these papers: <a href="{{ '/citations/' | relative_url }}">{{ site.data.citations.summary.citing_papers }} citing papers</a>, combined from INSPIRE-HEP, NASA ADS, Semantic Scholar, OpenAlex and Google Scholar.</p>
+    {%- endif %}
     <nav class="toc toc--inline" aria-label="Sections">
       <ul>
         <li><a href="#published">Published ({{ published.size }})</a></li>

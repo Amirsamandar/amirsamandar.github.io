@@ -1,0 +1,54 @@
+{%- comment -%}
+  One citing paper from _data/citations.json (written by scripts/update_citations.py).
+  Usage:
+    {% include citing-item.html c=c %}               citations page: shows which of my papers it cites
+    {% include citing-item.html c=c paper=slug %}    a publication page: self-citation judged for that paper
+{%- endcomment -%}
+{%- assign c = include.c -%}
+{%- if include.paper -%}
+  {%- if c.self_for contains include.paper %}{% assign is_self = true %}{% else %}{% assign is_self = false %}{% endif -%}
+{%- else -%}
+  {%- if c.self_for.size > 0 %}{% assign is_self = true %}{% else %}{% assign is_self = false %}{% endif -%}
+{%- endif -%}
+<li class="cite" data-cites="{{ c.cites | join: ' ' }}" data-self="{{ c.self_for | join: ' ' }}" data-sources="{{ c.sources | join: ' ' }}" data-search="{{ c.search | escape }}">
+  <p class="cite__title">{% if c.url != "" %}<a href="{{ c.url }}">{{ c.title | escape }}</a>{% else %}{{ c.title | escape }}{% endif %}</p>
+  <p class="cite__authors">
+    {%- if c.collab != "" %}{{ c.collab | escape }} · {% endif -%}
+    {%- if c.authors.size > 0 -%}
+      {%- if c.n_authors > 4 -%}{{ c.authors | slice: 0, 3 | join: ", " | escape }} et al. ({{ c.n_authors }} authors)
+      {%- else -%}{{ c.authors | join: ", " | escape }}{%- endif -%}
+    {%- endif -%}
+  </p>
+  <p class="cite__venue">{% if c.venue != "" %}{{ c.venue | escape }}{% if c.date_display != "" %} · {% endif %}{% endif %}{{ c.date_display }}</p>
+  <ul class="cite__links">
+    {%- if c.arxiv != "" %}<li><a href="https://arxiv.org/abs/{{ c.arxiv }}">arXiv:{{ c.arxiv }}</a></li>{% endif -%}
+    {%- if c.doi != "" %}<li><a href="https://doi.org/{{ c.doi }}">DOI</a></li>{% endif -%}
+    {%- if c.ids.inspire %}<li><a href="https://inspirehep.net/literature/{{ c.ids.inspire }}">INSPIRE</a></li>{% endif -%}
+    {%- if c.ids.ads %}<li><a href="https://ui.adsabs.harvard.edu/abs/{{ c.ids.ads | uri_escape }}/abstract">ADS</a></li>{% endif -%}
+    {%- if c.ids.s2 %}<li><a href="https://www.semanticscholar.org/paper/{{ c.ids.s2 }}">Semantic Scholar</a></li>{% endif -%}
+    {%- if c.ids.openalex %}<li><a href="https://openalex.org/{{ c.ids.openalex }}">OpenAlex</a></li>{% endif -%}
+  </ul>
+  {%- unless include.paper %}
+  <p class="cite__cites"><span class="pub__label">Cites:</span>
+    {%- for s in c.cites -%}
+      {%- assign cp = site.data.citations.papers | where: "slug", s | first -%}
+      {% unless forloop.first %},{% endunless %} <a href="{{ '/publication/' | append: s | relative_url }}">{{ cp.short | default: s }}</a>
+    {%- endfor -%}
+  </p>
+  {%- endunless %}
+  <p class="cite__meta">
+    {%- if is_self %}<span class="badge badge--self" title="Shares at least one author with the cited paper (INSPIRE-HEP's definition)">Self-citation</span>{% endif -%}
+    <span class="cite__found">Found in:
+      {%- for s in c.sources -%}
+        {%- case s -%}
+          {%- when "inspire" %} <span class="src">INSPIRE</span>
+          {%- when "ads" %} <span class="src">ADS</span>
+          {%- when "s2" %} <span class="src">Semantic Scholar</span>
+          {%- when "openalex" %} <span class="src">OpenAlex</span>
+          {%- when "scholar" %} <span class="src">Google Scholar</span>
+          {%- when "manual" %} <span class="src">added manually</span>
+        {%- endcase -%}
+      {%- endfor -%}
+    </span>
+  </p>
+</li>

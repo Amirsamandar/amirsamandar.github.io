@@ -1,3 +1,18 @@
+# Citations page (this site)
+
+`/citations/` lists every paper that cites my work, and each publication page has a "Cited by" section.
+The data in `_data/citations.json` is collected by `scripts/update_citations.py` from INSPIRE-HEP,
+Semantic Scholar, OpenAlex, NASA ADS and Google Scholar, merged so each citing paper appears once.
+
+- **Automatic:** the *Update citations* GitHub Action runs every Monday, whenever `_publications/` changes,
+  and on demand (Actions tab → Update citations → Run workflow).
+- **Optional secrets** (Settings → Secrets and variables → Actions): `ADS_TOKEN` (NASA ADS),
+  `SERPAPI_KEY` (Google Scholar citing lists), `S2_API_KEY`, `OPENALEX_API_KEY`. Without them those
+  sources are skipped or rate-limited; the rest still run.
+- **Corrections:** `_data/citations_overrides.yml` drops false matches, adds missing citing papers, and
+  pins database ids for a publication.
+- **Locally:** `pip install pyyaml && python scripts/update_citations.py` (`--dry-run` prints a summary).
+
 # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 

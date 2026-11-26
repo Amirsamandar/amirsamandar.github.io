@@ -6,6 +6,8 @@ main:
     url: /research-plan/
   - title: "Publications"
     url: /publications/
+  - title: "Citations"
+    url: /citations/
   - title: "Talks"
     url: /talks/
   - title: "CV"
