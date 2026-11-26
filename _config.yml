@@ -20,56 +20,20 @@ timezone                 : America/New_York
 # true  = every unresolved [[TODO: ...]] placeholder is rendered as a visible,
 #         highlighted marker so you can find and resolve it in the browser.
 # false = placeholders are hidden and neutral fallback text is shown instead.
-#         Open items are listed under "Placeholders" in REPORT.md.
+#         Turn it on temporarily to find the open items on the live pages.
 show_todos               : false
 
-# -- Theme compatibility --------------------------------------------------------
-# The redesigned pages use _layouts/scholar.html and assets/css/custom.css.
-# The legacy AcademicPages layouts and assets/css/main.css are kept only so any
-# remaining legacy page still renders; nothing in the main navigation uses them.
-site_theme               : "air"
-
-# The `author` block is read by legacy theme includes. The redesigned pages read
-# _data/profile.yml, which is the single source of truth for identity and links.
-author:
-  avatar                 : "profile.jpg"
-  name                   : "Amirhossein Samandar"
-  bio                    : "Cosmology · statistical inference · probabilistic machine learning · computational methods"
-  location               : "Cleveland, Ohio, USA"
-  employer               : "Case Western Reserve University"
-  email                  : "amirhossein.samandar@case.edu"
-  arxiv                  : "https://arxiv.org/search/?searchtype=author&query=Samandar%2C+A"
-  googlescholar          : "https://scholar.google.com/citations?user=cst228UAAAAJ"
-  inspire-hep            : "https://inspirehep.net/authors/2778276"
-  orcid                  : "https://orcid.org/0009-0004-4051-1654"
-  researchgate           : "https://www.researchgate.net/profile/Amirhossein-Samandar"
-  github                 : "Amirsamandar"
-
-publication_category:
-
-# -- Site settings ----------------------------------------------------------------
-breadcrumbs              : false
-words_per_minute         : 160
+# -- Site settings ------------------------------------------------------------------
+# Publications and talks can carry future dates (e.g. an accepted paper's
+# issue date); publish them anyway.
 future                   : true
-read_more                : "disabled"
-talkmap_link             : false
-comments:
-  provider               : false
-atom_feed:
-  hide                   : true
-analytics:
-  provider               : false
-
-# Social sharing: the redesigned <head> builds OpenGraph tags and the
-# schema.org Person record from _data/profile.yml.
-og_image                 : "profile.jpg"
 
 # -- Reading files ------------------------------------------------------------------
 include:
   - _pages
   - files
 exclude:
-  # build tooling and repository metadata
+  # build tooling and repository files (not part of the website)
   - .github
   - .devcontainer
   - .sass-cache
@@ -79,49 +43,12 @@ exclude:
   - node_modules
   - Gemfile
   - Gemfile.lock
-  - package.json
-  - package-lock.json
   - Dockerfile
   - docker-compose.yaml
   - _config_docker.yml
-  - CONTRIBUTING.md
   - LICENSE
   - README.md
-  - INSTALL.md
-  - REPORT.md
   - scripts
-  - markdown_generator
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  # template sample content that should never be published
-  - _posts
-  - _drafts
-  - _portfolio
-  - _teaching
-  - talkmap
-  - talkmap.ipynb
-  - talkmap.py
-  - talkmap_out.ipynb
-  - _pages/archive-layout-with-content.md
-  - _pages/category-archive.html
-  - _pages/collection-archive.html
-  - _pages/cv-json.md
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/page-archive.html
-  - _pages/portfolio.html
-  - _pages/tag-archive.html
-  - _pages/talkmap.html
-  - _pages/teaching.html
-  - _pages/terms.md
-  - _pages/year-archive.html
-  # superseded route owners (replaced by publications.md / talks.md)
-  - _pages/publications.html
-  - _pages/talks.html
-  # old record replaced by _publications/2026-10-12-beyond-kl-divergence.md
-  # (its URL now redirects); excluded in case the file survives a copy-over
-  - _publications/2026-09-01-beyond-kl-divergence.md
 keep_files:
   - .git
 encoding                 : "utf-8"
@@ -171,8 +98,8 @@ defaults:
       body_class: "page page--talk"
 
 # -- Sass -----------------------------------------------------------------------------
+# assets/css/custom.scss is plain CSS; Sass only minifies it.
 sass:
-  sass_dir               : _sass
   style                  : compressed
 
 # -- Output -----------------------------------------------------------------------------

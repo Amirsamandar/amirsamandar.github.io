@@ -1,111 +1,119 @@
-# Citations page (this site)
+<div align="center">
 
-`/citations/` lists every paper that cites my work, and each publication page has a "Cited by" section.
-The data in `_data/citations.json` is collected by `scripts/update_citations.py` from INSPIRE-HEP,
-Semantic Scholar, OpenAlex, NASA ADS and Google Scholar, merged so each citing paper appears once.
+# Amirhossein Samandar
 
-- **Automatic:** the *Update citations* GitHub Action runs every Monday, whenever `_publications/` changes,
-  and on demand (Actions tab → Update citations → Run workflow).
-- **Optional secrets** (Settings → Secrets and variables → Actions): `ADS_TOKEN` (NASA ADS),
-  `SERPAPI_KEY` (Google Scholar citing lists), `S2_API_KEY`, `OPENALEX_API_KEY`. Without them those
-  sources are skipped or rate-limited; the rest still run.
-- **Corrections:** `_data/citations_overrides.yml` drops false matches, adds missing citing papers, and
-  pins database ids for a publication.
-- **Locally:** `pip install pyyaml && python scripts/update_citations.py` (`--dry-run` prints a summary).
+**Ph.D. candidate in Physics · Case Western Reserve University**
 
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+Cosmology · statistical inference · probabilistic machine learning · computational methods
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+[![Website](https://img.shields.io/badge/website-amirsamandar.github.io-5a3696?style=flat-square)](https://amirsamandar.github.io)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-profile-4285F4?style=flat-square&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=cst228UAAAAJ)
+[![INSPIRE-HEP](https://img.shields.io/badge/INSPIRE--HEP-profile-0b3d91?style=flat-square)](https://inspirehep.net/authors/2778276)
+[![arXiv](https://img.shields.io/badge/arXiv-papers-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/search/?searchtype=author&query=Samandar%2C+A)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0004--4051--1654-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0004-4051-1654)
 
-# Getting Started
-
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+</div>
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+This repository holds the source of my academic website, **[amirsamandar.github.io](https://amirsamandar.github.io)**.
+
+We observe exactly one universe, so knowing what we can reliably learn from it is central to cosmology. My research asks whether non-trivial cosmic topology leaves detectable traces in the cosmic microwave background (CMB), how often a search can actually recover a real signal, and how machine learning trained on simulations can speed up inference while keeping its uncertainties honest. I also work on calibrated Bayesian evaluation of large language models.
+
+I am advised by Glenn D. Starkman and Craig J. Copi and work within the COMPACT Collaboration. **I am seeking postdoctoral positions starting in 2027.**
+
+## Selected work
+
+| Topic | Result |
+|---|---|
+| **Detectability beyond the KL divergence** | The KL divergence alone does not say how often a search detects a signal. Likelihood-ratio distributions do. [arXiv:2610.17186](https://arxiv.org/abs/2610.17186) |
+| **Parity violation from topology** | Spatial topology alone can induce parity-odd TB and EB correlations in the CMB. [JCAP 11 (2024) 020](https://arxiv.org/abs/2407.09400) |
+| **Tensor modes in compact spaces** | First spin-2 eigenmodes and CMB correlation matrices for orientable compact flat spaces. [JCAP 08 (2025) 015](https://arxiv.org/abs/2503.08671) |
+| **Bayesian LLM evaluation** | A Dirichlet-posterior replacement for Pass@k with credible intervals and more stable rankings. [ICLR 2026](https://arxiv.org/abs/2510.04265) |
+
+**Software:** [CMBtopology](https://github.com/CompactCollaboration/CMBtopology), GPU-parallelized CMB covariance matrices for compact topologies · [Scorio](https://github.com/mohsenhariri/scorio), Bayesian evaluation toolkit for LLMs.
+
+## The website
+
+| Page | What it shows |
+|---|---|
+| [Home](https://amirsamandar.github.io/) | Research question, headline results, selected papers, news |
+| [Research](https://amirsamandar.github.io/research/) | Each project: problem, contribution, result, status |
+| [Research plan](https://amirsamandar.github.io/research-plan/) | Proposed postdoctoral directions |
+| [Publications](https://amirsamandar.github.io/publications/) | Every paper with my author position, my contribution and BibTeX |
+| [Citations](https://amirsamandar.github.io/citations/) | Every paper citing my work, merged from five databases |
+| [Talks](https://amirsamandar.github.io/talks/) · [CV](https://amirsamandar.github.io/cv/) · [News](https://amirsamandar.github.io/news/) | Talks, CV with PDF download, dated news |
+
+## Repository layout
+
+```
+_data/
+  profile.yml               name, links, availability, citation metrics (single source of truth)
+  home.yml                  homepage text and headline results
+  research.yml              research themes and projects
+  news.yml, software.yml    news items, software cards
+  navigation.yml            header and footer menus
+  citations.json            citing papers (generated, do not edit by hand)
+  citations_overrides.yml   manual fixes for the citation data
+_publications/              one Markdown file per paper
+_talks/                     one Markdown file per talk
+_pages/                     the site's pages (home is about.md)
+_layouts/, _includes/       page templates
+assets/css/custom.scss      all styling (color tokens at the top)
+assets/js/                  theme toggle, citation filters
+files/                      downloadable PDFs (CV)
+images/                     portrait, icons, background
+scripts/                    citation and metrics updaters, background generator
+.github/workflows/          scheduled updates
+```
+
+## Updating the site
+
+| To change… | Edit |
+|---|---|
+| Name, links, availability, Ph.D. date | `_data/profile.yml` |
+| Homepage wording and headline results | `_data/home.yml` |
+| Research themes and projects | `_data/research.yml` |
+| Add a paper | new file in `_publications/` (copy an existing one; set `status`, `arxiv`, `doi`, `contribution`) |
+| Add a talk | new file in `_talks/` |
+| News | `_data/news.yml` |
+| Menu | `_data/navigation.yml` |
+| Colors and fonts | `assets/css/custom.scss` |
+| CV PDF | replace `files/Samandar_CV.pdf` |
+
+Set `show_todos: true` in `_config.yml` to see unresolved placeholders highlighted on the pages.
+
+## Automation
+
+Two GitHub Actions keep the numbers current without manual work:
+
+- **Update citations** (`update_citations.yml`) runs every Monday, whenever a publication changes, and on demand. It collects citing papers from INSPIRE-HEP, Semantic Scholar, OpenAlex, NASA ADS and Google Scholar, removes duplicates, flags self-citations, and commits `_data/citations.json`.
+- **Update citation metrics** (`update_scholar_metrics.yml`) refreshes the citation count, h-index and i10-index from Google Scholar every Monday.
+
+Optional repository secrets (*Settings → Secrets and variables → Actions*) switch on more sources:
+
+| Secret | Enables |
+|---|---|
+| `ADS_TOKEN` | NASA ADS ([get a token](https://ui.adsabs.harvard.edu/user/settings/token)) |
+| `SERPAPI_KEY` | Reliable Google Scholar data via [SerpAPI](https://serpapi.com) |
+| `S2_API_KEY` | Higher Semantic Scholar rate limit |
+| `OPENALEX_API_KEY` | Higher OpenAlex daily limit |
+
+To fix a wrong or missing citation, edit `_data/citations_overrides.yml`. The fix is kept on every later run.
+
+## Preview locally
+
+With Ruby and Bundler installed:
+
+```bash
+bundle install
+bundle exec jekyll serve      # http://localhost:4000
+```
+
+With Docker, run `docker compose up`. In VS Code, use *Dev Containers: Reopen in Container*. Either way the site is served on port 4000.
+
+To refresh citations locally: `pip install pyyaml && python scripts/update_citations.py --dry-run`.
+
+## Credits
+
+Built with [Jekyll](https://jekyllrb.com) and hosted on GitHub Pages. The repository started from the [AcademicPages](https://github.com/academicpages/academicpages.github.io) template (based on Minimal Mistakes). The current design is custom. Code is under the MIT License (see `LICENSE`). Text, photos and the CV are © Amirhossein Samandar.
