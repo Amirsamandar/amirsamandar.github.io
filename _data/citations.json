@@ -1,10 +1,10 @@
 {
  "updated": "2026-11-26",
  "summary": {
-  "citing_papers": 98,
-  "citing_papers_noself": 65,
-  "citations": 176,
-  "citations_noself": 93,
+  "citing_papers": 79,
+  "citing_papers_noself": 57,
+  "citations": 158,
+  "citations_noself": 85,
   "h_index": 9,
   "papers_cited": 13
  },
@@ -29,9 +29,9 @@
    "id": "s2",
    "name": "Semantic Scholar",
    "status": "ok",
-   "note": "5 paper(s) failed this run; previous data kept for them",
+   "note": "2 paper(s) failed this run; previous data kept for them",
    "as_of": "2026-11-26",
-   "links": 82
+   "links": 111
   },
   {
    "id": "openalex",
@@ -39,7 +39,7 @@
    "status": "ok",
    "note": "",
    "as_of": "2026-11-26",
-   "links": 162
+   "links": 140
   },
   {
    "id": "scholar",
@@ -102,7 +102,6 @@
    "doi": "10.1088/1475-7516/2025/01/004",
    "ids": {
     "inspire": 2824834,
-    "s2": "4cf11ff2cd01dc6bc77cb759f4ace43ed204cdba",
     "openalex": [
      "W4406170517"
     ]
@@ -167,6 +166,7 @@
    "doi": "",
    "ids": {
     "inspire": 3121048,
+    "s2": "91a6918f8750a36eae207f35321ded637ca6ad78",
     "openalex": [
      "W7130311544"
     ]
@@ -174,7 +174,7 @@
    "counts": {
     "inspire": 7,
     "ads": null,
-    "s2": null,
+    "s2": 6,
     "openalex": 7,
     "scholar": null
    },
@@ -188,6 +188,7 @@
    "doi": "",
    "ids": {
     "inspire": 3129136,
+    "s2": "439aafdb1c4f7befe5f81b608a16a3e619c4fad6",
     "openalex": [
      "W7136703098"
     ]
@@ -195,7 +196,7 @@
    "counts": {
     "inspire": 8,
     "ads": null,
-    "s2": null,
+    "s2": 8,
     "openalex": 9,
     "scholar": null
    },
@@ -231,24 +232,20 @@
    "doi": "10.1038/s41550-026-02930-6",
    "ids": {
     "inspire": 3171567,
+    "s2": "22c35b164b399f0128650c91ab609ab6648a269f",
     "openalex": [
-     "W7165730755",
-     "W1905850353",
-     "W2503406467",
-     "W1965561900",
-     "W3135708546",
-     "W7164309211"
+     "W7165730755"
     ]
    },
    "counts": {
     "inspire": 8,
     "ads": null,
-    "s2": null,
-    "openalex": 29,
+    "s2": 0,
+    "openalex": 7,
     "scholar": null
    },
-   "total": 30,
-   "total_noself": 15
+   "total": 9,
+   "total_noself": 6
   },
   {
    "slug": "2026-08-04-test-time-scaling",
@@ -256,6 +253,7 @@
    "arxiv": "2608.04001",
    "doi": "",
    "ids": {
+    "s2": "0aea282a4a5eb147744d0aae66de6aed9f2179e6",
     "openalex": [
      "W7172492764"
     ]
@@ -263,12 +261,12 @@
    "counts": {
     "inspire": null,
     "ads": null,
-    "s2": null,
+    "s2": 14,
     "openalex": 14,
     "scholar": null
    },
-   "total": 14,
-   "total_noself": 11
+   "total": 16,
+   "total_noself": 12
   },
   {
    "slug": "2026-08-25-cosmic-topology-va",
@@ -299,7 +297,6 @@
    "doi": "",
    "ids": {
     "inspire": 3212982,
-    "s2": "6753799d42fa88cd35156c64caa1236132eb1ab4",
     "openalex": [
      "W7221159679"
     ]
@@ -321,6 +318,7 @@
    "doi": "",
    "ids": {
     "inspire": 3214436,
+    "s2": "93345e035372f5cc064c780a1e23fe80b5df7b1b",
     "openalex": [
      "W7221805728"
     ]
@@ -328,11 +326,11 @@
    "counts": {
     "inspire": 0,
     "ads": null,
-    "s2": null,
+    "s2": 1,
     "openalex": 1,
     "scholar": null
    },
-   "total": 1,
+   "total": 2,
    "total_noself": 0
   }
  ],
@@ -513,11 +511,11 @@
     "D. Ganguly",
     "V. Singh",
     "M. Hariri",
-    "W. Chen",
-    "Y. Zhang",
+    "W.-C. Chen",
+    "Y.-Y. Zhang",
     "S. Wang",
     "W. Yang",
-    "C. Song",
+    "C.-D. Song",
     "A. Nemecek"
    ],
    "n_authors": 20,
@@ -528,9 +526,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "7ade45fec846a2bea7bc0c5b5f0b8f2b5e1c79ae",
     "openalex": "W7225144412"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -544,15 +544,15 @@
    ],
    "date_display": "2 Nov 2026",
    "id": "ce49dfdd299",
-   "search": "leanguard: lean-verified guardrails for tool-using agents s. sankar d. ganguly v. singh m. hariri w. chen y. zhang s. wang w. yang c. song a. nemecek  "
+   "search": "leanguard: lean-verified guardrails for tool-using agents s. sankar d. ganguly v. singh m. hariri w.-c. chen y.-y. zhang s. wang w. yang c.-d. song a. nemecek  "
   },
   {
    "title": "From Apparent Search Gains to Selection Failures: Auditing Test-Time Inference in Structured Workflow Planning",
    "authors": [
-    "Z. Chen",
-    "W. Zhang",
+    "Z.-T. Chen",
+    "W.-F. Zhang",
     "K. Yin",
-    "Z. Wang",
+    "Z.-Y. Wang",
     "A. Mostafavi",
     "J. Caverlee"
    ],
@@ -564,9 +564,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "447195e904a4954b3b2f510ae7a142b289e3b74a",
     "openalex": "W7225162243"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -578,14 +580,14 @@
    "self_for": [],
    "date_display": "31 Oct 2026",
    "id": "cec3a389d5f",
-   "search": "from apparent search gains to selection failures: auditing test-time inference in structured workflow planning z. chen w. zhang k. yin z. wang a. mostafavi j. caverlee  "
+   "search": "from apparent search gains to selection failures: auditing test-time inference in structured workflow planning z.-t. chen w.-f. zhang k. yin z.-y. wang a. mostafavi j. caverlee  "
   },
   {
    "title": "Few Trials, Many Metrics: Beta Mixtures for Low-Budget AI Evaluation",
    "authors": [
     "G. Tironi",
-    "F. M. Polo",
-    "D. P. P. Mesquita"
+    "F. Polo",
+    "D. M. Mesquita"
    ],
    "n_authors": 3,
    "collab": "",
@@ -595,9 +597,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "ac890b6a97b22102780311c5c717c44ca569c6f1",
     "openalex": "W7225194500"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -609,7 +613,7 @@
    "self_for": [],
    "date_display": "31 Oct 2026",
    "id": "cbf453a1c66",
-   "search": "few trials, many metrics: beta mixtures for low-budget ai evaluation g. tironi f. m. polo d. p. p. mesquita  "
+   "search": "few trials, many metrics: beta mixtures for low-budget ai evaluation g. tironi f. polo d. m. mesquita  "
   },
   {
    "title": "Which Answers Agree? Evaluating Self-Consistency from Incomplete Logs",
@@ -691,10 +695,12 @@
    "doctype": "article",
    "ids": {
     "inspire": 3216271,
+    "s2": "59ade1a4207087c5b0ba7ef5c7171a65ad414c9f",
     "openalex": "W7223044822"
    },
    "sources": [
     "inspire",
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -770,16 +776,16 @@
   {
    "title": "Collaborative Learning and Reasoning over Model Slices",
    "authors": [
-    "Y. Wang",
-    "R. Yang",
-    "Z. Bao",
-    "Q. Zhang",
-    "H. Li",
+    "Y.-H. Wang",
+    "R.-D. Yang",
+    "Z.-H. Bao",
+    "Q.-R. Zhang",
+    "H.-T. Li",
     "Y. Zheng",
-    "L. Wu",
-    "J. Fan",
-    "S. Yao",
-    "Y. Li"
+    "L.-N. Wu",
+    "J.-R. Fan",
+    "S.-Y. Yao",
+    "Y.-H. Li"
    ],
    "n_authors": 12,
    "collab": "",
@@ -789,9 +795,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "8575a1cec19b396978efa53eed7bff1822032158",
     "openalex": "W7221528939"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -803,7 +811,7 @@
    "self_for": [],
    "date_display": "9 Oct 2026",
    "id": "ca313d8df36",
-   "search": "collaborative learning and reasoning over model slices y. wang r. yang z. bao q. zhang h. li y. zheng l. wu j. fan s. yao y. li  "
+   "search": "collaborative learning and reasoning over model slices y.-h. wang r.-d. yang z.-h. bao q.-r. zhang h.-t. li y. zheng l.-n. wu j.-r. fan s.-y. yao y.-h. li  "
   },
   {
    "title": "Cosmic topology. Part IId. Eigenmodes and correlation matrices of lens spaces",
@@ -844,7 +852,8 @@
     "2026-02-15-cosmic-topology-iic",
     "2026-03-12-quantum-signatures",
     "2026-07-01-cosmic-topology-iib",
-    "2026-08-25-cosmic-topology-va"
+    "2026-08-25-cosmic-topology-va",
+    "2026-10-12-beyond-kl-divergence"
    ],
    "year": "2026",
    "url": "https://arxiv.org/abs/2610.12418",
@@ -857,7 +866,8 @@
     "2026-02-15-cosmic-topology-iic",
     "2026-03-12-quantum-signatures",
     "2026-07-01-cosmic-topology-iib",
-    "2026-08-25-cosmic-topology-va"
+    "2026-08-25-cosmic-topology-va",
+    "2026-10-12-beyond-kl-divergence"
    ],
    "date_display": "8 Oct 2026",
    "id": "c4743840805",
@@ -900,9 +910,9 @@
   {
    "title": "Adaptive Power Sampling for LLM Reasoning",
    "authors": [
-    "B. Xiao",
-    "C. Yang",
-    "B. Li",
+    "B.-N. Xiao",
+    "C.-H. Yang",
+    "B.-C. Li",
     "W. Ni",
     "X. Wang"
    ],
@@ -914,9 +924,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "328114f865558546e8c44ea91a842bac6d700c5c",
     "openalex": "W7220928984"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -928,7 +940,7 @@
    "self_for": [],
    "date_display": "6 Oct 2026",
    "id": "cfec836fc17",
-   "search": "adaptive power sampling for llm reasoning b. xiao c. yang b. li w. ni x. wang  "
+   "search": "adaptive power sampling for llm reasoning b.-n. xiao c.-h. yang b.-c. li w. ni x. wang  "
   },
   {
    "title": "Limited Impact of CMB B-mode Polarization on Constraints on Cosmic Topology",
@@ -969,11 +981,11 @@
   {
    "title": "Budget Boundary Effects in Test-Time Mathematical Reasoning",
    "authors": [
-    "G. Zhang",
-    "Z. Tan",
-    "W. Guo",
+    "G.-L. Zhang",
+    "Z.-Q. Tan",
+    "W.-L. Guo",
     "K. Zhao",
-    "H. Yang",
+    "H.-Y. Yang",
     "M. Luo",
     "Q. Ning",
     "F. Yang"
@@ -986,9 +998,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "4f87e6d9c5065c58139cee72fbc08d8bfcf0a47c",
     "openalex": "W7216595965"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -1000,7 +1014,7 @@
    "self_for": [],
    "date_display": "30 Sep 2026",
    "id": "c6436c246d5",
-   "search": "budget boundary effects in test-time mathematical reasoning g. zhang z. tan w. guo k. zhao h. yang m. luo q. ning f. yang  "
+   "search": "budget boundary effects in test-time mathematical reasoning g.-l. zhang z.-q. tan w.-l. guo k. zhao h.-y. yang m. luo q. ning f. yang  "
   },
   {
    "title": "Anytime-Valid LLM Leaderboards via Benchmark-weighted and Block-Factorized e-Processes",
@@ -1365,9 +1379,9 @@
    "title": "Recursive Agentic Reasoning",
    "authors": [
     "S. Zhang",
-    "X. Wu",
-    "X. Wu",
-    "J. Xie"
+    "X.-M. Wu",
+    "X.-Y. Wu",
+    "J.-Y. Xie"
    ],
    "n_authors": 4,
    "collab": "",
@@ -1377,9 +1391,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "68682e1a993e29b01674f2507c921cf88532d2ab",
     "openalex": "W7204500123"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -1391,7 +1407,7 @@
    "self_for": [],
    "date_display": "25 Aug 2026",
    "id": "c842f253301",
-   "search": "recursive agentic reasoning s. zhang x. wu x. wu j. xie  "
+   "search": "recursive agentic reasoning s. zhang x.-m. wu x.-y. wu j.-y. xie  "
   },
   {
    "title": "Cosmic topology. Part Va. Information content of the observable Universe",
@@ -1523,7 +1539,7 @@
     "A. Tahmasivand",
     "H. Alsyouri",
     "S. Al-Sayouri",
-    "C. Fang",
+    "C.-Z. Fang",
     "I. Alouani",
     "K. N. Khasawneh"
    ],
@@ -1535,9 +1551,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "d7d1941f6fc091c0d0c0361d9c94484bcdda00f9",
     "openalex": "W7204085726"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -1549,7 +1567,7 @@
    "self_for": [],
    "date_display": "20 Aug 2026",
    "id": "ca64db3465d",
-   "search": "faults that fortify: cnn adversarial robustness via gpu undervolting b. omidi a. tahmasivand h. alsyouri s. al-sayouri c. fang i. alouani k. n. khasawneh  "
+   "search": "faults that fortify: cnn adversarial robustness via gpu undervolting b. omidi a. tahmasivand h. alsyouri s. al-sayouri c.-z. fang i. alouani k. n. khasawneh  "
   },
   {
    "title": "Cross-frequency stochastic gravitational-wave background anisotropy from compact topology: CMB <math display=\"inline\"><mi>B</mi></math>-mode covariance as a transfer probe",
@@ -1585,6 +1603,38 @@
    "search": "cross-frequency stochastic gravitational-wave background anisotropy from compact topology: cmb <math display=\"inline\"><mi>b</mi></math>-mode covariance as a transfer probe l.-e. qiang p. xu  phys.rev.d 114 l081301 (2026)"
   },
   {
+   "title": "ZOMP: Zeroth-Order Multi-Modal Prompt Tuning for Vision-Language Models",
+   "authors": [
+    "S. Ghiasvand",
+    "Y. Yang",
+    "M. Alizadeh",
+    "R. Pedarsani"
+   ],
+   "n_authors": 4,
+   "collab": "",
+   "date": "2026-08-08",
+   "venue": "",
+   "arxiv": "2608.08060",
+   "doi": "",
+   "doctype": "",
+   "ids": {
+    "s2": "1b1684d17ac31e1a0d516fc2b30083d212ee1331"
+   },
+   "sources": [
+    "s2"
+   ],
+   "cites": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "year": "2026",
+   "url": "https://arxiv.org/abs/2608.08060",
+   "self_own": false,
+   "self_for": [],
+   "date_display": "8 Aug 2026",
+   "id": "c25661d7aee",
+   "search": "zomp: zeroth-order multi-modal prompt tuning for vision-language models s. ghiasvand y. yang m. alizadeh r. pedarsani  "
+  },
+  {
    "title": "GRASP: Reinforcing Language Model Anonymizers with Group Relative Policy Optimization",
    "authors": [
     "S. Ghiasvand",
@@ -1598,9 +1648,11 @@
    "doi": "",
    "doctype": "preprint",
    "ids": {
+    "s2": "a7c4e63338e81a588472b09f868af861a0be9ee6",
     "openalex": "W7202133006"
    },
    "sources": [
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -1899,6 +1951,46 @@
    "search": "inflation and topology from the no-boundary state v. godet  "
   },
   {
+   "title": "Path-Lock Expert: Separating Reasoning Mode in Hybrid Thinking via Architecture-Level Separation",
+   "authors": [
+    "S. Wang",
+    "W. Yang",
+    "C. Ma",
+    "D. Ganguly",
+    "V. Singh",
+    "C.-D. Song",
+    "X.-P. Li",
+    "X.-X. Long",
+    "V. Chaudhary",
+    "X.-T. Han"
+   ],
+   "n_authors": 10,
+   "collab": "",
+   "date": "2026-04-29",
+   "venue": "",
+   "arxiv": "2604.27201",
+   "doi": "",
+   "doctype": "",
+   "ids": {
+    "s2": "e821774e30ae78e7d339e6ae26168ea20319d3ca"
+   },
+   "sources": [
+    "s2"
+   ],
+   "cites": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "year": "2026",
+   "url": "https://arxiv.org/abs/2604.27201",
+   "self_own": false,
+   "self_for": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "date_display": "29 Apr 2026",
+   "id": "c3005dab0bb",
+   "search": "path-lock expert: separating reasoning mode in hybrid thinking via architecture-level separation s. wang w. yang c. ma d. ganguly v. singh c.-d. song x.-p. li x.-x. long v. chaudhary x.-t. han  "
+  },
+  {
    "title": "Unruh–DeWitt detector response in toroidal spacetime",
    "authors": [
     "N. Kajuri",
@@ -1985,10 +2077,12 @@
    "doctype": "article",
    "ids": {
     "inspire": 3136392,
+    "s2": "3582e569df5c4427d1a81466133321504b466ff9",
     "openalex": "W7164818764"
    },
    "sources": [
     "inspire",
+    "s2",
     "openalex"
    ],
    "cites": [
@@ -2454,43 +2548,6 @@
    "search": "does cot-pass@k really check the cot? a multilingual mathematical audit t. t. tasalt b. hudaverdi d. semedo  workshop on multilingual representation learning (mrl)"
   },
   {
-   "title": "Demystifying Hybrid Thinking: Can LLMs Truly Switch Between Think and No-Think?",
-   "authors": [
-    "S. Wang",
-    "Y. Wang",
-    "X. Long",
-    "D. Ganguly",
-    "Q. Wang",
-    "V. Chaudhary",
-    "X. Han"
-   ],
-   "n_authors": 7,
-   "collab": "",
-   "date": "2026-01-01",
-   "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-   "arxiv": "2510.12680",
-   "doi": "10.18653/2026.emnlp-main.151",
-   "doctype": "conference-paper",
-   "ids": {
-    "openalex": "W4415271111"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-04-test-time-scaling"
-   ],
-   "year": "2026",
-   "url": "https://arxiv.org/abs/2510.12680",
-   "self_own": false,
-   "self_for": [
-    "2026-08-04-test-time-scaling"
-   ],
-   "date_display": "1 Jan 2026",
-   "id": "cc371cca311",
-   "search": "demystifying hybrid thinking: can llms truly switch between think and no-think? s. wang y. wang x. long d. ganguly q. wang v. chaudhary x. han  conference on empirical methods in natural language processing (emnlp)"
-  },
-  {
    "title": "Bayesian World Models",
    "authors": [
     "N. G. Polson",
@@ -2654,6 +2711,45 @@
    "date_display": "4 Nov 2025",
    "id": "ca1714667e6",
    "search": "sequential bayesian evaluation of large language model behavior s. kher s. wu r. longjohn c. g. belem p. smyth  "
+  },
+  {
+   "title": "Demystifying Hybrid Thinking: Can LLMs Truly Switch Between Think and No-Think?",
+   "authors": [
+    "S. Wang",
+    "W. Yang",
+    "X.-X. Long",
+    "D. Ganguly",
+    "Q.-F. Wang",
+    "V. Chaudhary",
+    "X.-T. Han"
+   ],
+   "n_authors": 7,
+   "collab": "",
+   "date": "2025-10-14",
+   "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+   "arxiv": "2510.12680",
+   "doi": "10.18653/2026.emnlp-main.151",
+   "doctype": "conference-paper",
+   "ids": {
+    "s2": "abcf4ddcbca58376f2541f5821d75d0a936d8e14",
+    "openalex": "W4415271111"
+   },
+   "sources": [
+    "s2",
+    "openalex"
+   ],
+   "cites": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "year": "2025",
+   "url": "https://arxiv.org/abs/2510.12680",
+   "self_own": false,
+   "self_for": [
+    "2026-08-04-test-time-scaling"
+   ],
+   "date_display": "14 Oct 2025",
+   "id": "cc371cca311",
+   "search": "demystifying hybrid thinking: can llms truly switch between think and no-think? s. wang w. yang x.-x. long d. ganguly q.-f. wang v. chaudhary x.-t. han  conference on empirical methods in natural language processing (emnlp)"
   },
   {
    "title": "Cosmic topology. Part IIb. Eigenmodes, correlation matrices, and detectability of non-orientable Euclidean manifolds",
@@ -2902,35 +2998,6 @@
    "search": "illustrating the consequences of a misuse of <math display=\"inline\"><mrow><msub><mrow><mi></mi></mrow><mrow><mn>8</mn></mrow></msub></mrow></math> in cosmology m. forconi a. favale a. gomez-valent  phys.rev.d 112 023517 (2025)"
   },
   {
-   "title": "Relic Black Holes and the Presence of Barbour’s Shape Dynamics to Explain Different Pathways for a Change of Energy State at the Start of Inflation",
-   "authors": [
-    "A. W. Beckwith"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2025-01-01",
-   "venue": "Journal of High Energy Physics Gravitation and Cosmology",
-   "arxiv": "",
-   "doi": "10.4236/jhepgc.2025.112033",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W4409818925"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2025",
-   "url": "https://doi.org/10.4236/jhepgc.2025.112033",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 Jan 2025",
-   "id": "cf877a151ae",
-   "search": "relic black holes and the presence of barbours shape dynamics to explain different pathways for a change of energy state at the start of inflation a. w. beckwith  journal of high energy physics gravitation and cosmology"
-  },
-  {
    "title": "Probing the Cosmological Principle with weak lensing shear",
    "authors": [
     "J. Adam",
@@ -3095,638 +3162,6 @@
    "date_display": "1 Mar 2024",
    "id": "c0e1b4f19ff",
    "search": "cosmic topology. part iia. eigenmodes, correlation matrices, and detectability of orientable euclidean manifolds j. r. eskilt y. akrami s. anselmi c. j. copi a. h. jaffe a. b. kosowsky d. p. mihaylov g. d. starkman a. tamosiunas j. b. mertens  journal of cosmology and astroparticle physics"
-  },
-  {
-   "title": "Cosmic microwave background properties in a universe with simply or multiply connected topology",
-   "authors": [
-    "M. J. France"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2022-06-28",
-   "venue": "theses.fr (ABES)",
-   "arxiv": "",
-   "doi": "10.70675/1ce9cf8eze22cz494ez8129ze7c7e0fcb4dc",
-   "doctype": "dissertation",
-   "ids": {
-    "openalex": "W7151382685"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2022",
-   "url": "https://doi.org/10.70675/1ce9cf8eze22cz494ez8129ze7c7e0fcb4dc",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "28 Jun 2022",
-   "id": "c6fed76ed91",
-   "search": "cosmic microwave background properties in a universe with simply or multiply connected topology m. j. france  theses.fr (abes)"
-  },
-  {
-   "title": "Gravitational potentials and forces in the Lattice Universe: a slab",
-   "authors": [
-    "M. Eingorn",
-    "N. O’Briant",
-    "K. Arzu",
-    "M. Brilenkov",
-    "A. Zhuk"
-   ],
-   "n_authors": 5,
-   "collab": "",
-   "date": "2021-02-01",
-   "venue": "The European Physical Journal Plus",
-   "arxiv": "2112.14281",
-   "doi": "10.1140/epjp/s13360-021-01139-y",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W3130175056"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2021",
-   "url": "https://arxiv.org/abs/2112.14281",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 Feb 2021",
-   "id": "cdb38bffbd7",
-   "search": "gravitational potentials and forces in the lattice universe: a slab m. eingorn n. obriant k. arzu m. brilenkov a. zhuk  the european physical journal plus"
-  },
-  {
-   "title": "Nouveaux concepts pour les matrices de bolomètres destinées à l’exploration de l’Univers dans le domaine millimétrique",
-   "authors": [
-    "O. Rigaut"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2014-05-06",
-   "venue": "theses.fr (ABES)",
-   "arxiv": "",
-   "doi": "10.70675/6c4a1738ze043z440ezbe87z75fb51cdf358",
-   "doctype": "dissertation",
-   "ids": {
-    "openalex": "W7144296628"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2014",
-   "url": "https://doi.org/10.70675/6c4a1738ze043z440ezbe87z75fb51cdf358",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "6 May 2014",
-   "id": "cfe5a7191cc",
-   "search": "nouveaux concepts pour les matrices de bolometres destinees a lexploration de lunivers dans le domaine millimetrique o. rigaut  theses.fr (abes)"
-  },
-  {
-   "title": "Deep redshift topological lensing: strategies for the T3 candidate",
-   "authors": [
-    "B. F. Roukema",
-    "M. J. France",
-    "T. A. Kazimierczak",
-    "T. Buchert"
-   ],
-   "n_authors": 4,
-   "collab": "",
-   "date": "2013-11-15",
-   "venue": "Monthly Notices of the Royal Astronomical Society",
-   "arxiv": "1302.4425",
-   "doi": "10.1093/mnras/stt1885",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W1967019091"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2013",
-   "url": "https://arxiv.org/abs/1302.4425",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "15 Nov 2013",
-   "id": "c5d09ba65d5",
-   "search": "deep redshift topological lensing: strategies for the t3 candidate b. f. roukema m. j. france t. a. kazimierczak t. buchert  monthly notices of the royal astronomical society"
-  },
-  {
-   "title": "Topological acceleration in relativistic cosmology",
-   "authors": [
-    "B. F. Roukema"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2013-01-01",
-   "venue": "AIP conference proceedings",
-   "arxiv": "1212.5426",
-   "doi": "10.1063/1.4791746",
-   "doctype": "conference-paper",
-   "ids": {
-    "openalex": "W1967601524"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2013",
-   "url": "https://arxiv.org/abs/1212.5426",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "1 Jan 2013",
-   "id": "cd65cc90c01",
-   "search": "topological acceleration in relativistic cosmology b. f. roukema  aip conference proceedings"
-  },
-  {
-   "title": "Constraints on the global topology and size of the universe from the cosmic microwave background",
-   "authors": [
-    "G. Aslanyan",
-    "A. V. Manohar"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2012-06-06",
-   "venue": "Journal of Cosmology and Astroparticle Physics",
-   "arxiv": "1104.0015",
-   "doi": "10.1088/1475-7516/2012/06/003",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2951207872"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2012",
-   "url": "https://arxiv.org/abs/1104.0015",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "6 Jun 2012",
-   "id": "c61a3d67c12",
-   "search": "constraints on the global topology and size of the universe from the cosmic microwave background g. aslanyan a. v. manohar  journal of cosmology and astroparticle physics"
-  },
-  {
-   "title": "The size of the Universe according to the Poincaré dodecahedral space hypothesis",
-   "authors": [
-    "B. F. Roukema",
-    "T. A. Kazimierczak"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2011-08-12",
-   "venue": "Astronomy and Astrophysics",
-   "arxiv": "1106.0727",
-   "doi": "10.1051/0004-6361/201117403",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2098435312"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2011",
-   "url": "https://arxiv.org/abs/1106.0727",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "12 Aug 2011",
-   "id": "c35bd672c56",
-   "search": "the size of the universe according to the poincare dodecahedral space hypothesis b. f. roukema t. a. kazimierczak  astronomy and astrophysics"
-  },
-  {
-   "title": "There was movement that was stationary, for the four-velocity had passed around",
-   "authors": [
-    "B. F. Roukema"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2010-02-01",
-   "venue": "Monthly Notices of the Royal Astronomical Society",
-   "arxiv": "0911.1205",
-   "doi": "10.1111/j.1365-2966.2010.16273.x",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2155329650"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2010",
-   "url": "https://arxiv.org/abs/0911.1205",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "1 Feb 2010",
-   "id": "c1c1cbce1a0",
-   "search": "there was movement that was stationary, for the four-velocity had passed around b. f. roukema  monthly notices of the royal astronomical society"
-  },
-  {
-   "title": "A residual acceleration effect due to an inhomogeneity",
-   "authors": [
-    "B. F. Roukema",
-    "J. Alimi",
-    "A. Fuözfa"
-   ],
-   "n_authors": 3,
-   "collab": "",
-   "date": "2010-01-01",
-   "venue": "AIP conference proceedings",
-   "arxiv": "0911.2739",
-   "doi": "10.1063/1.3462611",
-   "doctype": "conference-paper",
-   "ids": {
-    "openalex": "W2092388594"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2010",
-   "url": "https://arxiv.org/abs/0911.2739",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "1 Jan 2010",
-   "id": "c1bcdd25a0a",
-   "search": "a residual acceleration effect due to an inhomogeneity b. f. roukema j. alimi a. fuozfa  aip conference proceedings"
-  },
-  {
-   "title": "A measure on the set of compact Friedmann–Lemaître–Robertson–Walker models",
-   "authors": [
-    "B. F. Roukema",
-    "V. Blanlœil"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2009-12-11",
-   "venue": "Classical and Quantum Gravity",
-   "arxiv": "0912.2300",
-   "doi": "10.1088/0264-9381/27/24/245001",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2044692539"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2009",
-   "url": "https://arxiv.org/abs/0912.2300",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "11 Dec 2009",
-   "id": "c577571cf8f",
-   "search": "a measure on the set of compact friedmannlemaitrerobertsonwalker models b. f. roukema v. blanlil  classical and quantum gravity"
-  },
-  {
-   "title": "Homotopy symmetry in the multiply connected twin paradox of special relativity",
-   "authors": [
-    "B. F. Roukema",
-    "S. Bajtlik"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2008-09-01",
-   "venue": "Monthly Notices of the Royal Astronomical Society",
-   "arxiv": "astro-ph/0606559",
-   "doi": "10.1111/j.1365-2966.2008.13734.x",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2144230250"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2008",
-   "url": "https://arxiv.org/abs/astro-ph/0606559",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "1 Sep 2008",
-   "id": "cc7f6d27ce1",
-   "search": "homotopy symmetry in the multiply connected twin paradox of special relativity b. f. roukema s. bajtlik  monthly notices of the royal astronomical society"
-  },
-  {
-   "title": "The optimal phase of the generalised Poincaré dodecahedral space hypothesis implied by the spatial cross-correlation function of the WMAP sky maps",
-   "authors": [
-    "B. F. Roukema",
-    "Z. Buliński",
-    "A. Szaniewska",
-    "N. Gaudin"
-   ],
-   "n_authors": 4,
-   "collab": "",
-   "date": "2008-05-15",
-   "venue": "Astronomy and Astrophysics",
-   "arxiv": "0801.0006",
-   "doi": "10.1051/0004-6361:20079339",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2104978079"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2008",
-   "url": "https://arxiv.org/abs/0801.0006",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "15 May 2008",
-   "id": "c69dd236eb2",
-   "search": "the optimal phase of the generalised poincare dodecahedral space hypothesis implied by the spatial cross-correlation function of the wmap sky maps b. f. roukema z. bulinski a. szaniewska n. gaudin  astronomy and astrophysics"
-  },
-  {
-   "title": "A weak acceleration effect due to residual gravity in a multiply connected universe",
-   "authors": [
-    "B. F. Roukema",
-    "S. Bajtlik",
-    "M. Biesiada",
-    "A. Szaniewska",
-    "H. Jurkiewicz"
-   ],
-   "n_authors": 5,
-   "collab": "",
-   "date": "2006-12-11",
-   "venue": "Astronomy and Astrophysics",
-   "arxiv": "astro-ph/0602159",
-   "doi": "10.1051/0004-6361:20064979",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W1984471631"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2006",
-   "url": "https://arxiv.org/abs/astro-ph/0602159",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "11 Dec 2006",
-   "id": "c133a167ede",
-   "search": "a weak acceleration effect due to residual gravity in a multiply connected universe b. f. roukema s. bajtlik m. biesiada a. szaniewska h. jurkiewicz  astronomy and astrophysics"
-  },
-  {
-   "title": "Peaks in the Hartle–Hawking wavefunction from sums over topologies",
-   "authors": [
-    "M. T. Anderson",
-    "S. J. Carlip",
-    "J. G. Ratcliffe",
-    "S. Surya",
-    "S. T. Tschantz"
-   ],
-   "n_authors": 5,
-   "collab": "",
-   "date": "2003-12-23",
-   "venue": "Classical and Quantum Gravity",
-   "arxiv": "gr-qc/0310002",
-   "doi": "10.1088/0264-9381/21/2/025",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2076853091"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2003",
-   "url": "https://arxiv.org/abs/gr-qc/0310002",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "23 Dec 2003",
-   "id": "cfdd3579812",
-   "search": "peaks in the hartlehawking wavefunction from sums over topologies m. t. anderson s. j. carlip j. g. ratcliffe s. surya s. t. tschantz  classical and quantum gravity"
-  },
-  {
-   "title": "Topology and the cosmic microwave background",
-   "authors": [
-    "J. Levin"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2002-08-01",
-   "venue": "Physics Reports",
-   "arxiv": "gr-qc/0108043",
-   "doi": "10.1016/s0370-1573(02)00018-2",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2019828291"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2002",
-   "url": "https://arxiv.org/abs/gr-qc/0108043",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 Aug 2002",
-   "id": "cedb0fdbf87",
-   "search": "topology and the cosmic microwave background j. levin  physics reports"
-  },
-  {
-   "title": "Astrophysics in 2001",
-   "authors": [
-    "V. Trimble",
-    "M. J. Aschwanden"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2002-05-01",
-   "venue": "Publications of the Astronomical Society of the Pacific",
-   "arxiv": "",
-   "doi": "10.1086/341673",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W1990307709"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2002",
-   "url": "https://doi.org/10.1086/341673",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "1 May 2002",
-   "id": "c39896e5bec",
-   "search": "astrophysics in 2001 v. trimble m. j. aschwanden  publications of the astronomical society of the pacific"
-  },
-  {
-   "title": "The cosmological constant and quintessence from a correlation function comoving fine feature in the 2dF quasar redshift survey",
-   "authors": [
-    "B. F. Roukema",
-    "G. A. Mamon",
-    "S. Bajtlik"
-   ],
-   "n_authors": 3,
-   "collab": "",
-   "date": "2002-02-01",
-   "venue": "Astronomy and Astrophysics",
-   "arxiv": "astro-ph/0106135",
-   "doi": "10.1051/0004-6361:20011534",
-   "doctype": "article",
-   "ids": {
-    "openalex": "W2084622682"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2002",
-   "url": "https://arxiv.org/abs/astro-ph/0106135",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "1 Feb 2002",
-   "id": "c19b2dee60a",
-   "search": "the cosmological constant and quintessence from a correlation function comoving fine feature in the 2df quasar redshift survey b. f. roukema g. a. mamon s. bajtlik  astronomy and astrophysics"
-  },
-  {
-   "title": "Observational Constraints on the Topology (Global Geometry) of the Universe",
-   "authors": [
-    "B. F. Roukema"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2002-01-07",
-   "venue": "",
-   "arxiv": "astro-ph/0201092",
-   "doi": "",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W1778709070"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2002",
-   "url": "https://arxiv.org/abs/astro-ph/0201092",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "7 Jan 2002",
-   "id": "c16b02928c6",
-   "search": "observational constraints on the topology (global geometry) of the universe b. f. roukema  "
-  },
-  {
-   "title": "Null Cones in Lorentz-Covariant General Relativity",
-   "authors": [
-    "J. B. Pitts",
-    "W. C. Schieve"
-   ],
-   "n_authors": 2,
-   "collab": "",
-   "date": "2001-11-02",
-   "venue": "PhilSci-Archive (University of Pittsburgh)",
-   "arxiv": "gr-qc/0111004",
-   "doi": "",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W1942261491"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2001",
-   "url": "https://arxiv.org/abs/gr-qc/0111004",
-   "self_own": false,
-   "self_for": [],
-   "date_display": "2 Nov 2001",
-   "id": "c0d4ba23d95",
-   "search": "null cones in lorentz-covariant general relativity j. b. pitts w. c. schieve  philsci-archive (university of pittsburgh)"
-  },
-  {
-   "title": "Clusters of Galaxies as Standard Candles for Global Observational Cosmology",
-   "authors": [
-    "B. F. Roukema"
-   ],
-   "n_authors": 1,
-   "collab": "",
-   "date": "2001-05-31",
-   "venue": "",
-   "arxiv": "astro-ph/0105548",
-   "doi": "",
-   "doctype": "preprint",
-   "ids": {
-    "openalex": "W1577192163"
-   },
-   "sources": [
-    "openalex"
-   ],
-   "cites": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "year": "2001",
-   "url": "https://arxiv.org/abs/astro-ph/0105548",
-   "self_own": false,
-   "self_for": [
-    "2026-08-01-topology-of-the-universe"
-   ],
-   "date_display": "31 May 2001",
-   "id": "c484f8c5638",
-   "search": "clusters of galaxies as standard candles for global observational cosmology b. f. roukema  "
   },
   {
    "title": "TOWARDS A HIGH GENUS COSMIC MANIFOLD",
